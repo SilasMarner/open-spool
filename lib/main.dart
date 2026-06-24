@@ -25,6 +25,7 @@ class ReelPlannerApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light(),
           darkTheme: AppTheme.dark(),
+          themeMode: ThemeMode.dark,
           home: const HomeScreen(),
         );
       },

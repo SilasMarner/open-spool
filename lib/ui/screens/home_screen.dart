@@ -10,6 +10,7 @@ import '../../services/unit_converter.dart';
 import '../widgets/capacity_result_card.dart';
 import 'line_picker_screen.dart';
 import 'loadouts_screen.dart';
+import 'manual_screen.dart';
 import 'reel_picker_screen.dart';
 import 'settings_screen.dart';
 
@@ -60,6 +61,14 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.bookmark_outline),
             tooltip: 'Loadouts',
             onPressed: _openLoadouts,
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu_book_outlined),
+            tooltip: 'User Guide',
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ManualScreen()),
+            ),
           ),
           IconButton(
             icon: const Icon(Icons.settings),

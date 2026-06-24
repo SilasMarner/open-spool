@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../app_state.dart';
 import '../../services/unit_converter.dart';
+import 'manual_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -32,6 +33,17 @@ class SettingsScreen extends StatelessWidget {
                   value: UnitSystem.metric,
                 ),
               ],
+            ),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.menu_book_outlined),
+            title: const Text('User Guide'),
+            subtitle: const Text('How the planner works, step by step'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ManualScreen()),
             ),
           ),
           const Divider(),
