@@ -1019,6 +1019,78 @@
       "source": "Jerry Brown / BMC published spec"
     },
     {
+      "id": "tightline-hollow-30",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-50",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-65",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-80",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.018,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-100",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.020,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-130",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.022,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-150",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 150,
+      "diameter_in": 0.024,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
+      "id": "tightline-hollow-200",
+      "brand": "Tight Line",
+      "product": "12 Strand Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.028,
+      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+    },
+    {
       "id": "pphollowace-40",
       "brand": "PowerPro",
       "product": "Hollow Ace",
