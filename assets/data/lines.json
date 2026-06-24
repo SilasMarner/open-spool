@@ -1025,7 +1025,7 @@
       "type": "braid_hollow",
       "lb_test": 40,
       "diameter_in": 0.016,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "pphollowace-60",
@@ -1034,7 +1034,7 @@
       "type": "braid_hollow",
       "lb_test": 60,
       "diameter_in": 0.019,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "pphollowace-80",
@@ -1043,7 +1043,7 @@
       "type": "braid_hollow",
       "lb_test": 80,
       "diameter_in": 0.021,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "pphollowace-100",
@@ -1052,7 +1052,7 @@
       "type": "braid_hollow",
       "lb_test": 100,
       "diameter_in": 0.024,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "pphollowace-130",
@@ -1061,7 +1061,7 @@
       "type": "braid_hollow",
       "lb_test": 130,
       "diameter_in": 0.028,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "pphollowace-200",
@@ -1070,7 +1070,7 @@
       "type": "braid_hollow",
       "lb_test": 200,
       "diameter_in": 0.033,
-      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
     },
     {
       "id": "joyfish-mono-30",
@@ -1484,7 +1484,7 @@
       "type": "mono",
       "lb_test": 12,
       "diameter_in": 0.014,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "source": "Ande published spec (line-specs chart, 0.35 mm)"
     },
     {
       "id": "ande-premium-15",
@@ -1492,8 +1492,8 @@
       "product": "Premium Monofilament",
       "type": "mono",
       "lb_test": 15,
-      "diameter_in": 0.016,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "diameter_in": 0.015,
+      "source": "Ande published spec (line-specs chart, 0.4 mm)"
     },
     {
       "id": "ande-premium-20",
@@ -1502,7 +1502,7 @@
       "type": "mono",
       "lb_test": 20,
       "diameter_in": 0.018,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "source": "Ande published spec (line-specs chart, 0.45 mm)"
     },
     {
       "id": "ande-premium-30",
@@ -1511,7 +1511,7 @@
       "type": "mono",
       "lb_test": 30,
       "diameter_in": 0.022,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "source": "Ande published spec (line-specs chart, 0.55 mm)"
     },
     {
       "id": "ande-premium-40",
@@ -1519,8 +1519,8 @@
       "product": "Premium Monofilament",
       "type": "mono",
       "lb_test": 40,
-      "diameter_in": 0.026,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "diameter_in": 0.024,
+      "source": "Ande published spec (line-specs chart, 0.6 mm)"
     },
     {
       "id": "ande-premium-50",
@@ -1529,7 +1529,7 @@
       "type": "mono",
       "lb_test": 50,
       "diameter_in": 0.028,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "source": "Ande published spec (line-specs chart, 0.7 mm)"
     },
     {
       "id": "ande-premium-60",
@@ -1537,8 +1537,8 @@
       "product": "Premium Monofilament",
       "type": "mono",
       "lb_test": 60,
-      "diameter_in": 0.032,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "diameter_in": 0.031,
+      "source": "Ande published spec (line-specs chart, 0.8 mm)"
     },
     {
       "id": "ande-premium-80",
@@ -1546,8 +1546,8 @@
       "product": "Premium Monofilament",
       "type": "mono",
       "lb_test": 80,
-      "diameter_in": 0.036,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "diameter_in": 0.035,
+      "source": "Ande published spec (line-specs chart, 0.9 mm)"
     },
     {
       "id": "ande-premium-100",
@@ -1555,17 +1555,17 @@
       "product": "Premium Monofilament",
       "type": "mono",
       "lb_test": 100,
-      "diameter_in": 0.043,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "diameter_in": 0.039,
+      "source": "Ande published spec (line-specs chart, 1 mm)"
     },
     {
-      "id": "ande-premium-130",
+      "id": "ande-premium-125",
       "brand": "Ande",
       "product": "Premium Monofilament",
       "type": "mono",
-      "lb_test": 130,
-      "diameter_in": 0.052,
-      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+      "lb_test": 125,
+      "diameter_in": 0.051,
+      "source": "Ande published spec (line-specs chart, 1.3 mm)"
     },
     {
       "id": "jinkai-premium-25",
@@ -1880,7 +1880,7 @@
       "type": "braid_solid",
       "lb_test": 80,
       "diameter_in": 0.0177,
-      "source": "VERIFY \u2014 Beyond Braid sells 80 lb but publishes no diameter; ~0.45 mm estimate"
+      "source": "VERIFY \u2014 Beyond Braid publishes no diameter above 60 lb; ~0.45 mm estimate"
     },
     {
       "id": "bb8x-solid-100",
@@ -1889,7 +1889,7 @@
       "type": "braid_solid",
       "lb_test": 100,
       "diameter_in": 0.0197,
-      "source": "VERIFY \u2014 Beyond Braid sells 100 lb but publishes no diameter; ~0.5 mm estimate"
+      "source": "VERIFY \u2014 Beyond Braid publishes no diameter above 60 lb; ~0.5 mm estimate"
     },
     {
       "id": "reaction-x8-10",
