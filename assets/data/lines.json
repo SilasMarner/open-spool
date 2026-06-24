@@ -1,0 +1,131 @@
+{
+  "_note": "Diameter is the source of truth for capacity math. Entries tagged 'VERIFY' in `source` are approximate and must be confirmed against current manufacturer spec sheets before trusting the numbers. Braid diameters vary a lot by brand; hollow-core runs thicker than solid-core for the same test.",
+  "lines": [
+    {
+      "id": "ande-mono-30",
+      "brand": "Ande",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.024,
+      "source": "VERIFY — approx mono dia for 30 lb"
+    },
+    {
+      "id": "ande-mono-50",
+      "brand": "Ande",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.029,
+      "source": "VERIFY — approx mono dia for 50 lb"
+    },
+    {
+      "id": "ande-mono-80",
+      "brand": "Ande",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.037,
+      "source": "VERIFY — approx mono dia for 80 lb"
+    },
+    {
+      "id": "ande-mono-100",
+      "brand": "Ande",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.043,
+      "source": "VERIFY — approx mono dia for 100 lb"
+    },
+    {
+      "id": "ande-mono-130",
+      "brand": "Ande",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.049,
+      "source": "VERIFY — approx mono dia for 130 lb"
+    },
+    {
+      "id": "powerpro-solid-50",
+      "brand": "PowerPro",
+      "product": "Spectra (solid)",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "VERIFY — approx solid braid dia for 50 lb"
+    },
+    {
+      "id": "powerpro-solid-65",
+      "brand": "PowerPro",
+      "product": "Spectra (solid)",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "VERIFY — approx solid braid dia for 65 lb"
+    },
+    {
+      "id": "powerpro-solid-80",
+      "brand": "PowerPro",
+      "product": "Spectra (solid)",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.019,
+      "source": "VERIFY — approx solid braid dia for 80 lb"
+    },
+    {
+      "id": "powerpro-solid-100",
+      "brand": "PowerPro",
+      "product": "Spectra (solid)",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.021,
+      "source": "VERIFY — approx solid braid dia for 100 lb"
+    },
+    {
+      "id": "powerpro-solid-130",
+      "brand": "PowerPro",
+      "product": "Spectra (solid)",
+      "type": "braid_solid",
+      "lb_test": 130,
+      "diameter_in": 0.024,
+      "source": "VERIFY — approx solid braid dia for 130 lb"
+    },
+    {
+      "id": "tightline-hollow-80",
+      "brand": "Tightline (TUF-Line)",
+      "product": "Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.024,
+      "source": "VERIFY — approx hollow-core dia for 80 lb"
+    },
+    {
+      "id": "tightline-hollow-100",
+      "brand": "Tightline (TUF-Line)",
+      "product": "Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.027,
+      "source": "VERIFY — approx hollow-core dia for 100 lb"
+    },
+    {
+      "id": "tightline-hollow-130",
+      "brand": "Tightline (TUF-Line)",
+      "product": "Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.031,
+      "source": "VERIFY — approx hollow-core dia for 130 lb (the request's example line)"
+    },
+    {
+      "id": "tightline-hollow-200",
+      "brand": "Tightline (TUF-Line)",
+      "product": "Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.039,
+      "source": "VERIFY — approx hollow-core dia for 200 lb"
+    }
+  ]
+}

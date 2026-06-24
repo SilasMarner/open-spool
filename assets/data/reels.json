@@ -1,0 +1,85 @@
+{
+  "_note": "Each reel is anchored to ONE published capacity (anchor_label + anchor_yards at anchor_diameter_in). The diameter-squared model derives every other line from that anchor, so the anchor's yardage and the line diameter used for it must be accurate. Entries tagged 'VERIFY' are approximate placeholders — confirm against the manufacturer's spec/capacity chart.",
+  "reels": [
+    {
+      "id": "avet-trx-80w",
+      "brand": "Avet",
+      "model": "T-RX 80W",
+      "type": "conventional",
+      "anchor_label": "80 lb mono",
+      "anchor_diameter_in": 0.037,
+      "anchor_yards": 700,
+      "source": "VERIFY — anchor approximate (80-class two-speed)"
+    },
+    {
+      "id": "avet-hxw-raptor",
+      "brand": "Avet",
+      "model": "HXW Raptor 5.3",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.029,
+      "anchor_yards": 500,
+      "source": "VERIFY — anchor approximate"
+    },
+    {
+      "id": "avet-sx-raptor",
+      "brand": "Avet",
+      "model": "SX 5.3 Raptor",
+      "type": "conventional",
+      "anchor_label": "30 lb mono",
+      "anchor_diameter_in": 0.024,
+      "anchor_yards": 245,
+      "source": "VERIFY — anchor approximate"
+    },
+    {
+      "id": "penn-international-50visw",
+      "brand": "Penn",
+      "model": "International 50VISW",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.029,
+      "anchor_yards": 850,
+      "source": "VERIFY — anchor approximate"
+    },
+    {
+      "id": "shimano-talica-25ii",
+      "brand": "Shimano",
+      "model": "Talica 25 II",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.029,
+      "anchor_yards": 525,
+      "source": "VERIFY — anchor approximate"
+    },
+    {
+      "id": "shimano-stella-sw-14000",
+      "brand": "Shimano",
+      "model": "Stella SW 14000XG",
+      "type": "spinning",
+      "anchor_label": "50 lb braid (solid)",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 320,
+      "source": "VERIFY — anchor approximate (braid-rated spinner)"
+    },
+    {
+      "id": "penn-slammer-iv-6500",
+      "brand": "Penn",
+      "model": "Slammer IV 6500",
+      "type": "spinning",
+      "anchor_label": "30 lb mono",
+      "anchor_diameter_in": 0.024,
+      "anchor_yards": 335,
+      "source": "VERIFY — anchor approximate"
+    },
+    {
+      "id": "daiwa-saltiga-8000",
+      "brand": "Daiwa",
+      "model": "Saltiga 8000",
+      "type": "spinning",
+      "anchor_label": "65 lb braid (solid)",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 360,
+      "source": "VERIFY — anchor approximate"
+    }
+  ]
+}
