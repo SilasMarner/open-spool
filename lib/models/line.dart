@@ -1,23 +1,26 @@
 import '../services/unit_converter.dart';
 
 /// Construction of a fishing line. Diameter is what actually drives capacity.
-enum LineType { mono, braidSolid, braidHollow }
+enum LineType { mono, fluoro, braidSolid, braidHollow }
 
 extension LineTypeX on LineType {
   String get label => switch (this) {
         LineType.mono => 'Mono',
+        LineType.fluoro => 'Fluorocarbon',
         LineType.braidSolid => 'Braid (solid core)',
         LineType.braidHollow => 'Braid (hollow core)',
       };
 
   String get shortLabel => switch (this) {
         LineType.mono => 'Mono',
+        LineType.fluoro => 'Fluoro',
         LineType.braidSolid => 'Solid braid',
         LineType.braidHollow => 'Hollow braid',
       };
 
   static LineType fromJson(String v) => switch (v) {
         'mono' => LineType.mono,
+        'fluoro' => LineType.fluoro,
         'braid_solid' => LineType.braidSolid,
         'braid_hollow' => LineType.braidHollow,
         _ => throw ArgumentError('Unknown line type: $v'),
@@ -25,6 +28,7 @@ extension LineTypeX on LineType {
 
   String get json => switch (this) {
         LineType.mono => 'mono',
+        LineType.fluoro => 'fluoro',
         LineType.braidSolid => 'braid_solid',
         LineType.braidHollow => 'braid_hollow',
       };

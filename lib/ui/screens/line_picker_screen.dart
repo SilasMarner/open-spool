@@ -66,6 +66,7 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
               children: [
                 _filterChip('All', null),
                 _filterChip('Mono', LineType.mono),
+                _filterChip('Fluoro', LineType.fluoro),
                 _filterChip('Solid braid', LineType.braidSolid),
                 _filterChip('Hollow braid', LineType.braidHollow),
               ],

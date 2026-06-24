@@ -102,6 +102,35 @@
     { "id": "daiwa-bg-4000", "brand": "Daiwa", "model": "BG 4000", "type": "spinning", "anchor_label": "30 lb braid", "anchor_diameter_in": 0.011, "anchor_yards": 280, "source": "Daiwa published capacity (30 lb braid / 280 yd)" },
     { "id": "daiwa-bg-4500", "brand": "Daiwa", "model": "BG 4500", "type": "spinning", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 340, "source": "Daiwa published capacity (40 lb braid / 340 yd)" },
     { "id": "daiwa-bg-5000", "brand": "Daiwa", "model": "BG 5000", "type": "spinning", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 360, "source": "Daiwa published capacity (50 lb braid / 360 yd)" },
-    { "id": "daiwa-bg-8000", "brand": "Daiwa", "model": "BG 8000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 590, "source": "Daiwa published capacity (65 lb J-Braid / 590 yd)" }
+    { "id": "daiwa-bg-8000", "brand": "Daiwa", "model": "BG 8000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 590, "source": "Daiwa published capacity (65 lb J-Braid / 590 yd)" },
+
+    { "id": "finnor-marquesa-12", "brand": "Fin-Nor", "model": "Marquesa MA12 II", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 270,  "source": "Fin-Nor published capacity (50 lb braid / 270 yd)" },
+    { "id": "finnor-marquesa-16", "brand": "Fin-Nor", "model": "Marquesa MA16 II", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 400,  "source": "Fin-Nor published capacity (50 lb braid / 400 yd)" },
+    { "id": "finnor-marquesa-20", "brand": "Fin-Nor", "model": "Marquesa MA20 II", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 530,  "source": "Fin-Nor published capacity (50 lb braid / 530 yd)" },
+    { "id": "finnor-marquesa-30", "brand": "Fin-Nor", "model": "Marquesa MA30 II", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 670,  "source": "Fin-Nor published capacity (50 lb braid / 670 yd)" },
+    { "id": "finnor-marquesa-40", "brand": "Fin-Nor", "model": "Marquesa MA40 II", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 700,  "source": "Fin-Nor published capacity (50 lb braid / 700 yd)" },
+    { "id": "finnor-marquesa-50", "brand": "Fin-Nor", "model": "Marquesa MA50 II", "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 1000, "source": "Fin-Nor published capacity (65 lb braid / 1000 yd)" },
+
+    { "id": "maxel-hybrid-20", "brand": "Maxel", "model": "Hybrid 20", "type": "conventional", "anchor_label": "30 lb braid", "anchor_diameter_in": 0.011, "anchor_yards": 300, "source": "Maxel published capacity (30 lb braid / 300 yd)" },
+    { "id": "maxel-hybrid-25", "brand": "Maxel", "model": "Hybrid 25", "type": "conventional", "anchor_label": "30 lb braid", "anchor_diameter_in": 0.011, "anchor_yards": 390, "source": "Maxel published capacity (30 lb braid / 390 yd)" },
+
+    { "id": "seigler-sgn", "brand": "Seigler", "model": "SGN (Small Game Narrow)", "type": "conventional", "anchor_label": "30 lb braid", "anchor_diameter_in": 0.011, "anchor_yards": 350, "source": "Seigler published capacity (30 lb braid / 350 yd)" },
+    { "id": "seigler-sg",  "brand": "Seigler", "model": "SG (Small Game)",         "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 450, "source": "Seigler published capacity (50 lb braid / 450 yd)" },
+    { "id": "seigler-lg",  "brand": "Seigler", "model": "LG (Large Game)",         "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 750, "source": "Seigler published capacity (65 lb braid / 750 yd)" },
+
+    { "id": "accurate-bv-300",   "brand": "Accurate", "model": "Boss Valiant BV-300",   "type": "conventional", "anchor_label": "30 lb braid",  "anchor_diameter_in": 0.011, "anchor_yards": 325,  "source": "Accurate published capacity (30 lb braid / 325 yd)" },
+    { "id": "accurate-bv-400",   "brand": "Accurate", "model": "Boss Valiant BV-400",   "type": "conventional", "anchor_label": "50 lb braid",  "anchor_diameter_in": 0.014, "anchor_yards": 325,  "source": "Accurate published capacity (50 lb braid / 325 yd)" },
+    { "id": "accurate-bv2-800",  "brand": "Accurate", "model": "Boss Valiant BV2-800",  "type": "conventional", "anchor_label": "80 lb braid",  "anchor_diameter_in": 0.017, "anchor_yards": 800,  "source": "Accurate published capacity (80 lb braid / 800 yd)" },
+    { "id": "accurate-bv2-1000", "brand": "Accurate", "model": "Boss Valiant BV2-1000", "type": "conventional", "anchor_label": "100 lb braid", "anchor_diameter_in": 0.021, "anchor_yards": 1000, "source": "Accurate published capacity (100 lb braid / 1000 yd)" },
+
+    { "id": "vanstaal-vsx2-50",  "brand": "Van Staal", "model": "VSX2 50",  "type": "spinning", "anchor_label": "20 lb braid", "anchor_diameter_in": 0.009, "anchor_yards": 360, "source": "Van Staal published capacity (20 lb braid / 360 yd)" },
+    { "id": "vanstaal-vsx2-100", "brand": "Van Staal", "model": "VSX2 100", "type": "spinning", "anchor_label": "20 lb braid", "anchor_diameter_in": 0.009, "anchor_yards": 460, "source": "Van Staal published capacity (20 lb braid / 460 yd)" },
+    { "id": "vanstaal-vsx2-150", "brand": "Van Staal", "model": "VSX2 150", "type": "spinning", "anchor_label": "30 lb braid", "anchor_diameter_in": 0.011, "anchor_yards": 440, "source": "Van Staal published capacity (30 lb braid / 440 yd)" },
+    { "id": "vanstaal-vsx2-200", "brand": "Van Staal", "model": "VSX2 200", "type": "spinning", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 500, "source": "Van Staal published capacity (40 lb braid / 500 yd)" },
+    { "id": "vanstaal-vsx2-300", "brand": "Van Staal", "model": "VSX2 300", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 500, "source": "Van Staal published capacity (80 lb braid / ~500 yd)" },
+
+    { "id": "penn-slammeriv-5500", "brand": "Penn", "model": "Slammer IV 5500", "type": "spinning", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 490, "source": "Penn published capacity (50 lb braid / 490 yd)" },
+    { "id": "penn-slammeriv-6500", "brand": "Penn", "model": "Slammer IV 6500", "type": "spinning", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 440, "source": "Penn published capacity (50 lb braid / 440 yd)" },
+    { "id": "penn-slammeriv-8500", "brand": "Penn", "model": "Slammer IV 8500", "type": "spinning", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 600, "source": "Penn published capacity (50 lb braid / 600 yd)" }
   ]
 }

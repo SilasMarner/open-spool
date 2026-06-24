@@ -27,6 +27,18 @@ Need diameter for: **30, 50, 65, 80, 100, 130, 150, 200 lb**
 Current estimates (in): 30=.011, 50=.014, 65=.016, 80=.018, 100=.020, 130=.022, 150=.024, 200=.028
 Note: tightlinebraid.com lists tests/yardages only — no per-size diameters published.
 
+### 4. SpiderWire Stealth (solid braid) — 4 interpolated sizes
+Confirmed from spec: 10=.006, 30=.012, 65=.015. Interpolated (VERIFY): **15=.008, 20=.010, 50=.014, 80=.017**.
+Note: published numbers are spotty across sizes; confirm the in-between tests.
+
+### 5. Seaguar Threadlock (hollow-core braid) — 1 size
+Confirmed from spec: 50=.015, 60=.016, 80=.019, 100=.020, 130=.022. Estimated (VERIFY): **200=.026**.
+Note: Seaguar's spec chart omits the 200 lb diameter.
+
+### 6. TUF-Line Guide's Choice Hollow (hollow-core braid) — 4 sizes
+Confirmed from spec: 60=.016. Estimated from comparable hollow core (VERIFY): **40=.013, 80=.019, 130=.024, 200=.030**.
+Note: Mustad/TUF-Line publishes a diameter only for select sizes.
+
 ---
 
 ## Manufacturer contacts

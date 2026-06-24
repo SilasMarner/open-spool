@@ -130,8 +130,9 @@ class ManualScreen extends StatelessWidget {
         'Open a line picker and filter by type or brand. Diameter is the '
             'number that drives the result, so the catalog stores a real '
             'published diameter for each line and test.',
-        'Three line types are supported:',
+        'Four line types are supported:',
         '• Mono — monofilament.',
+        '• Fluorocarbon — 100% fluoro leader/topshot material.',
         '• Braid (solid) — standard round/solid braided superline.',
         '• Braid (hollow) — hollow-core braid you can splice for wind-on '
             'leaders and topshots.',
