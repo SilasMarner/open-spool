@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../app_state.dart';
 import '../../models/line.dart';
@@ -6,6 +7,7 @@ import '../../models/line_segment.dart';
 import '../../models/loadout.dart';
 import '../../models/reel.dart';
 import '../../services/capacity_calculator.dart';
+import '../../services/loadout_result.dart';
 import '../../services/unit_converter.dart';
 import '../widgets/capacity_result_card.dart';
 import 'line_picker_screen.dart';
@@ -59,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.bookmark_outline),
-            tooltip: 'Loadouts',
+            tooltip: 'Favorites',
             onPressed: _openLoadouts,
           ),
           IconButton(
@@ -96,8 +98,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ? null
           : FloatingActionButton.extended(
               onPressed: _saveLoadout,
-              icon: const Icon(Icons.save),
-              label: const Text('Save'),
+              icon: const Icon(Icons.star_outline),
+              label: const Text('Save favorite'),
             ),
     );
   }
@@ -240,16 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_mode == LoadoutMode.straight) {
       final line = _straightLine;
       if (line == null) return const _Hint('Pick a line to see capacity.');
-      final yards = straightYards(
-        spoolK: reel.spoolK,
-        diameterIn: line.diameterIn,
-        packingFactor: line.packingFactor,
-      );
-      return CapacityResultCard(
-        rows: [ResultRow(line.displayName, yards, sub: line.type.shortLabel)],
-        fillFraction: 1.0,
-        unverifiedInputs: reel.unverified || line.unverified,
-      );
+      return _card(computeStraight(reel: reel, line: line));
     }
 
     final top = _topshotLine;
@@ -265,27 +258,27 @@ class _HomeScreenState extends State<HomeScreen> {
     final fixedYd =
         settings.units == UnitSystem.metric ? metersToYards(fixedYards) : fixedYards;
 
-    final r = mixFill(
-      spoolK: reel.spoolK,
-      topDiameterIn: top.diameterIn,
-      topPackingFactor: top.packingFactor,
-      backDiameterIn: back.diameterIn,
-      backPackingFactor: back.packingFactor,
+    return _card(computeMix(
+      reel: reel,
+      topshot: top,
+      backing: back,
       fixed: _fixed,
       fixedYards: fixedYd,
-    );
+    ));
+  }
 
-    final topFixed = _fixed == FixedSegment.topshot;
-    return CapacityResultCard(
-      rows: [
-        ResultRow('Topshot — ${top.displayName}', r.topshotYards,
-            sub: topFixed ? 'fixed' : 'computed fill'),
-        ResultRow('Backing — ${back.displayName}', r.backingYards,
-            sub: topFixed ? 'computed fill' : 'fixed'),
-      ],
-      fillFraction: r.fillFraction,
-      overflow: r.overflow,
-      unverifiedInputs: reel.unverified || top.unverified || back.unverified,
+  Widget _card(ComputedResult r) => CapacityResultCard(
+        rows: [for (final row in r.rows) ResultRow(row.label, row.yards, sub: row.sub)],
+        fillFraction: r.fillFraction,
+        overflow: r.overflow,
+        unverifiedInputs: r.unverified,
+        onShare: () => _shareResult(r),
+      );
+
+  Future<void> _shareResult(ComputedResult r) async {
+    await Share.share(
+      shareSummary(r, settings.units),
+      subject: 'Reel line plan — ${r.reel.displayName}',
     );
   }
 
@@ -387,7 +380,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return showDialog<String>(
       context: context,
       builder: (_) => AlertDialog(
-        title: const Text('Save loadout'),
+        title: const Text('Save favorite'),
         content: TextField(
           controller: c,
           autofocus: true,

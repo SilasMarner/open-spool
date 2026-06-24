@@ -18,12 +18,17 @@ class CapacityResultCard extends StatelessWidget {
   final bool overflow;
   final bool unverifiedInputs;
 
+  /// When provided, a Share button is shown that hands the result to the system
+  /// share sheet (email, text, messaging, etc.).
+  final VoidCallback? onShare;
+
   const CapacityResultCard({
     super.key,
     required this.rows,
     this.fillFraction,
     this.overflow = false,
     this.unverifiedInputs = false,
+    this.onShare,
   });
 
   @override
@@ -96,6 +101,18 @@ class CapacityResultCard extends StatelessWidget {
                 color: theme.colorScheme.error,
                 text: 'Uses an unverified catalog spec (tagged VERIFY). '
                     'Confirm the diameter / anchor before trusting this.',
+              ),
+            if (onShare != null)
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton.icon(
+                  onPressed: onShare,
+                  icon: const Icon(Icons.ios_share, size: 18),
+                  label: const Text('Share'),
+                  style: TextButton.styleFrom(
+                    foregroundColor: theme.colorScheme.onPrimaryContainer,
+                  ),
+                ),
               ),
           ],
         ),

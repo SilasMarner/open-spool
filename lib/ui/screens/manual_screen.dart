@@ -165,14 +165,18 @@ class ManualScreen extends StatelessWidget {
       ],
     ),
     _Section(
-      Icons.bookmark,
-      'Saved loadouts',
+      Icons.star_outline,
+      'Favorites & sharing',
       [
-        'Built a setup you like? Tap Save (the button appears once a reel is '
-            'selected) and give it a name. It’s stored on your phone.',
-        'Reopen saved loadouts from the bookmark icon in the top bar — tap one '
-            'to load the reel, mode, lines, and fixed length back into the '
+        'Built a setup you like? Tap Save favorite (the button appears once a '
+            'reel is selected) and give it a name. It’s stored on your phone.',
+        'Reopen favorites from the bookmark icon in the top bar — tap one to '
+            'load the reel, mode, lines, and fixed length back into the '
             'calculator.',
+        '• Share a result anytime: tap Share on the result card for the setup '
+            'you’re looking at, or the share icon next to any saved favorite. '
+            'The summary goes out through your phone’s share sheet — email, '
+            'text, or any messaging app.',
       ],
     ),
     _Section(

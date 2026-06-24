@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../app_state.dart';
 import '../../models/loadout.dart';
+import '../../services/loadout_result.dart';
 
-/// Lists saved loadouts. Tapping one returns it to the calculator; swipe/long
-/// press to delete.
+/// Lists saved favorites. Tapping one returns it to the calculator; swipe to
+/// delete; the share icon hands its result to the system share sheet.
 class LoadoutsScreen extends StatefulWidget {
   const LoadoutsScreen({super.key});
 
@@ -23,10 +25,26 @@ class _LoadoutsScreenState extends State<LoadoutsScreen> {
 
   void _refresh() => setState(() => _future = loadoutRepo.all());
 
+  Future<void> _shareLoadout(Loadout l) async {
+    final r = computeLoadout(l);
+    if (r == null) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Could not compute this favorite.')),
+        );
+      }
+      return;
+    }
+    await Share.share(
+      shareSummary(r, settings.units, title: l.name),
+      subject: 'Reel line plan — ${l.name}',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Saved loadouts')),
+      appBar: AppBar(title: const Text('Saved favorites')),
       body: FutureBuilder<List<Loadout>>(
         future: _future,
         builder: (context, snap) {
@@ -39,7 +57,7 @@ class _LoadoutsScreenState extends State<LoadoutsScreen> {
               child: Padding(
                 padding: EdgeInsets.all(24),
                 child: Text(
-                  'No saved loadouts yet.\nBuild a setup on the calculator and tap Save.',
+                  'No saved favorites yet.\nBuild a setup on the calculator and tap Save favorite.',
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -73,6 +91,11 @@ class _LoadoutsScreenState extends State<LoadoutsScreen> {
                   title: Text(l.name),
                   subtitle: Text('${reel?.displayName ?? l.reelId}\n$lineNames'),
                   isThreeLine: true,
+                  trailing: IconButton(
+                    icon: const Icon(Icons.ios_share),
+                    tooltip: 'Share',
+                    onPressed: () => _shareLoadout(l),
+                  ),
                   onTap: () => Navigator.pop(context, l),
                 ),
               );
