@@ -16,6 +16,9 @@ class CapacityResultCard extends StatelessWidget {
   final List<ResultRow> rows;
   final double? fillFraction;
   final bool overflow;
+
+  /// Overrides the default overflow message when provided.
+  final String? overflowText;
   final bool unverifiedInputs;
 
   /// When provided, a Share button is shown that hands the result to the system
@@ -27,6 +30,7 @@ class CapacityResultCard extends StatelessWidget {
     required this.rows,
     this.fillFraction,
     this.overflow = false,
+    this.overflowText,
     this.unverifiedInputs = false,
     this.onShare,
   });
@@ -79,8 +83,9 @@ class CapacityResultCard extends StatelessWidget {
               _Note(
                 icon: Icons.error_outline,
                 color: theme.colorScheme.error,
-                text: 'The fixed line alone overfills this spool. Reduce its '
-                    'length or pick a thinner line.',
+                text: overflowText ??
+                    'The fixed line alone overfills this spool. Reduce its '
+                        'length or pick a thinner line.',
               )
             else if (fillFraction != null)
               _Note(

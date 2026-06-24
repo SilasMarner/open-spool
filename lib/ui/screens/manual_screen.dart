@@ -139,16 +139,19 @@ class ManualScreen extends StatelessWidget {
     ),
     _Section(
       Icons.layers,
-      'Straight vs. Topshot',
+      'Straight, Topshot, Backing/Topshot',
       [
-        'The Straight / Topshot toggle picks how you’re filling the spool.',
+        'Step 2 picks how you’re filling the spool — three options:',
         '• Straight — one line fills the whole spool. The result is simply how '
             'many yards of that line the reel holds.',
-        '• Topshot — a fixed length of one line over a backing that fills the '
-            'rest. Choose which segment is the fixed one (topshot or backing), '
-            'type its length, and the app computes the fill of the other.',
-        'If the fixed segment alone is larger than the spool, the result card '
-            'flags an overflow so you can shorten it.',
+        '• Topshot — set your topshot length and the backing auto-fills the '
+            'rest of the spool. Best for a leader/topshot over backing when you '
+            'only care about the topshot.',
+        '• Backing/Topshot — set both the topshot and the backing length '
+            'yourself. The result shows how full the spool is and warns if the '
+            'two together exceed its capacity.',
+        'If a length is larger than the spool can hold, the result card flags '
+            'an overflow so you can shorten it.',
       ],
     ),
     _Section(

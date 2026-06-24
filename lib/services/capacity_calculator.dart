@@ -116,3 +116,25 @@ MixResult mixFill({
     );
   }
 }
+
+/// Both segment lengths set explicitly (no auto-fill). Reports total fill and
+/// flags [overflow] when the two together need more than the spool holds.
+MixResult mixBoth({
+  required double spoolK,
+  required double topDiameterIn,
+  double topPackingFactor = 1.0,
+  required double backDiameterIn,
+  double backPackingFactor = 1.0,
+  required double topYards,
+  required double backYards,
+}) {
+  final topVol = topYards * volPerYard(topDiameterIn, packingFactor: topPackingFactor);
+  final backVol = backYards * volPerYard(backDiameterIn, packingFactor: backPackingFactor);
+  final fill = (topVol + backVol) / spoolK;
+  return MixResult(
+    topshotYards: topYards,
+    backingYards: backYards,
+    overflow: fill > 1.0,
+    fillFraction: fill,
+  );
+}

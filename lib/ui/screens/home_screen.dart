@@ -16,6 +16,10 @@ import 'manual_screen.dart';
 import 'reel_picker_screen.dart';
 import 'settings_screen.dart';
 
+/// Front-screen fill type: one straight line, a topshot (set the topshot length,
+/// backing auto-fills), or backing + topshot with both lengths set explicitly.
+enum _FillType { straight, topshot, both }
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -25,14 +29,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   Reel? _reel;
-  LoadoutMode _mode = LoadoutMode.straight;
+  _FillType _fill = _FillType.straight;
 
   Line? _straightLine;
 
   Line? _topshotLine;
   Line? _backingLine;
-  FixedSegment _fixed = FixedSegment.topshot;
-  final _fixedYards = TextEditingController(text: '300');
+  final _topYards = TextEditingController(text: '50');
+  final _backYards = TextEditingController(text: '300');
 
   @override
   void initState() {
@@ -49,7 +53,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     settings.removeListener(_onSettingsChanged);
-    _fixedYards.dispose();
+    _topYards.dispose();
+    _backYards.dispose();
     super.dispose();
   }
 
@@ -93,16 +98,11 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 8),
           _modeHelp(),
           const SizedBox(height: 16),
-          _StepHeader(
-            3,
-            _mode == LoadoutMode.straight
-                ? 'Pick your line'
-                : 'Pick lines & set an amount',
-          ),
-          if (_mode == LoadoutMode.straight)
+          _StepHeader(3, _stepThreeTitle()),
+          if (_fill == _FillType.straight)
             _straightSection()
           else
-            _topshotSection(),
+            _mixSection(),
           const SizedBox(height: 16),
           _result(),
         ],
@@ -141,28 +141,40 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _modeToggle() => SegmentedButton<LoadoutMode>(
-        segments: const [
-          ButtonSegment(
-            value: LoadoutMode.straight,
-            label: Text('Straight'),
-            icon: Icon(Icons.linear_scale),
+  Widget _modeToggle() => SegmentedButton<_FillType>(
+        showSelectedIcon: false,
+        style: const ButtonStyle(
+          textStyle: WidgetStatePropertyAll(
+            TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600),
           ),
+          padding: WidgetStatePropertyAll(
+            EdgeInsets.symmetric(horizontal: 6),
+          ),
+        ),
+        segments: const [
+          ButtonSegment(value: _FillType.straight, label: Text('Straight')),
+          ButtonSegment(value: _FillType.topshot, label: Text('Topshot')),
           ButtonSegment(
-            value: LoadoutMode.topshot,
-            label: Text('Topshot'),
-            icon: Icon(Icons.layers),
+            value: _FillType.both,
+            label: Text('Backing/\nTopshot', textAlign: TextAlign.center),
           ),
         ],
-        selected: {_mode},
-        onSelectionChanged: (s) => setState(() => _mode = s.first),
+        selected: {_fill},
+        onSelectionChanged: (s) => setState(() => _fill = s.first),
       );
 
   Widget _modeHelp() {
-    final msg = _mode == LoadoutMode.straight
-        ? 'One line fills the whole spool.'
-        : 'A topshot (leader) over backing. Set how much of one line you '
-            'want — the other auto-fills the rest of the spool.';
+    final String msg;
+    switch (_fill) {
+      case _FillType.straight:
+        msg = 'One line fills the whole spool.';
+      case _FillType.topshot:
+        msg = 'Set your topshot length — the backing auto-fills the rest of '
+            'the spool.';
+      case _FillType.both:
+        msg = 'Set both the backing and topshot lengths — the result warns if '
+            'they exceed the spool.';
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
       child: Text(
@@ -170,6 +182,17 @@ class _HomeScreenState extends State<HomeScreen> {
         style: const TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.35),
       ),
     );
+  }
+
+  String _stepThreeTitle() {
+    switch (_fill) {
+      case _FillType.straight:
+        return 'Pick your line';
+      case _FillType.topshot:
+        return 'Pick lines & set your topshot';
+      case _FillType.both:
+        return 'Pick lines & set both lengths';
+    }
   }
 
   // ---- Straight ------------------------------------------------------------
@@ -180,10 +203,11 @@ class _HomeScreenState extends State<HomeScreen> {
         onPick: (l) => setState(() => _straightLine = l),
       );
 
-  // ---- Topshot -------------------------------------------------------------
+  // ---- Backing + topshot ---------------------------------------------------
 
-  Widget _topshotSection() {
+  Widget _mixSection() {
     final unit = settings.units.lengthUnit;
+    final both = _fill == _FillType.both;
     return Column(
       children: [
         _lineTile(
@@ -204,46 +228,26 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Which length do you want to set?',
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                _yardsField(
+                  controller: _topYards,
+                  label: 'Topshot length',
+                  unit: unit,
                 ),
-                const SizedBox(height: 4),
-                const Text(
-                  'Enter one — we auto-fill the other to fill the spool.',
-                  style: TextStyle(color: Colors.white70, fontSize: 12.5),
-                ),
-                const SizedBox(height: 10),
-                SegmentedButton<FixedSegment>(
-                  segments: const [
-                    ButtonSegment(
-                      value: FixedSegment.topshot,
-                      label: Text('Topshot'),
-                      icon: Icon(Icons.vertical_align_top),
-                    ),
-                    ButtonSegment(
-                      value: FixedSegment.backing,
-                      label: Text('Backing'),
-                      icon: Icon(Icons.vertical_align_bottom),
-                    ),
-                  ],
-                  selected: {_fixed},
-                  onSelectionChanged: (s) => setState(() => _fixed = s.first),
-                ),
-                const SizedBox(height: 12),
-                TextField(
-                  controller: _fixedYards,
-                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                  decoration: InputDecoration(
-                    labelText:
-                        '${_fixed == FixedSegment.topshot ? "Topshot" : "Backing"} length',
-                    suffixText: unit,
-                    border: const OutlineInputBorder(),
+                if (both) ...[
+                  const SizedBox(height: 12),
+                  _yardsField(
+                    controller: _backYards,
+                    label: 'Backing length',
+                    unit: unit,
                   ),
-                  onChanged: (_) => setState(() {}),
-                ),
-                const SizedBox(height: 10),
-                _autoPreview(),
+                ] else
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8, left: 2),
+                    child: Text(
+                      'Backing fills the rest of the spool automatically.',
+                      style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                    ),
+                  ),
               ],
             ),
           ),
@@ -252,67 +256,27 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// Live feedback under the amount field: shows the auto-filled length of the
-  /// other segment so the trade-off is obvious as you type.
-  Widget _autoPreview() {
-    final theme = Theme.of(context);
-    final autoLabel = _fixed == FixedSegment.topshot ? 'Backing' : 'Topshot';
-    final r = _mixResult();
-    if (r == null) {
-      return Text(
-        'Enter an amount above — the $autoLabel auto-fills the spool.',
-        style: const TextStyle(color: Colors.white54, fontSize: 12.5),
-      );
-    }
-    if (r.overflow) {
-      return _previewRow(
-        Icons.error_outline,
-        theme.colorScheme.error,
-        'That ${_fixed == FixedSegment.topshot ? "topshot" : "backing"} alone '
-            'overfills the spool — reduce it.',
-      );
-    }
-    final autoYards =
-        _fixed == FixedSegment.topshot ? r.rows[1].yards : r.rows[0].yards;
-    return _previewRow(
-      Icons.subdirectory_arrow_right,
-      theme.colorScheme.primary,
-      '$autoLabel auto-fills to ~${settings.units.length(autoYards)} '
-          'to top off the spool.',
-    );
-  }
-
-  Widget _previewRow(IconData icon, Color color, String text) => Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, size: 16, color: color),
-          const SizedBox(width: 6),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(color: color, fontSize: 12.5, height: 1.3),
-            ),
-          ),
-        ],
+  Widget _yardsField({
+    required TextEditingController controller,
+    required String label,
+    required String unit,
+  }) =>
+      TextField(
+        controller: controller,
+        keyboardType: const TextInputType.numberWithOptions(decimal: true),
+        decoration: InputDecoration(
+          labelText: label,
+          suffixText: unit,
+          border: const OutlineInputBorder(),
+        ),
+        onChanged: (_) => setState(() {}),
       );
 
-  /// Current topshot/backing mix from live state, or null if incomplete.
-  ComputedResult? _mixResult() {
-    final reel = _reel;
-    final top = _topshotLine;
-    final back = _backingLine;
-    if (reel == null || top == null || back == null) return null;
-    final entered = double.tryParse(_fixedYards.text.trim());
-    if (entered == null || entered <= 0) return null;
-    final fixedYd =
-        settings.units == UnitSystem.metric ? metersToYards(entered) : entered;
-    return computeMix(
-      reel: reel,
-      topshot: top,
-      backing: back,
-      fixed: _fixed,
-      fixedYards: fixedYd,
-    );
+  /// Parse a length field in the active unit → yards, or null if blank/invalid.
+  double? _yards(TextEditingController c) {
+    final v = double.tryParse(c.text.trim());
+    if (v == null || v <= 0) return null;
+    return settings.units == UnitSystem.metric ? metersToYards(v) : v;
   }
 
   Widget _lineTile({
@@ -349,7 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return const _Hint('Pick a reel to begin.');
     }
 
-    if (_mode == LoadoutMode.straight) {
+    if (_fill == _FillType.straight) {
       final line = _straightLine;
       if (line == null) return const _Hint('Pick a line to see capacity.');
       return _card(computeStraight(reel: reel, line: line));
@@ -360,20 +324,31 @@ class _HomeScreenState extends State<HomeScreen> {
     if (top == null || back == null) {
       return const _Hint('Pick both a topshot and a backing line.');
     }
-    final fixedYards = double.tryParse(_fixedYards.text.trim());
-    if (fixedYards == null || fixedYards <= 0) {
-      return const _Hint('Enter a fixed length greater than zero.');
-    }
-    // Input length is in the active unit; convert to yards for the engine.
-    final fixedYd =
-        settings.units == UnitSystem.metric ? metersToYards(fixedYards) : fixedYards;
 
-    return _card(computeMix(
+    if (_fill == _FillType.topshot) {
+      final y = _yards(_topYards);
+      if (y == null) return const _Hint('Enter a topshot length greater than zero.');
+      return _card(computeMix(
+        reel: reel,
+        topshot: top,
+        backing: back,
+        fixed: FixedSegment.topshot,
+        fixedYards: y,
+      ));
+    }
+
+    // Backing/Topshot: both lengths set explicitly.
+    final ty = _yards(_topYards);
+    final by = _yards(_backYards);
+    if (ty == null || by == null) {
+      return const _Hint('Enter both a topshot and a backing length.');
+    }
+    return _card(computeMixBoth(
       reel: reel,
       topshot: top,
       backing: back,
-      fixed: _fixed,
-      fixedYards: fixedYd,
+      topYards: ty,
+      backYards: by,
     ));
   }
 
@@ -381,6 +356,7 @@ class _HomeScreenState extends State<HomeScreen> {
         rows: [for (final row in r.rows) ResultRow(row.label, row.yards, sub: row.sub)],
         fillFraction: r.fillFraction,
         overflow: r.overflow,
+        overflowText: r.overflowText,
         unverifiedInputs: r.unverified,
         onShare: () => _shareResult(r),
       );
@@ -406,25 +382,31 @@ class _HomeScreenState extends State<HomeScreen> {
     final reel = catalog.reel(l.reelId);
     setState(() {
       _reel = reel;
-      _mode = l.mode;
       if (l.mode == LoadoutMode.straight) {
+        _fill = _FillType.straight;
         _straightLine = l.segments.isNotEmpty ? catalog.line(l.segments.first.lineId) : null;
       } else {
+        double? topF;
+        double? backF;
         for (final seg in l.segments) {
           final line = catalog.line(seg.lineId);
           if (seg.role == SegmentRole.topshot) {
             _topshotLine = line;
-            if (seg.fixedYards != null) {
-              _fixed = FixedSegment.topshot;
-              _fixedYards.text = _formatFixed(seg.fixedYards!);
-            }
+            topF = seg.fixedYards;
           } else {
             _backingLine = line;
-            if (seg.fixedYards != null) {
-              _fixed = FixedSegment.backing;
-              _fixedYards.text = _formatFixed(seg.fixedYards!);
-            }
+            backF = seg.fixedYards;
           }
+        }
+        if (topF != null && backF != null) {
+          // Both lengths pinned → Backing/Topshot.
+          _fill = _FillType.both;
+          _topYards.text = _formatFixed(topF);
+          _backYards.text = _formatFixed(backF);
+        } else {
+          // Topshot pinned, backing auto-filled.
+          _fill = _FillType.topshot;
+          if (topF != null) _topYards.text = _formatFixed(topF);
         }
       }
     });
@@ -441,7 +423,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     // Validate the current setup is complete enough to save.
     final List<LineSegment> segments;
-    if (_mode == LoadoutMode.straight) {
+    if (_fill == _FillType.straight) {
       if (_straightLine == null) {
         _toast('Pick a line first.');
         return;
@@ -452,23 +434,30 @@ class _HomeScreenState extends State<HomeScreen> {
         _toast('Pick both lines first.');
         return;
       }
-      final entered = double.tryParse(_fixedYards.text.trim());
-      if (entered == null || entered <= 0) {
-        _toast('Enter a valid fixed length.');
+      final topFixed = _yards(_topYards);
+      if (topFixed == null) {
+        _toast('Enter a valid topshot length.');
         return;
       }
-      final fixedYd =
-          settings.units == UnitSystem.metric ? metersToYards(entered) : entered;
+      // Backing/Topshot pins both; Topshot leaves the backing to auto-fill.
+      double? backFixed;
+      if (_fill == _FillType.both) {
+        backFixed = _yards(_backYards);
+        if (backFixed == null) {
+          _toast('Enter a valid backing length.');
+          return;
+        }
+      }
       segments = [
         LineSegment(
           lineId: _topshotLine!.id,
           role: SegmentRole.topshot,
-          fixedYards: _fixed == FixedSegment.topshot ? fixedYd : null,
+          fixedYards: topFixed,
         ),
         LineSegment(
           lineId: _backingLine!.id,
           role: SegmentRole.backing,
-          fixedYards: _fixed == FixedSegment.backing ? fixedYd : null,
+          fixedYards: backFixed,
         ),
       ];
     }
@@ -479,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen> {
     await loadoutRepo.save(Loadout(
       name: name.trim(),
       reelId: reel.id,
-      mode: _mode,
+      mode: _fill == _FillType.straight ? LoadoutMode.straight : LoadoutMode.topshot,
       segments: segments,
     ));
     _toast('Saved "$name".');

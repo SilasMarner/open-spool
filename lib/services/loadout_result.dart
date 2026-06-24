@@ -22,12 +22,17 @@ class ComputedResult {
   final List<ResultLine> rows;
   final double? fillFraction;
   final bool overflow;
+
+  /// Custom message shown when [overflow] is true; null falls back to the
+  /// card's default ("the fixed line alone overfills").
+  final String? overflowText;
   final bool unverified;
   const ComputedResult({
     required this.reel,
     required this.rows,
     this.fillFraction,
     this.overflow = false,
+    this.overflowText,
     this.unverified = false,
   });
 }
@@ -79,6 +84,40 @@ ComputedResult computeMix({
   );
 }
 
+/// Topshot mix with BOTH lengths set explicitly. [topYards]/[backYards] are in
+/// engine units (yards). Flags an overflow when the two exceed the spool.
+ComputedResult computeMixBoth({
+  required Reel reel,
+  required Line topshot,
+  required Line backing,
+  required double topYards,
+  required double backYards,
+}) {
+  final r = mixBoth(
+    spoolK: reel.spoolK,
+    topDiameterIn: topshot.diameterIn,
+    topPackingFactor: topshot.packingFactor,
+    backDiameterIn: backing.diameterIn,
+    backPackingFactor: backing.packingFactor,
+    topYards: topYards,
+    backYards: backYards,
+  );
+  return ComputedResult(
+    reel: reel,
+    rows: [
+      ResultLine('Topshot — ${topshot.displayName}', topYards, sub: 'you set'),
+      ResultLine('Backing — ${backing.displayName}', backYards, sub: 'you set'),
+    ],
+    fillFraction: r.fillFraction,
+    overflow: r.overflow,
+    overflowText: r.overflow
+        ? 'These two lengths need ~${(r.fillFraction * 100).toStringAsFixed(0)}% '
+            'of the spool — more than it holds. Trim the topshot or backing.'
+        : null,
+    unverified: reel.unverified || topshot.unverified || backing.unverified,
+  );
+}
+
 /// Compute a saved loadout, resolving its ids against the catalog. Returns null
 /// if the reel or a referenced line can no longer be found.
 ComputedResult? computeLoadout(Loadout l) {
@@ -106,7 +145,16 @@ ComputedResult? computeLoadout(Loadout l) {
   final back = catalog.line(backSeg.lineId);
   if (top == null || back == null) return null;
 
-  // Whichever segment carries a fixedYards is the pinned one.
+  // Both segments pinned → both-lengths mode; otherwise the pinned one fills.
+  if (topSeg.fixedYards != null && backSeg.fixedYards != null) {
+    return computeMixBoth(
+      reel: reel,
+      topshot: top,
+      backing: back,
+      topYards: topSeg.fixedYards!,
+      backYards: backSeg.fixedYards!,
+    );
+  }
   final fixed = topSeg.fixedYards != null
       ? FixedSegment.topshot
       : FixedSegment.backing;
@@ -132,7 +180,7 @@ String shareSummary(ComputedResult r, UnitSystem u, {String? title}) {
     b.writeln('${row.label}: ${u.length(row.yards)}$sub');
   }
   if (r.overflow) {
-    b.writeln('Note: the fixed line alone overfills this spool.');
+    b.writeln('Note: ${r.overflowText ?? 'the fixed line alone overfills this spool.'}');
   } else if (r.fillFraction != null) {
     b.writeln('Spool fill: ~${(r.fillFraction! * 100).toStringAsFixed(0)}%');
   }
