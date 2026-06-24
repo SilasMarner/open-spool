@@ -83,14 +83,27 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 96),
         children: [
+          const _StepHeader(1, 'Pick your reel'),
           _reelSelector(),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
+          const _StepHeader(2, 'How are you filling it?'),
           _modeToggle(),
           const SizedBox(height: 8),
-          if (_mode == LoadoutMode.straight) _straightSection() else _topshotSection(),
-          const SizedBox(height: 12),
+          _modeHelp(),
+          const SizedBox(height: 16),
+          _StepHeader(
+            3,
+            _mode == LoadoutMode.straight
+                ? 'Pick your line'
+                : 'Pick lines & set an amount',
+          ),
+          if (_mode == LoadoutMode.straight)
+            _straightSection()
+          else
+            _topshotSection(),
+          const SizedBox(height: 16),
           _result(),
         ],
       ),
@@ -145,10 +158,24 @@ class _HomeScreenState extends State<HomeScreen> {
         onSelectionChanged: (s) => setState(() => _mode = s.first),
       );
 
+  Widget _modeHelp() {
+    final msg = _mode == LoadoutMode.straight
+        ? 'One line fills the whole spool.'
+        : 'A topshot (leader) over backing. Set how much of one line you '
+            'want — the other auto-fills the rest of the spool.';
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: Text(
+        msg,
+        style: const TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.35),
+      ),
+    );
+  }
+
   // ---- Straight ------------------------------------------------------------
 
   Widget _straightSection() => _lineTile(
-        label: 'Line',
+        label: 'Your line',
         line: _straightLine,
         onPick: (l) => setState(() => _straightLine = l),
       );
@@ -156,32 +183,49 @@ class _HomeScreenState extends State<HomeScreen> {
   // ---- Topshot -------------------------------------------------------------
 
   Widget _topshotSection() {
+    final unit = settings.units.lengthUnit;
     return Column(
       children: [
         _lineTile(
-          label: 'Topshot (top)',
+          label: 'Topshot — line on top',
           line: _topshotLine,
           title: 'Select topshot',
           onPick: (l) => setState(() => _topshotLine = l),
         ),
         _lineTile(
-          label: 'Backing (bottom)',
+          label: 'Backing — fills underneath',
           line: _backingLine,
           title: 'Select backing',
           onPick: (l) => setState(() => _backingLine = l),
         ),
         Card(
           child: Padding(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Fix the length of:'),
-                const SizedBox(height: 8),
+                const Text(
+                  'Which length do you want to set?',
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+                const SizedBox(height: 4),
+                const Text(
+                  'Enter one — we auto-fill the other to fill the spool.',
+                  style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                ),
+                const SizedBox(height: 10),
                 SegmentedButton<FixedSegment>(
                   segments: const [
-                    ButtonSegment(value: FixedSegment.topshot, label: Text('Topshot')),
-                    ButtonSegment(value: FixedSegment.backing, label: Text('Backing')),
+                    ButtonSegment(
+                      value: FixedSegment.topshot,
+                      label: Text('Topshot'),
+                      icon: Icon(Icons.vertical_align_top),
+                    ),
+                    ButtonSegment(
+                      value: FixedSegment.backing,
+                      label: Text('Backing'),
+                      icon: Icon(Icons.vertical_align_bottom),
+                    ),
                   ],
                   selected: {_fixed},
                   onSelectionChanged: (s) => setState(() => _fixed = s.first),
@@ -192,16 +236,82 @@ class _HomeScreenState extends State<HomeScreen> {
                   keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText:
-                        'Fixed ${_fixed == FixedSegment.topshot ? "topshot" : "backing"} length (${settings.units.lengthUnit})',
+                        '${_fixed == FixedSegment.topshot ? "Topshot" : "Backing"} length',
+                    suffixText: unit,
                     border: const OutlineInputBorder(),
                   ),
                   onChanged: (_) => setState(() {}),
                 ),
+                const SizedBox(height: 10),
+                _autoPreview(),
               ],
             ),
           ),
         ),
       ],
+    );
+  }
+
+  /// Live feedback under the amount field: shows the auto-filled length of the
+  /// other segment so the trade-off is obvious as you type.
+  Widget _autoPreview() {
+    final theme = Theme.of(context);
+    final autoLabel = _fixed == FixedSegment.topshot ? 'Backing' : 'Topshot';
+    final r = _mixResult();
+    if (r == null) {
+      return Text(
+        'Enter an amount above — the $autoLabel auto-fills the spool.',
+        style: const TextStyle(color: Colors.white54, fontSize: 12.5),
+      );
+    }
+    if (r.overflow) {
+      return _previewRow(
+        Icons.error_outline,
+        theme.colorScheme.error,
+        'That ${_fixed == FixedSegment.topshot ? "topshot" : "backing"} alone '
+            'overfills the spool — reduce it.',
+      );
+    }
+    final autoYards =
+        _fixed == FixedSegment.topshot ? r.rows[1].yards : r.rows[0].yards;
+    return _previewRow(
+      Icons.subdirectory_arrow_right,
+      theme.colorScheme.primary,
+      '$autoLabel auto-fills to ~${settings.units.length(autoYards)} '
+          'to top off the spool.',
+    );
+  }
+
+  Widget _previewRow(IconData icon, Color color, String text) => Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, size: 16, color: color),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(color: color, fontSize: 12.5, height: 1.3),
+            ),
+          ),
+        ],
+      );
+
+  /// Current topshot/backing mix from live state, or null if incomplete.
+  ComputedResult? _mixResult() {
+    final reel = _reel;
+    final top = _topshotLine;
+    final back = _backingLine;
+    if (reel == null || top == null || back == null) return null;
+    final entered = double.tryParse(_fixedYards.text.trim());
+    if (entered == null || entered <= 0) return null;
+    final fixedYd =
+        settings.units == UnitSystem.metric ? metersToYards(entered) : entered;
+    return computeMix(
+      reel: reel,
+      topshot: top,
+      backing: back,
+      fixed: _fixed,
+      fixedYards: fixedYd,
     );
   }
 
@@ -217,7 +327,7 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: const Icon(Icons.timeline),
         title: Text(line == null ? label : '${line.displayName} · ${u.test(line.lbTest)}'),
         subtitle: line == null
-            ? Text('Tap to choose · $label')
+            ? const Text('Tap to choose')
             : Text('${line.type.shortLabel} · ${u.diameter(line.diameterIn)}'),
         trailing: const Icon(Icons.chevron_right),
         onTap: () async {
@@ -400,6 +510,51 @@ class _HomeScreenState extends State<HomeScreen> {
   void _toast(String msg) {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+  }
+}
+
+/// A numbered step heading (circular badge + bold title) for the calculator's
+/// stepped flow.
+class _StepHeader extends StatelessWidget {
+  final int number;
+  final String title;
+  const _StepHeader(this.number, this.title);
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.only(left: 4, top: 4, bottom: 8),
+      child: Row(
+        children: [
+          Container(
+            width: 24,
+            height: 24,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: theme.colorScheme.primary,
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              '$number',
+              style: TextStyle(
+                color: theme.colorScheme.onPrimary,
+                fontWeight: FontWeight.bold,
+                fontSize: 13,
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              title,
+              style: theme.textTheme.titleMedium
+                  ?.copyWith(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
