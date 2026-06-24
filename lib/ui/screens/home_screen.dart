@@ -160,7 +160,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         selected: {_fill},
-        onSelectionChanged: (s) => setState(() => _fill = s.first),
+        onSelectionChanged: (s) {
+          setState(() => _fill = s.first);
+          // Entering Backing/Topshot: top off the backing from the topshot so
+          // both fields start showing a full-spool pair.
+          if (_fill == _FillType.both) _syncMix(FixedSegment.topshot);
+        },
       );
 
   Widget _modeHelp() {
@@ -172,8 +177,8 @@ class _HomeScreenState extends State<HomeScreen> {
         msg = 'Set your topshot length — the backing auto-fills the rest of '
             'the spool.';
       case _FillType.both:
-        msg = 'Set both the backing and topshot lengths — the result warns if '
-            'they exceed the spool.';
+        msg = 'Set either length — the other auto-fills so the two together '
+            'fill the spool.';
     }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -214,13 +219,13 @@ class _HomeScreenState extends State<HomeScreen> {
           label: 'Topshot — line on top',
           line: _topshotLine,
           title: 'Select topshot',
-          onPick: (l) => setState(() => _topshotLine = l),
+          onPick: (l) => _pickMixLine(topshot: true, line: l),
         ),
         _lineTile(
           label: 'Backing — fills underneath',
           line: _backingLine,
           title: 'Select backing',
-          onPick: (l) => setState(() => _backingLine = l),
+          onPick: (l) => _pickMixLine(topshot: false, line: l),
         ),
         Card(
           child: Padding(
@@ -232,6 +237,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   controller: _topYards,
                   label: 'Topshot length',
                   unit: unit,
+                  onChanged: both
+                      ? (_) {
+                          _syncMix(FixedSegment.topshot);
+                          setState(() {});
+                        }
+                      : null,
                 ),
                 if (both) ...[
                   const SizedBox(height: 12),
@@ -239,6 +250,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     controller: _backYards,
                     label: 'Backing length',
                     unit: unit,
+                    onChanged: (_) {
+                      _syncMix(FixedSegment.backing);
+                      setState(() {});
+                    },
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8, left: 2),
+                    child: Text(
+                      'Edit either length — the other auto-adjusts to fill the '
+                      'rest of the spool.',
+                      style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                    ),
                   ),
                 ] else
                   const Padding(
@@ -260,6 +283,7 @@ class _HomeScreenState extends State<HomeScreen> {
     required TextEditingController controller,
     required String label,
     required String unit,
+    ValueChanged<String>? onChanged,
   }) =>
       TextField(
         controller: controller,
@@ -269,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
           suffixText: unit,
           border: const OutlineInputBorder(),
         ),
-        onChanged: (_) => setState(() {}),
+        onChanged: onChanged ?? (_) => setState(() {}),
       );
 
   /// Parse a length field in the active unit → yards, or null if blank/invalid.
@@ -277,6 +301,42 @@ class _HomeScreenState extends State<HomeScreen> {
     final v = double.tryParse(c.text.trim());
     if (v == null || v <= 0) return null;
     return settings.units == UnitSystem.metric ? metersToYards(v) : v;
+  }
+
+  /// Backing/Topshot mode: after the [edited] segment changes, recompute the
+  /// other segment to whatever fills the rest of the spool (diameter² model) and
+  /// write it back into its field. Setting a controller's text programmatically
+  /// doesn't fire its onChanged, so this can't loop.
+  void _syncMix(FixedSegment edited) {
+    final reel = _reel;
+    final top = _topshotLine;
+    final back = _backingLine;
+    if (reel == null || top == null || back == null) return;
+    final src = edited == FixedSegment.topshot ? _topYards : _backYards;
+    final fixedYd = _yards(src);
+    if (fixedYd == null) return;
+    final r = computeMix(
+      reel: reel,
+      topshot: top,
+      backing: back,
+      fixed: edited,
+      fixedYards: fixedYd,
+    );
+    // rows[0] = topshot, rows[1] = backing.
+    final otherYards =
+        edited == FixedSegment.topshot ? r.rows[1].yards : r.rows[0].yards;
+    final dst = edited == FixedSegment.topshot ? _backYards : _topYards;
+    dst.text = _formatFixed(otherYards);
+  }
+
+  void _pickMixLine({required bool topshot, required Line line}) {
+    if (topshot) {
+      _topshotLine = line;
+    } else {
+      _backingLine = line;
+    }
+    if (_fill == _FillType.both) _syncMix(FixedSegment.topshot);
+    setState(() {});
   }
 
   Widget _lineTile({
@@ -337,11 +397,13 @@ class _HomeScreenState extends State<HomeScreen> {
       ));
     }
 
-    // Backing/Topshot: both lengths set explicitly.
-    final ty = _yards(_topYards);
-    final by = _yards(_backYards);
-    if (ty == null || by == null) {
-      return const _Hint('Enter both a topshot and a backing length.');
+    // Backing/Topshot: editing one length auto-fills the other (a length of 0
+    // means the other segment alone overflows the spool — keep it so the card
+    // can show the overflow warning rather than hiding behind a hint).
+    final ty = _yards(_topYards) ?? 0;
+    final by = _yards(_backYards) ?? 0;
+    if (ty <= 0 && by <= 0) {
+      return const _Hint('Enter a topshot or backing length.');
     }
     return _card(computeMixBoth(
       reel: reel,

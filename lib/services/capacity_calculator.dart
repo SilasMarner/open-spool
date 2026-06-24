@@ -131,10 +131,13 @@ MixResult mixBoth({
   final topVol = topYards * volPerYard(topDiameterIn, packingFactor: topPackingFactor);
   final backVol = backYards * volPerYard(backDiameterIn, packingFactor: backPackingFactor);
   final fill = (topVol + backVol) / spoolK;
+  // Allow a 1% slop so a whole-yard rounding on an auto-filled segment doesn't
+  // tip a "just full" spool into a false overflow warning. A real overflow (one
+  // length alone exceeding the spool) clears this easily.
   return MixResult(
     topshotYards: topYards,
     backingYards: backYards,
-    overflow: fill > 1.0,
+    overflow: fill > 1.01,
     fillFraction: fill,
   );
 }

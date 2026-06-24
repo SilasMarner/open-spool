@@ -147,9 +147,9 @@ class ManualScreen extends StatelessWidget {
         '• Topshot — set your topshot length and the backing auto-fills the '
             'rest of the spool. Best for a leader/topshot over backing when you '
             'only care about the topshot.',
-        '• Backing/Topshot — set both the topshot and the backing length '
-            'yourself. The result shows how full the spool is and warns if the '
-            'two together exceed its capacity.',
+        '• Backing/Topshot — set either length and the other auto-adjusts so '
+            'the two together fill the spool. Type the backing you have on hand '
+            'and it tells you the topshot that tops it off (or vice versa).',
         'If a length is larger than the spool can hold, the result card flags '
             'an overflow so you can shorten it.',
       ],
