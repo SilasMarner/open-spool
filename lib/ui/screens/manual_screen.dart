@@ -195,6 +195,21 @@ class ManualScreen extends StatelessWidget {
             'spool up and adjust your topshot length if needed.',
       ],
     ),
+    _Section(
+      Icons.alternate_email,
+      'Contact & contribute',
+      [
+        'This catalog is a work in progress. If you spot a wrong number, know a '
+            'line’s real published diameter, or want a reel or line added, send '
+            'it over and it’ll go into a future update.',
+        '• Email the author: open-reel.single766@passmail.com',
+        '• Especially helpful: confirmed line diameters for entries tagged '
+            'VERIFY — the author is collecting these from the manufacturers.',
+        '• Questions about the math or a result are welcome too.',
+        'Settings has a “Contact the author” tile that copies the address for '
+            'you.',
+      ],
+    ),
   ];
 }
 

@@ -1,0 +1,107 @@
+LINE DIAMETER REQUEST EMAILS
+(copy/paste ready — see also docs/line-verification.md)
+
+
+====================================================================
+1. TIGHT LINE BRAID
+====================================================================
+To:  customersupport@tightlinebraid.com
+Cc:  jnugent@tightlinebraid.com   (optional — owner)
+Subject: Line diameter spec request — 12 Strand Hollow Core
+
+Hi,
+
+I'm building a line-capacity tool and would like to list accurate specs for
+your 12 Strand Hollow Core braid. Could you send the actual line diameter
+(in inches or mm) for each pound test:
+
+30, 50, 65, 80, 100, 130, 150, and 200 lb.
+
+I'm after the real line diameter, not an equivalent-mono or leader-fit
+rating. Thanks very much for the help.
+
+— Matt
+
+
+====================================================================
+2. BEYOND BRAID
+====================================================================
+To:  info@beyondbraid.com
+Subject: Line diameter spec request — 8X braid (80 & 100 lb)
+
+Hi,
+
+I'm building a line-capacity tool and have your published 8X diameter chart
+for 15–60 lb, but it stops there. Could you send the actual line diameter
+(in inches or mm) for the two heavier sizes:
+
+80 lb and 100 lb.
+
+I'm after the real line diameter, not an equivalent-mono rating. Thanks very
+much.
+
+— Matt
+
+
+====================================================================
+3. POWERPRO (SHIMANO)  — no public email; use web form or phone
+====================================================================
+Web form: https://fishshop.shimano.com/pages/contact-us
+Phone:    1-877-577-0600  (Mon–Fri 5:30a–5:00p PT)
+Subject:  Line diameter spec request — PowerPro Hollow-Ace
+
+Hi,
+
+I'm building a line-capacity tool and need the actual line diameter for
+PowerPro Hollow-Ace hollow-core braid. Could you send the diameter (in inches
+or mm) for each pound test:
+
+40, 60, 80, 100, 130, and 200 lb.
+
+To be clear, I'm after the real line diameter, not the equivalent-mono or
+leader-fit rating that Hollow-Ace is usually marketed by. Thanks very much.
+
+— Matt
+
+
+====================================================================
+4. TIGHT LINE BRAID — REPLY (they pushed back: hollow core changes
+   shape under load, so a single "stated diameter" is a guesstimate)
+====================================================================
+To:  customersupport@tightlinebraid.com
+Subject: Re: Line diameter spec request — 12 Strand Hollow Core
+
+Hi,
+
+That's a fair point — and honestly refreshing to hear from a manufacturer.
+You're right that a single "stated diameter" on hollow core is mostly a
+guesstimate.
+
+For what I'm building, I don't actually need a true round-cross-section
+diameter. The tool only estimates how many yards of a line will fit on a
+given reel, so all I really need is a consistent, repeatable measure of how
+much spool space the line takes up per length. A few ways that would work,
+in order of what's easiest for you:
+
+1. A nominal diameter measured the way you'd spool it — relaxed / light
+   spooling tension, not under fighting load. To your question: spooling
+   (limp) tension is the state that matters for capacity, since that's how
+   the line actually packs on the reel — not 50% or full load. Even labeled
+   "approximate, as spooled," it's useful, because my app treats every
+   number as an estimate and tells the angler to confirm on the reel.
+
+2. If diameter feels too squishy to commit to, a linear density would be
+   even better and is fully repeatable — grams per 100 m, yards per pound,
+   or the denier of the braid. That's a clean, quantifiable number and it
+   maps directly to how much fills a spool.
+
+3. Or, if you have any real-world capacity data ("X yards of 65 lb fills
+   a [reel model]"), even one data point per line lets me calibrate the
+   whole size range.
+
+Any one of those three gets me there. I'd genuinely rather publish your
+honest "approximate, at spooling tension" figure than the guesstimates
+everyone else lists.
+
+Thanks for taking the time —
+Matt

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../app_state.dart';
 import '../../services/unit_converter.dart';
@@ -46,6 +47,26 @@ class SettingsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (_) => const ManualScreen()),
             ),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.alternate_email),
+            title: const Text('Contact the author'),
+            subtitle: const Text(
+              'open-reel.single766@passmail.com\n'
+              'Tap to copy — line corrections, verified diameters, '
+              'reel/line requests, or questions',
+            ),
+            isThreeLine: true,
+            trailing: const Icon(Icons.copy),
+            onTap: () {
+              Clipboard.setData(
+                const ClipboardData(text: 'open-reel.single766@passmail.com'),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Email address copied')),
+              );
+            },
           ),
           const Divider(),
           const Padding(
