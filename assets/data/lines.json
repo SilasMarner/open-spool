@@ -191,6 +191,36 @@
     { "id": "ande-premium-60",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 60,  "diameter_in": 0.032, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
     { "id": "ande-premium-80",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 80,  "diameter_in": 0.036, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
     { "id": "ande-premium-100", "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 100, "diameter_in": 0.043, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-130", "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 130, "diameter_in": 0.052, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" }
+    { "id": "ande-premium-130", "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 130, "diameter_in": 0.052, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
+
+    { "id": "jinkai-premium-25",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 25,  "diameter_in": 0.0173, "source": "Jinkai published spec (0.44 mm)" },
+    { "id": "jinkai-premium-30",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 30,  "diameter_in": 0.0185, "source": "Jinkai published spec (0.47 mm)" },
+    { "id": "jinkai-premium-40",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 40,  "diameter_in": 0.0224, "source": "Jinkai published spec (0.57 mm)" },
+    { "id": "jinkai-premium-50",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 50,  "diameter_in": 0.0244, "source": "Jinkai published spec (0.62 mm)" },
+    { "id": "jinkai-premium-60",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 60,  "diameter_in": 0.0291, "source": "Jinkai published spec (0.74 mm)" },
+    { "id": "jinkai-premium-80",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 80,  "diameter_in": 0.0319, "source": "Jinkai published spec (0.81 mm)" },
+    { "id": "jinkai-premium-100", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 100, "diameter_in": 0.0354, "source": "Jinkai published spec (0.90 mm)" },
+    { "id": "jinkai-premium-130", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 130, "diameter_in": 0.0409, "source": "Jinkai published spec (1.04 mm)" },
+    { "id": "jinkai-premium-150", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 150, "diameter_in": 0.0461, "source": "Jinkai published spec (1.17 mm)" },
+    { "id": "jinkai-premium-200", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 200, "diameter_in": 0.0524, "source": "Jinkai published spec (1.33 mm)" },
+    { "id": "jinkai-premium-220", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 220, "diameter_in": 0.0543, "source": "Jinkai published spec (1.38 mm)" },
+    { "id": "jinkai-premium-250", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 250, "diameter_in": 0.0579, "source": "Jinkai published spec (1.47 mm)" },
+    { "id": "jinkai-premium-300", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 300, "diameter_in": 0.0614, "source": "Jinkai published spec (1.56 mm)" },
+    { "id": "jinkai-premium-400", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 400, "diameter_in": 0.0713, "source": "Jinkai published spec (1.81 mm)" },
+    { "id": "jinkai-premium-500", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 500, "diameter_in": 0.0787, "source": "Jinkai published spec (2.00 mm)" },
+    { "id": "jinkai-premium-600", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 600, "diameter_in": 0.0886, "source": "Jinkai published spec (2.25 mm)" },
+
+    { "id": "softsteel-ultra-40",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 40,  "diameter_in": 0.0217, "source": "Soft Steel published spec (0.55 mm)" },
+    { "id": "softsteel-ultra-50",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 50,  "diameter_in": 0.0236, "source": "Soft Steel published spec (0.60 mm)" },
+    { "id": "softsteel-ultra-60",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 60,  "diameter_in": 0.0256, "source": "Soft Steel published spec (0.65 mm)" },
+    { "id": "softsteel-ultra-80",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 80,  "diameter_in": 0.0295, "source": "Soft Steel published spec (0.75 mm)" },
+    { "id": "softsteel-ultra-100", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 100, "diameter_in": 0.0335, "source": "Soft Steel published spec (0.85 mm)" },
+    { "id": "softsteel-ultra-130", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 130, "diameter_in": 0.0374, "source": "Soft Steel published spec (0.95 mm)" },
+    { "id": "softsteel-ultra-150", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 150, "diameter_in": 0.0394, "source": "Soft Steel published spec (1.00 mm)" },
+    { "id": "softsteel-ultra-200", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 200, "diameter_in": 0.0472, "source": "Soft Steel published spec (1.20 mm)" },
+    { "id": "softsteel-ultra-250", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 250, "diameter_in": 0.0512, "source": "Soft Steel published spec (1.30 mm)" },
+    { "id": "softsteel-ultra-300", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 300, "diameter_in": 0.0551, "source": "Soft Steel published spec (1.40 mm)" },
+    { "id": "softsteel-ultra-400", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 400, "diameter_in": 0.0709, "source": "Soft Steel published spec (1.80 mm)" },
+    { "id": "softsteel-ultra-600", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 600, "diameter_in": 0.0984, "source": "Soft Steel published spec (2.50 mm)" }
   ]
 }
