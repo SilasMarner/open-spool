@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_state.dart';
 import '../../services/unit_converter.dart';
@@ -50,23 +50,23 @@ class SettingsScreen extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.alternate_email),
-            title: const Text('Contact the author'),
+            leading: const Icon(Icons.email_outlined),
+            title: const Text('Email the author'),
             subtitle: const Text(
               'open-reel.single766@passmail.com\n'
-              'Tap to copy — line corrections, verified diameters, '
-              'reel/line requests, or questions',
+              'Line corrections, verified diameters, reel/line requests, '
+              'or questions',
             ),
             isThreeLine: true,
-            trailing: const Icon(Icons.copy),
-            onTap: () {
-              Clipboard.setData(
-                const ClipboardData(text: 'open-reel.single766@passmail.com'),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Email address copied')),
-              );
-            },
+            trailing: const Icon(Icons.open_in_new),
+            onTap: () => launchUrl(
+              Uri(
+                scheme: 'mailto',
+                path: 'open-reel.single766@passmail.com',
+                query: 'subject=OpenSpool feedback',
+              ),
+              mode: LaunchMode.externalApplication,
+            ),
           ),
           const Divider(),
           const Padding(
