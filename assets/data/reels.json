@@ -36,6 +36,41 @@
     { "id": "daiwa-saltiga-8000",  "brand": "Daiwa", "model": "Saltiga 8000",  "type": "spinning", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 330, "source": "Daiwa published capacity (40 lb J-Braid / 330 yd)" },
     { "id": "daiwa-saltiga-14000", "brand": "Daiwa", "model": "Saltiga 14000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 330, "source": "Daiwa published capacity (65 lb J-Braid / 330 yd)" },
     { "id": "daiwa-saltiga-18000", "brand": "Daiwa", "model": "Saltiga 18000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 440, "source": "Daiwa published capacity (65 lb J-Braid / 440 yd)" },
-    { "id": "daiwa-saltiga-20000", "brand": "Daiwa", "model": "Saltiga 20000", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 440, "source": "Daiwa published capacity (80 lb J-Braid / 440 yd)" }
+    { "id": "daiwa-saltiga-20000", "brand": "Daiwa", "model": "Saltiga 20000", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 440, "source": "Daiwa published capacity (80 lb J-Braid / 440 yd)" },
+
+    { "id": "avet-trx-130",  "brand": "Avet", "model": "T-RX 130/2 Quad", "type": "conventional", "anchor_label": "200 lb braid", "anchor_diameter_in": 0.03,  "anchor_yards": 2900, "source": "Avet published capacity (200 lb braid / 2900 yd)" },
+
+    { "id": "shimano-tiagra-12a",     "brand": "Shimano", "model": "Tiagra 12A",     "type": "conventional", "anchor_label": "20 lb mono", "anchor_diameter_in": 0.018, "anchor_yards": 460,  "source": "Shimano published capacity (20 lb mono / 460 yd)" },
+    { "id": "shimano-tiagra-16a",     "brand": "Shimano", "model": "Tiagra 16A",     "type": "conventional", "anchor_label": "20 lb mono", "anchor_diameter_in": 0.018, "anchor_yards": 670,  "source": "Shimano published capacity (20 lb mono / 670 yd)" },
+    { "id": "shimano-tiagra-20a",     "brand": "Shimano", "model": "Tiagra 20A",     "type": "conventional", "anchor_label": "20 lb mono", "anchor_diameter_in": 0.018, "anchor_yards": 690,  "source": "Shimano published capacity (20 lb mono / 690 yd)" },
+    { "id": "shimano-tiagra-30wlrsa", "brand": "Shimano", "model": "Tiagra 30WLRSA", "type": "conventional", "anchor_label": "30 lb mono", "anchor_diameter_in": 0.022, "anchor_yards": 935,  "source": "Shimano published capacity (30 lb mono / 935 yd)" },
+    { "id": "shimano-tiagra-50wlrsa", "brand": "Shimano", "model": "Tiagra 50WLRSA", "type": "conventional", "anchor_label": "80 lb mono", "anchor_diameter_in": 0.035, "anchor_yards": 550,  "source": "Shimano published capacity (80 lb mono / 550 yd)" },
+    { "id": "shimano-tiagra-80wa",    "brand": "Shimano", "model": "Tiagra 80WA",    "type": "conventional", "anchor_label": "80 lb mono", "anchor_diameter_in": 0.035, "anchor_yards": 950,  "source": "Shimano published capacity (80 lb mono / 950 yd)" },
+    { "id": "shimano-tiagra-130a",    "brand": "Shimano", "model": "Tiagra 130A",    "type": "conventional", "anchor_label": "130 lb mono", "anchor_diameter_in": 0.044, "anchor_yards": 1000, "source": "Shimano published capacity (130 lb mono / 1000 yd)" },
+
+    { "id": "okuma-makaira-10ii",  "brand": "Okuma", "model": "Makaira MK-10II",  "type": "conventional", "anchor_label": "20 lb mono",  "anchor_diameter_in": 0.018, "anchor_yards": 380,  "source": "Okuma published capacity (20 lb mono / 380 yd)" },
+    { "id": "okuma-makaira-15ii",  "brand": "Okuma", "model": "Makaira MK-15II",  "type": "conventional", "anchor_label": "20 lb mono",  "anchor_diameter_in": 0.018, "anchor_yards": 575,  "source": "Okuma published capacity (20 lb mono / 575 yd)" },
+    { "id": "okuma-makaira-16ii",  "brand": "Okuma", "model": "Makaira MK-16II",  "type": "conventional", "anchor_label": "20 lb mono",  "anchor_diameter_in": 0.018, "anchor_yards": 870,  "source": "Okuma published capacity (20 lb mono / 870 yd)" },
+    { "id": "okuma-makaira-20ii",  "brand": "Okuma", "model": "Makaira MK-20II",  "type": "conventional", "anchor_label": "30 lb mono",  "anchor_diameter_in": 0.022, "anchor_yards": 660,  "source": "Okuma published capacity (30 lb mono / 660 yd)" },
+    { "id": "okuma-makaira-30ii",  "brand": "Okuma", "model": "Makaira MK-30II",  "type": "conventional", "anchor_label": "40 lb mono",  "anchor_diameter_in": 0.024, "anchor_yards": 700,  "source": "Okuma published capacity (40 lb mono / 700 yd)" },
+    { "id": "okuma-makaira-50ii",  "brand": "Okuma", "model": "Makaira MK-50II",  "type": "conventional", "anchor_label": "50 lb mono",  "anchor_diameter_in": 0.028, "anchor_yards": 650,  "source": "Okuma published capacity (50 lb mono / 650 yd)" },
+    { "id": "okuma-makaira-50wii", "brand": "Okuma", "model": "Makaira MK-50WII", "type": "conventional", "anchor_label": "50 lb mono",  "anchor_diameter_in": 0.028, "anchor_yards": 900,  "source": "Okuma published capacity (50 lb mono / 900 yd)" },
+    { "id": "okuma-makaira-80ii",  "brand": "Okuma", "model": "Makaira MK-80II",  "type": "conventional", "anchor_label": "80 lb mono",  "anchor_diameter_in": 0.035, "anchor_yards": 570,  "source": "Okuma published capacity (80 lb mono / 570 yd)" },
+    { "id": "okuma-makaira-80wii", "brand": "Okuma", "model": "Makaira MK-80WII", "type": "conventional", "anchor_label": "80 lb mono",  "anchor_diameter_in": 0.035, "anchor_yards": 1000, "source": "Okuma published capacity (80 lb mono / 1000 yd)" },
+    { "id": "okuma-makaira-130ii", "brand": "Okuma", "model": "Makaira MK-130II", "type": "conventional", "anchor_label": "130 lb mono", "anchor_diameter_in": 0.044, "anchor_yards": 1000, "source": "Okuma published capacity (130 lb mono / 1000 yd)" },
+
+    { "id": "shimano-tranx-300", "brand": "Shimano", "model": "Tranx 300", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 190, "source": "Shimano published capacity (50 lb PowerPro / 190 yd)" },
+    { "id": "shimano-tranx-400", "brand": "Shimano", "model": "Tranx 400", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 275, "source": "Shimano published capacity (50 lb PowerPro / 275 yd)" },
+
+    { "id": "penn-squall2-30ld", "brand": "Penn", "model": "Squall II 30 Lever Drag", "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 635, "source": "Penn published capacity (50 lb braid / 635 yd)" },
+
+    { "id": "penn-fathom-lp300", "brand": "Penn", "model": "Fathom Low Profile 300", "type": "conventional", "anchor_label": "20 lb braid", "anchor_diameter_in": 0.009, "anchor_yards": 310, "source": "Penn published capacity (20 lb braid / 310 yd)" },
+    { "id": "penn-fathom-lp400", "brand": "Penn", "model": "Fathom Low Profile 400", "type": "conventional", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 235, "source": "Penn published capacity (40 lb braid / 235 yd)" },
+
+    { "id": "daiwa-lexa-300", "brand": "Daiwa", "model": "Lexa 300", "type": "conventional", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 240, "source": "Daiwa published capacity (40 lb braid / 240 yd)" },
+    { "id": "daiwa-lexa-400", "brand": "Daiwa", "model": "Lexa 400", "type": "conventional", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 330, "source": "VERIFY — Lexa 400 ~40 lb braid / 330 yd; Daiwa lists metric PE only" },
+
+    { "id": "accurate-bv-600", "brand": "Accurate", "model": "Boss Valiant BV-600", "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 300, "source": "Accurate published capacity (65 lb braid / 300 yd)" },
+    { "id": "accurate-bv-500", "brand": "Accurate", "model": "Boss Valiant BV-500", "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 230, "source": "VERIFY — BV-500 ~65 lb braid / 230 yd; confirm on Accurate chart" }
   ]
 }
