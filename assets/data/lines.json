@@ -1,131 +1,81 @@
 {
-  "_note": "Diameter is the source of truth for capacity math. Entries tagged 'VERIFY' in `source` are approximate and must be confirmed against current manufacturer spec sheets before trusting the numbers. Braid diameters vary a lot by brand; hollow-core runs thicker than solid-core for the same test.",
+  "_note": "Diameter is the source of truth for capacity math. Diameters below are manufacturer-published spec values (inches). Braid diameters vary a lot by brand; hollow-core runs thicker than solid-core for the same test. Entries whose `source` contains 'VERIFY' are approximate and should be confirmed before trusting the numbers.",
   "lines": [
-    {
-      "id": "ande-mono-30",
-      "brand": "Ande",
-      "product": "Premium Mono",
-      "type": "mono",
-      "lb_test": 30,
-      "diameter_in": 0.024,
-      "source": "VERIFY — approx mono dia for 30 lb"
-    },
-    {
-      "id": "ande-mono-50",
-      "brand": "Ande",
-      "product": "Premium Mono",
-      "type": "mono",
-      "lb_test": 50,
-      "diameter_in": 0.029,
-      "source": "VERIFY — approx mono dia for 50 lb"
-    },
-    {
-      "id": "ande-mono-80",
-      "brand": "Ande",
-      "product": "Premium Mono",
-      "type": "mono",
-      "lb_test": 80,
-      "diameter_in": 0.037,
-      "source": "VERIFY — approx mono dia for 80 lb"
-    },
-    {
-      "id": "ande-mono-100",
-      "brand": "Ande",
-      "product": "Premium Mono",
-      "type": "mono",
-      "lb_test": 100,
-      "diameter_in": 0.043,
-      "source": "VERIFY — approx mono dia for 100 lb"
-    },
-    {
-      "id": "ande-mono-130",
-      "brand": "Ande",
-      "product": "Premium Mono",
-      "type": "mono",
-      "lb_test": 130,
-      "diameter_in": 0.049,
-      "source": "VERIFY — approx mono dia for 130 lb"
-    },
-    {
-      "id": "powerpro-solid-50",
-      "brand": "PowerPro",
-      "product": "Spectra (solid)",
-      "type": "braid_solid",
-      "lb_test": 50,
-      "diameter_in": 0.014,
-      "source": "VERIFY — approx solid braid dia for 50 lb"
-    },
-    {
-      "id": "powerpro-solid-65",
-      "brand": "PowerPro",
-      "product": "Spectra (solid)",
-      "type": "braid_solid",
-      "lb_test": 65,
-      "diameter_in": 0.016,
-      "source": "VERIFY — approx solid braid dia for 65 lb"
-    },
-    {
-      "id": "powerpro-solid-80",
-      "brand": "PowerPro",
-      "product": "Spectra (solid)",
-      "type": "braid_solid",
-      "lb_test": 80,
-      "diameter_in": 0.019,
-      "source": "VERIFY — approx solid braid dia for 80 lb"
-    },
-    {
-      "id": "powerpro-solid-100",
-      "brand": "PowerPro",
-      "product": "Spectra (solid)",
-      "type": "braid_solid",
-      "lb_test": 100,
-      "diameter_in": 0.021,
-      "source": "VERIFY — approx solid braid dia for 100 lb"
-    },
-    {
-      "id": "powerpro-solid-130",
-      "brand": "PowerPro",
-      "product": "Spectra (solid)",
-      "type": "braid_solid",
-      "lb_test": 130,
-      "diameter_in": 0.024,
-      "source": "VERIFY — approx solid braid dia for 130 lb"
-    },
-    {
-      "id": "tightline-hollow-80",
-      "brand": "Tightline (TUF-Line)",
-      "product": "Hollow Core",
-      "type": "braid_hollow",
-      "lb_test": 80,
-      "diameter_in": 0.024,
-      "source": "VERIFY — approx hollow-core dia for 80 lb"
-    },
-    {
-      "id": "tightline-hollow-100",
-      "brand": "Tightline (TUF-Line)",
-      "product": "Hollow Core",
-      "type": "braid_hollow",
-      "lb_test": 100,
-      "diameter_in": 0.027,
-      "source": "VERIFY — approx hollow-core dia for 100 lb"
-    },
-    {
-      "id": "tightline-hollow-130",
-      "brand": "Tightline (TUF-Line)",
-      "product": "Hollow Core",
-      "type": "braid_hollow",
-      "lb_test": 130,
-      "diameter_in": 0.031,
-      "source": "VERIFY — approx hollow-core dia for 130 lb (the request's example line)"
-    },
-    {
-      "id": "tightline-hollow-200",
-      "brand": "Tightline (TUF-Line)",
-      "product": "Hollow Core",
-      "type": "braid_hollow",
-      "lb_test": 200,
-      "diameter_in": 0.039,
-      "source": "VERIFY — approx hollow-core dia for 200 lb"
-    }
+    { "id": "bigame-mono-8",   "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 8,   "diameter_in": 0.009, "source": "Berkley published spec" },
+    { "id": "bigame-mono-10",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 10,  "diameter_in": 0.012, "source": "Berkley published spec" },
+    { "id": "bigame-mono-12",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 12,  "diameter_in": 0.014, "source": "Berkley published spec" },
+    { "id": "bigame-mono-15",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 15,  "diameter_in": 0.015, "source": "Berkley published spec" },
+    { "id": "bigame-mono-20",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 20,  "diameter_in": 0.018, "source": "Berkley published spec" },
+    { "id": "bigame-mono-25",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 25,  "diameter_in": 0.019, "source": "Berkley published spec" },
+    { "id": "bigame-mono-30",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 30,  "diameter_in": 0.022, "source": "Berkley published spec" },
+    { "id": "bigame-mono-40",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 40,  "diameter_in": 0.024, "source": "Berkley published spec" },
+    { "id": "bigame-mono-50",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 50,  "diameter_in": 0.028, "source": "Berkley published spec" },
+    { "id": "bigame-mono-60",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 60,  "diameter_in": 0.031, "source": "Berkley published spec" },
+    { "id": "bigame-mono-80",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 80,  "diameter_in": 0.035, "source": "Berkley published spec" },
+    { "id": "bigame-mono-100", "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 100, "diameter_in": 0.039, "source": "Berkley published spec" },
+    { "id": "bigame-mono-130", "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 130, "diameter_in": 0.044, "source": "Berkley published spec" },
+
+    { "id": "trilenexl-mono-6",  "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 6,  "diameter_in": 0.009, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-8",  "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 8,  "diameter_in": 0.010, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-10", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 10, "diameter_in": 0.011, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-12", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 12, "diameter_in": 0.013, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-14", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 14, "diameter_in": 0.014, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-17", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 17, "diameter_in": 0.015, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-20", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 20, "diameter_in": 0.016, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-25", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 25, "diameter_in": 0.018, "source": "Berkley published spec" },
+    { "id": "trilenexl-mono-30", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 30, "diameter_in": 0.020, "source": "Berkley published spec" },
+
+    { "id": "powerpro-solid-8",   "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 8,   "diameter_in": 0.005, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-10",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.006, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-15",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.008, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-20",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.009, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-30",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.011, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-40",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.013, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-50",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.014, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-65",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-80",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-100", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.018, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-150", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 150, "diameter_in": 0.022, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-200", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 200, "diameter_in": 0.030, "source": "PowerPro published spec" },
+    { "id": "powerpro-solid-250", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 250, "diameter_in": 0.035, "source": "PowerPro published spec" },
+
+    { "id": "maxcuatro-solid-20",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.007, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-30",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.009, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-40",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.011, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-50",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.012, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-65",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.014, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-80",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.016, "source": "PowerPro published spec" },
+    { "id": "maxcuatro-solid-100", "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.017, "source": "PowerPro published spec" },
+
+    { "id": "sufix832-solid-8",  "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 8,  "diameter_in": 0.007,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-10", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 10, "diameter_in": 0.008,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-15", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.0085, "source": "Sufix published spec" },
+    { "id": "sufix832-solid-20", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 20, "diameter_in": 0.009,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-30", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.011,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-40", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 40, "diameter_in": 0.013,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-50", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-65", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016,  "source": "Sufix published spec" },
+    { "id": "sufix832-solid-80", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.018,  "source": "Sufix published spec" },
+
+    { "id": "berkleyx9-solid-8",   "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 8,   "diameter_in": 0.004, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-10",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.005, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-15",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.006, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-20",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.007, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-30",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.008, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-40",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.010, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-50",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.012, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-65",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.014, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-80",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.016, "source": "Berkley published spec" },
+    { "id": "berkleyx9-solid-100", "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.017, "source": "Berkley published spec" },
+
+    { "id": "jbrown-hollow-40",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 40,  "diameter_in": 0.012, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-60",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.015, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-80",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.018, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-100", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.017, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-130", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.021, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-200", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.024, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-300", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 300, "diameter_in": 0.042, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-500", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 500, "diameter_in": 0.053, "source": "Jerry Brown / BMC published spec" },
+    { "id": "jbrown-hollow-800", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 800, "diameter_in": 0.072, "source": "Jerry Brown / BMC published spec" }
   ]
 }

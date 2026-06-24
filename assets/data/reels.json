@@ -1,85 +1,41 @@
 {
-  "_note": "Each reel is anchored to ONE published capacity (anchor_label + anchor_yards at anchor_diameter_in). The diameter-squared model derives every other line from that anchor, so the anchor's yardage and the line diameter used for it must be accurate. Entries tagged 'VERIFY' are approximate placeholders — confirm against the manufacturer's spec/capacity chart.",
+  "_note": "Each reel is anchored to ONE published capacity (anchor_label + anchor_yards at anchor_diameter_in). The diameter-squared model derives every other line from that anchor. Anchors use a manufacturer-published capacity; the anchor diameter is the standard diameter for that line/test (Berkley Big Game for mono, PowerPro Spectra for braid). Published spool capacities vary with how tightly line is packed, so treat results as close estimates.",
   "reels": [
-    {
-      "id": "avet-trx-80w",
-      "brand": "Avet",
-      "model": "T-RX 80W",
-      "type": "conventional",
-      "anchor_label": "80 lb mono",
-      "anchor_diameter_in": 0.037,
-      "anchor_yards": 700,
-      "source": "VERIFY — anchor approximate (80-class two-speed)"
-    },
-    {
-      "id": "avet-hxw-raptor",
-      "brand": "Avet",
-      "model": "HXW Raptor 5.3",
-      "type": "conventional",
-      "anchor_label": "50 lb mono",
-      "anchor_diameter_in": 0.029,
-      "anchor_yards": 500,
-      "source": "VERIFY — anchor approximate"
-    },
-    {
-      "id": "avet-sx-raptor",
-      "brand": "Avet",
-      "model": "SX 5.3 Raptor",
-      "type": "conventional",
-      "anchor_label": "30 lb mono",
-      "anchor_diameter_in": 0.024,
-      "anchor_yards": 245,
-      "source": "VERIFY — anchor approximate"
-    },
-    {
-      "id": "penn-international-50visw",
-      "brand": "Penn",
-      "model": "International 50VISW",
-      "type": "conventional",
-      "anchor_label": "50 lb mono",
-      "anchor_diameter_in": 0.029,
-      "anchor_yards": 850,
-      "source": "VERIFY — anchor approximate"
-    },
-    {
-      "id": "shimano-talica-25ii",
-      "brand": "Shimano",
-      "model": "Talica 25 II",
-      "type": "conventional",
-      "anchor_label": "50 lb mono",
-      "anchor_diameter_in": 0.029,
-      "anchor_yards": 525,
-      "source": "VERIFY — anchor approximate"
-    },
-    {
-      "id": "shimano-stella-sw-14000",
-      "brand": "Shimano",
-      "model": "Stella SW 14000XG",
-      "type": "spinning",
-      "anchor_label": "50 lb braid (solid)",
-      "anchor_diameter_in": 0.014,
-      "anchor_yards": 320,
-      "source": "VERIFY — anchor approximate (braid-rated spinner)"
-    },
-    {
-      "id": "penn-slammer-iv-6500",
-      "brand": "Penn",
-      "model": "Slammer IV 6500",
-      "type": "spinning",
-      "anchor_label": "30 lb mono",
-      "anchor_diameter_in": 0.024,
-      "anchor_yards": 335,
-      "source": "VERIFY — anchor approximate"
-    },
-    {
-      "id": "daiwa-saltiga-8000",
-      "brand": "Daiwa",
-      "model": "Saltiga 8000",
-      "type": "spinning",
-      "anchor_label": "65 lb braid (solid)",
-      "anchor_diameter_in": 0.016,
-      "anchor_yards": 360,
-      "source": "VERIFY — anchor approximate"
-    }
+    { "id": "avet-sxj-63",   "brand": "Avet", "model": "SXJ 6/3 G2",  "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 290,  "source": "Avet published capacity (50 lb / 290 yd)" },
+    { "id": "avet-sx-53",    "brand": "Avet", "model": "SX 5.3 G2",   "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 400,  "source": "Avet published capacity (50 lb / 400 yd)" },
+    { "id": "avet-mxj",      "brand": "Avet", "model": "MXJ 6/4",     "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 460,  "source": "Avet published capacity (50 lb / 460 yd)" },
+    { "id": "avet-jx-63",    "brand": "Avet", "model": "JX 6/3",      "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 480,  "source": "Avet published capacity (65 lb / 480 yd)" },
+    { "id": "avet-lx-63",    "brand": "Avet", "model": "LX 6/3",      "type": "conventional", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 525,  "source": "Avet published capacity (65 lb / 525 yd)" },
+    { "id": "avet-hx-52",    "brand": "Avet", "model": "HX 5/2 Raptor", "type": "conventional", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 400, "source": "Avet published capacity (80 lb / 400 yd)" },
+    { "id": "avet-hxw-52",   "brand": "Avet", "model": "HXW 5/2 (wide)", "type": "conventional", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 600, "source": "Avet published capacity (80 lb / 600 yd)" },
+    { "id": "avet-trx-80w",  "brand": "Avet", "model": "T-RX 80W",    "type": "conventional", "anchor_label": "80 lb mono", "anchor_diameter_in": 0.035, "anchor_yards": 1000, "source": "Avet published capacity (80 lb mono / 1000 yd)" },
+
+    { "id": "penn-int30visw", "brand": "Penn", "model": "International 30VISW", "type": "conventional", "anchor_label": "30 lb mono", "anchor_diameter_in": 0.022, "anchor_yards": 1030, "source": "Penn published capacity (30 lb / 1030 yd)" },
+    { "id": "penn-int50visw", "brand": "Penn", "model": "International 50VISW", "type": "conventional", "anchor_label": "50 lb mono", "anchor_diameter_in": 0.028, "anchor_yards": 880,  "source": "Penn published capacity (50 lb / 880 yd)" },
+    { "id": "penn-int80visw", "brand": "Penn", "model": "International 80VISW", "type": "conventional", "anchor_label": "80 lb mono", "anchor_diameter_in": 0.035, "anchor_yards": 1120, "source": "Penn published capacity (80 lb / 1120 yd)" },
+
+    { "id": "penn-fathom2-60", "brand": "Penn", "model": "Fathom II 60 Lever Drag 2-Speed", "type": "conventional", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 1335, "source": "Penn published capacity (40 lb braid / 1335 yd)" },
+
+    { "id": "shimano-talica10",  "brand": "Shimano", "model": "Talica 10",  "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 390, "source": "Shimano published capacity (50 lb PowerPro / 390 yd)" },
+    { "id": "shimano-talica12",  "brand": "Shimano", "model": "Talica 12",  "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 700, "source": "Shimano published capacity (50 lb PowerPro / 700 yd)" },
+    { "id": "shimano-talica16",  "brand": "Shimano", "model": "Talica 16",  "type": "conventional", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 845, "source": "Shimano published capacity (50 lb PowerPro / 845 yd)" },
+
+    { "id": "penn-ssvi-3500",  "brand": "Penn", "model": "Spinfisher VI 3500",  "type": "spinning", "anchor_label": "8 lb mono",  "anchor_diameter_in": 0.009, "anchor_yards": 285, "source": "Penn published capacity (8 lb / 285 yd)" },
+    { "id": "penn-ssvi-4500",  "brand": "Penn", "model": "Spinfisher VI 4500",  "type": "spinning", "anchor_label": "10 lb mono", "anchor_diameter_in": 0.012, "anchor_yards": 320, "source": "Penn published capacity (10 lb / 320 yd)" },
+    { "id": "penn-ssvi-5500",  "brand": "Penn", "model": "Spinfisher VI 5500",  "type": "spinning", "anchor_label": "12 lb mono", "anchor_diameter_in": 0.014, "anchor_yards": 330, "source": "Penn published capacity (12 lb / 330 yd)" },
+    { "id": "penn-ssvi-6500",  "brand": "Penn", "model": "Spinfisher VI 6500",  "type": "spinning", "anchor_label": "15 lb mono", "anchor_diameter_in": 0.015, "anchor_yards": 345, "source": "Penn published capacity (15 lb / 345 yd)" },
+    { "id": "penn-ssvi-7500",  "brand": "Penn", "model": "Spinfisher VI 7500",  "type": "spinning", "anchor_label": "20 lb mono", "anchor_diameter_in": 0.018, "anchor_yards": 330, "source": "Penn published capacity (20 lb / 330 yd)" },
+    { "id": "penn-ssvi-9500",  "brand": "Penn", "model": "Spinfisher VI 9500",  "type": "spinning", "anchor_label": "30 lb mono", "anchor_diameter_in": 0.022, "anchor_yards": 350, "source": "Penn published capacity (30 lb / 350 yd)" },
+    { "id": "penn-ssvi-10500", "brand": "Penn", "model": "Spinfisher VI 10500", "type": "spinning", "anchor_label": "50 lb mono", "anchor_diameter_in": 0.028, "anchor_yards": 255, "source": "Penn published capacity (50 lb / 255 yd)" },
+
+    { "id": "shimano-stella-10000", "brand": "Shimano", "model": "Stella SW 10000PG", "type": "spinning", "anchor_label": "50 lb braid", "anchor_diameter_in": 0.014, "anchor_yards": 360, "source": "Shimano published capacity (50 lb PowerPro / 360 yd)" },
+    { "id": "shimano-stella-14000", "brand": "Shimano", "model": "Stella SW 14000XG", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 240, "source": "Shimano published capacity (80 lb PowerPro / 240 yd)" },
+    { "id": "shimano-stella-18000", "brand": "Shimano", "model": "Stella SW 18000HG", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 400, "source": "Shimano published capacity (80 lb PowerPro / 400 yd)" },
+    { "id": "shimano-stella-20000", "brand": "Shimano", "model": "Stella SW 20000PG", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 400, "source": "Shimano published capacity (80 lb PowerPro / 400 yd)" },
+
+    { "id": "daiwa-saltiga-8000",  "brand": "Daiwa", "model": "Saltiga 8000",  "type": "spinning", "anchor_label": "40 lb braid", "anchor_diameter_in": 0.013, "anchor_yards": 330, "source": "Daiwa published capacity (40 lb J-Braid / 330 yd)" },
+    { "id": "daiwa-saltiga-14000", "brand": "Daiwa", "model": "Saltiga 14000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 330, "source": "Daiwa published capacity (65 lb J-Braid / 330 yd)" },
+    { "id": "daiwa-saltiga-18000", "brand": "Daiwa", "model": "Saltiga 18000", "type": "spinning", "anchor_label": "65 lb braid", "anchor_diameter_in": 0.016, "anchor_yards": 440, "source": "Daiwa published capacity (65 lb J-Braid / 440 yd)" },
+    { "id": "daiwa-saltiga-20000", "brand": "Daiwa", "model": "Saltiga 20000", "type": "spinning", "anchor_label": "80 lb braid", "anchor_diameter_in": 0.017, "anchor_yards": 440, "source": "Daiwa published capacity (80 lb J-Braid / 440 yd)" }
   ]
 }
