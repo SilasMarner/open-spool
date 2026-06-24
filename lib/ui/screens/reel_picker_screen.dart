@@ -67,6 +67,8 @@ class _ReelPickerScreenState extends State<ReelPickerScreen> {
           ),
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewPadding.bottom),
               itemCount: _filtered.length,
               itemBuilder: (context, i) {
                 final r = _filtered[i];

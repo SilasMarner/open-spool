@@ -16,7 +16,8 @@ class ManualScreen extends StatelessWidget {
           foregroundColor: AppTheme.cyan,
         ),
         body: ListView(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 28),
+          padding: EdgeInsets.fromLTRB(
+              16, 16, 16, 28 + MediaQuery.of(context).viewPadding.bottom),
           children: [
             const Text('How OpenSpool works',
                 style: TextStyle(

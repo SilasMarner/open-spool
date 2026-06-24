@@ -73,6 +73,8 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
           ),
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewPadding.bottom),
               itemCount: _filtered.length,
               itemBuilder: (context, i) {
                 final l = _filtered[i];

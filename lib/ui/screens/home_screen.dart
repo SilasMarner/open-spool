@@ -93,25 +93,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(12, 12, 12, 28),
-        children: [
-          const _StepHeader(1, 'Pick your reel'),
-          _reelSelector(),
-          const SizedBox(height: 16),
-          const _StepHeader(2, 'How are you filling it?'),
-          _modeToggle(),
-          const SizedBox(height: 8),
-          _modeHelp(),
-          const SizedBox(height: 16),
-          _StepHeader(3, _stepThreeTitle()),
-          if (_fill == _FillType.straight)
-            _straightSection()
-          else
-            _mixSection(),
-          const SizedBox(height: 16),
-          _result(),
-        ],
+      // SafeArea keeps the (often non-scrolling) page above the system nav bar
+      // so the result card's Share button isn't hidden behind a Samsung-style
+      // 3-button bar under Android's forced edge-to-edge.
+      body: SafeArea(
+        top: false,
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 28),
+          children: [
+            const _StepHeader(1, 'Pick your reel'),
+            _reelSelector(),
+            const SizedBox(height: 16),
+            const _StepHeader(2, 'How are you filling it?'),
+            _modeToggle(),
+            const SizedBox(height: 8),
+            _modeHelp(),
+            const SizedBox(height: 16),
+            _StepHeader(3, _stepThreeTitle()),
+            if (_fill == _FillType.straight)
+              _straightSection()
+            else
+              _mixSection(),
+            const SizedBox(height: 16),
+            _result(),
+          ],
+        ),
       ),
     );
   }

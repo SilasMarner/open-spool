@@ -12,6 +12,7 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
       body: ListView(
+        padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom),
         children: [
           const Padding(
             padding: EdgeInsets.fromLTRB(16, 16, 16, 8),

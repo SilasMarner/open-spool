@@ -64,6 +64,8 @@ class _LoadoutsScreenState extends State<LoadoutsScreen> {
             );
           }
           return ListView.builder(
+            padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewPadding.bottom),
             itemCount: items.length,
             itemBuilder: (context, i) {
               final l = items[i];
