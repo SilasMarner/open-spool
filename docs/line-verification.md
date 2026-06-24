@@ -22,6 +22,11 @@ Current estimates (in): 40=.016, 60=.019, 80=.021, 100=.024, 130=.028, 200=.033
 Need diameter for: **80, 100 lb** (15–60 lb already verified from the published chart)
 Current estimates (in): 80=.0177 (~0.45 mm), 100=.0197 (~0.50 mm)
 
+### 3. Tight Line 12 Strand Hollow Core (hollow-core braid) — 8 sizes
+Need diameter for: **30, 50, 65, 80, 100, 130, 150, 200 lb**
+Current estimates (in): 30=.011, 50=.014, 65=.016, 80=.018, 100=.020, 130=.022, 150=.024, 200=.028
+Note: tightlinebraid.com lists tests/yardages only — no per-size diameters published.
+
 ---
 
 ## Manufacturer contacts
@@ -41,6 +46,12 @@ Current estimates (in): 80=.0177 (~0.45 mm), 100=.0197 (~0.50 mm)
 - **Social (responsive):** Instagram @beyond.braid · Facebook @beyondbraidline
 - Note: no public phone number; email/form/DM only.
 
+### Tight Line Braid
+- **Email:** customersupport@tightlinebraid.com (owner Jeff Nugent: jnugent@tightlinebraid.com)
+- **Phone:** (346) 808-7607
+- **Web contact form:** https://tightlinebraid.com/pages/contact
+- Based in Tomball/Cypress, TX.
+
 ---
 
 ## Draft email (copy/paste)
@@ -50,9 +61,10 @@ Current estimates (in): 80=.0177 (~0.45 mm), 100=.0197 (~0.50 mm)
 > Hi,
 >
 > I'm building a line-capacity tool and need the published **line diameter** for
-> each pound test of your [PowerPro Hollow-Ace / Beyond Braid 8X]. Could you send
-> the diameter (inches or mm) for: [40, 60, 80, 100, 130, 200 lb] /
-> [80 and 100 lb]?
+> each pound test of your [PowerPro Hollow-Ace / Beyond Braid 8X / Tight Line
+> 12 Strand Hollow Core]. Could you send the diameter (inches or mm) for:
+> [40, 60, 80, 100, 130, 200 lb] / [80 and 100 lb] /
+> [30, 50, 65, 80, 100, 130, 150, 200 lb]?
 >
 > I'm after the actual line diameter, not the equivalent-mono or leader-fit
 > rating. Thanks very much.
