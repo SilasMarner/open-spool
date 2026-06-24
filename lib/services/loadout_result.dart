@@ -189,6 +189,6 @@ String shareSummary(ComputedResult r, UnitSystem u, {String? title}) {
   if (r.unverified) {
     b.writeln('Heads up: uses an unverified catalog spec (tagged VERIFY).');
   }
-  b.writeln('Shared from Reel Capacity Planner');
+  b.writeln('Shared from OpenSpool');
   return b.toString().trimRight();
 }

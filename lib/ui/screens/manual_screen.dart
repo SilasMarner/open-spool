@@ -18,7 +18,7 @@ class ManualScreen extends StatelessWidget {
         body: ListView(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 28),
           children: [
-            const Text('How Reel Capacity Planner works',
+            const Text('How OpenSpool works',
                 style: TextStyle(
                     color: AppTheme.cyan,
                     fontSize: 20,

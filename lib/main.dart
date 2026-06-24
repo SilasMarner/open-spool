@@ -21,7 +21,7 @@ class ReelPlannerApp extends StatelessWidget {
       listenable: settings,
       builder: (context, _) {
         return MaterialApp(
-          title: 'Reel Capacity Planner',
+          title: 'OpenSpool',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light(),
           darkTheme: AppTheme.dark(),

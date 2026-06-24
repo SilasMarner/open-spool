@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Reel Capacity Planner'),
+        title: const Text('OpenSpool'),
         actions: [
           if (_reel != null)
             IconButton(

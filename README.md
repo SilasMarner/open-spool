@@ -1,4 +1,6 @@
-# Reel Capacity Planner
+# OpenSpool
+
+*(formerly "Reel Capacity Planner")*
 
 A standalone Android app (Flutter) for planning **line capacity on saltwater reels** —
 spinning and conventional — across **mono**, **solid-core braid**, and **hollow-core braid**,
