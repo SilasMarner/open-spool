@@ -1,226 +1,2021 @@
 {
   "_note": "Diameter is the source of truth for capacity math. Diameters below are manufacturer-published spec values (inches). Braid diameters vary a lot by brand; hollow-core runs thicker than solid-core for the same test. Entries whose `source` contains 'VERIFY' are approximate and should be confirmed before trusting the numbers.",
   "lines": [
-    { "id": "bigame-mono-8",   "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 8,   "diameter_in": 0.009, "source": "Berkley published spec" },
-    { "id": "bigame-mono-10",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 10,  "diameter_in": 0.012, "source": "Berkley published spec" },
-    { "id": "bigame-mono-12",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 12,  "diameter_in": 0.014, "source": "Berkley published spec" },
-    { "id": "bigame-mono-15",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 15,  "diameter_in": 0.015, "source": "Berkley published spec" },
-    { "id": "bigame-mono-20",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 20,  "diameter_in": 0.018, "source": "Berkley published spec" },
-    { "id": "bigame-mono-25",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 25,  "diameter_in": 0.019, "source": "Berkley published spec" },
-    { "id": "bigame-mono-30",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 30,  "diameter_in": 0.022, "source": "Berkley published spec" },
-    { "id": "bigame-mono-40",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 40,  "diameter_in": 0.024, "source": "Berkley published spec" },
-    { "id": "bigame-mono-50",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 50,  "diameter_in": 0.028, "source": "Berkley published spec" },
-    { "id": "bigame-mono-60",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 60,  "diameter_in": 0.031, "source": "Berkley published spec" },
-    { "id": "bigame-mono-80",  "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 80,  "diameter_in": 0.035, "source": "Berkley published spec" },
-    { "id": "bigame-mono-100", "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 100, "diameter_in": 0.039, "source": "Berkley published spec" },
-    { "id": "bigame-mono-130", "brand": "Berkley", "product": "Trilene Big Game", "type": "mono", "lb_test": 130, "diameter_in": 0.044, "source": "Berkley published spec" },
-
-    { "id": "trilenexl-mono-6",  "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 6,  "diameter_in": 0.009, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-8",  "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 8,  "diameter_in": 0.010, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-10", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 10, "diameter_in": 0.011, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-12", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 12, "diameter_in": 0.013, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-14", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 14, "diameter_in": 0.014, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-17", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 17, "diameter_in": 0.015, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-20", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 20, "diameter_in": 0.016, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-25", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 25, "diameter_in": 0.018, "source": "Berkley published spec" },
-    { "id": "trilenexl-mono-30", "brand": "Berkley", "product": "Trilene XL", "type": "mono", "lb_test": 30, "diameter_in": 0.020, "source": "Berkley published spec" },
-
-    { "id": "momoi-mono-12",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 12,  "diameter_in": 0.0138, "source": "Momoi published spec (0.35 mm)" },
-    { "id": "momoi-mono-16",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 16,  "diameter_in": 0.0157, "source": "Momoi published spec (0.40 mm)" },
-    { "id": "momoi-mono-20",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 20,  "diameter_in": 0.0177, "source": "Momoi published spec (0.45 mm)" },
-    { "id": "momoi-mono-25",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 25,  "diameter_in": 0.0205, "source": "Momoi published spec (0.52 mm)" },
-    { "id": "momoi-mono-30",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 30,  "diameter_in": 0.0232, "source": "Momoi published spec (0.59 mm)" },
-    { "id": "momoi-mono-40",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 40,  "diameter_in": 0.0256, "source": "Momoi published spec (0.65 mm)" },
-    { "id": "momoi-mono-50",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 50,  "diameter_in": 0.0295, "source": "Momoi published spec (0.75 mm)" },
-    { "id": "momoi-mono-60",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 60,  "diameter_in": 0.0315, "source": "Momoi published spec (0.80 mm)" },
-    { "id": "momoi-mono-80",  "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 80,  "diameter_in": 0.0354, "source": "Momoi published spec (0.90 mm)" },
-    { "id": "momoi-mono-100", "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 100, "diameter_in": 0.0394, "source": "Momoi published spec (1.00 mm)" },
-    { "id": "momoi-mono-130", "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 130, "diameter_in": 0.0504, "source": "Momoi published spec (1.28 mm)" },
-    { "id": "momoi-mono-200", "brand": "Momoi", "product": "Hi-Catch Diamond", "type": "mono", "lb_test": 200, "diameter_in": 0.0571, "source": "Momoi published spec (1.45 mm)" },
-
-    { "id": "powerpro-solid-8",   "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 8,   "diameter_in": 0.005, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-10",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.006, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-15",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.008, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-20",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.009, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-30",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.011, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-40",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.013, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-50",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.014, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-65",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-80",  "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-100", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.018, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-150", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 150, "diameter_in": 0.022, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-200", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 200, "diameter_in": 0.030, "source": "PowerPro published spec" },
-    { "id": "powerpro-solid-250", "brand": "PowerPro", "product": "Spectra Braid", "type": "braid_solid", "lb_test": 250, "diameter_in": 0.035, "source": "PowerPro published spec" },
-
-    { "id": "maxcuatro-solid-20",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.007, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-30",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.009, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-40",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.011, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-50",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.012, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-65",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.014, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-80",  "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.016, "source": "PowerPro published spec" },
-    { "id": "maxcuatro-solid-100", "brand": "PowerPro", "product": "Maxcuatro", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.017, "source": "PowerPro published spec" },
-
-    { "id": "sufix832-solid-8",  "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 8,  "diameter_in": 0.007,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-10", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 10, "diameter_in": 0.008,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-15", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.0085, "source": "Sufix published spec" },
-    { "id": "sufix832-solid-20", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 20, "diameter_in": 0.009,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-30", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.011,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-40", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 40, "diameter_in": 0.013,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-50", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-65", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016,  "source": "Sufix published spec" },
-    { "id": "sufix832-solid-80", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.018,  "source": "Sufix published spec" },
-
-    { "id": "berkleyx9-solid-8",   "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 8,   "diameter_in": 0.004, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-10",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.005, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-15",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.006, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-20",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.007, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-30",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.008, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-40",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.010, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-50",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.012, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-65",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.014, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-80",  "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.016, "source": "Berkley published spec" },
-    { "id": "berkleyx9-solid-100", "brand": "Berkley", "product": "x9 Braid", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.017, "source": "Berkley published spec" },
-
-    { "id": "cortland-master-10",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.006, "source": "Cortland published spec (0.152 mm)" },
-    { "id": "cortland-master-15",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.009, "source": "Cortland published spec (0.229 mm)" },
-    { "id": "cortland-master-20",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.010, "source": "Cortland published spec (0.254 mm)" },
-    { "id": "cortland-master-30",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.012, "source": "Cortland published spec (0.305 mm)" },
-    { "id": "cortland-master-50",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.014, "source": "Cortland published spec (0.356 mm)" },
-    { "id": "cortland-master-65",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "Cortland published spec (0.406 mm)" },
-    { "id": "cortland-master-80",  "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.020, "source": "Cortland published spec (0.508 mm)" },
-    { "id": "cortland-master-100", "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.023, "source": "Cortland published spec (0.584 mm)" },
-    { "id": "cortland-master-130", "brand": "Cortland", "product": "Master Braid", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.026, "source": "Cortland published spec (0.660 mm)" },
-
-    { "id": "dorisea-8x-10",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 10,  "diameter_in": 0.0055, "source": "Dorisea published spec (0.14 mm)" },
-    { "id": "dorisea-8x-15",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 15,  "diameter_in": 0.0071, "source": "Dorisea published spec (0.18 mm)" },
-    { "id": "dorisea-8x-20",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.0079, "source": "Dorisea published spec (0.20 mm)" },
-    { "id": "dorisea-8x-30",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.0102, "source": "Dorisea published spec (0.26 mm)" },
-    { "id": "dorisea-8x-40",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.0126, "source": "Dorisea published spec (0.32 mm)" },
-    { "id": "dorisea-8x-50",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.0142, "source": "Dorisea published spec (0.36 mm)" },
-    { "id": "dorisea-8x-60",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 60,  "diameter_in": 0.0157, "source": "Dorisea published spec (0.40 mm)" },
-    { "id": "dorisea-8x-80",  "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.0189, "source": "Dorisea published spec (0.48 mm)" },
-    { "id": "dorisea-8x-100", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.0217, "source": "Dorisea published spec (0.55 mm)" },
-    { "id": "dorisea-8x-130", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.0248, "source": "Dorisea published spec (0.63 mm)" },
-    { "id": "dorisea-8x-150", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 150, "diameter_in": 0.0268, "source": "Dorisea published spec (0.68 mm)" },
-    { "id": "dorisea-8x-200", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 200, "diameter_in": 0.0295, "source": "Dorisea published spec (0.75 mm)" },
-    { "id": "dorisea-8x-250", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 250, "diameter_in": 0.0315, "source": "Dorisea published spec (0.80 mm)" },
-    { "id": "dorisea-8x-300", "brand": "Dorisea", "product": "Extreme Braid 8X", "type": "braid_solid", "lb_test": 300, "diameter_in": 0.0394, "source": "Dorisea published spec (1.00 mm)" },
-
-    { "id": "jbraid-x8-8",  "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 8,  "diameter_in": 0.005, "source": "Daiwa published spec (0.13 mm)" },
-    { "id": "jbraid-x8-10", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 10, "diameter_in": 0.006, "source": "Daiwa published spec (0.15 mm)" },
-    { "id": "jbraid-x8-15", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.007, "source": "Daiwa published spec (0.19 mm)" },
-    { "id": "jbraid-x8-20", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 20, "diameter_in": 0.009, "source": "Daiwa published spec (0.23 mm)" },
-    { "id": "jbraid-x8-30", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.011, "source": "Daiwa published spec (0.28 mm)" },
-    { "id": "jbraid-x8-40", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 40, "diameter_in": 0.013, "source": "Daiwa published spec (0.32 mm)" },
-    { "id": "jbraid-x8-50", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014, "source": "Daiwa published spec (0.36 mm)" },
-    { "id": "jbraid-x8-65", "brand": "Daiwa", "product": "J-Braid x8", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016, "source": "Daiwa published spec (0.41 mm)" },
-
-    { "id": "jbrown-hollow-40",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 40,  "diameter_in": 0.012, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-60",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.015, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-80",  "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.018, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-100", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.017, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-130", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.021, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-200", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.024, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-300", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 300, "diameter_in": 0.042, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-500", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 500, "diameter_in": 0.053, "source": "Jerry Brown / BMC published spec" },
-    { "id": "jbrown-hollow-800", "brand": "Jerry Brown", "product": "Line One Hollow Core", "type": "braid_hollow", "lb_test": 800, "diameter_in": 0.072, "source": "Jerry Brown / BMC published spec" },
-
-    { "id": "pphollowace-40",  "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 40,  "diameter_in": 0.016, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-    { "id": "pphollowace-60",  "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.019, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-    { "id": "pphollowace-80",  "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.021, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-    { "id": "pphollowace-100", "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.024, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-    { "id": "pphollowace-130", "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.028, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-    { "id": "pphollowace-200", "brand": "PowerPro", "product": "Hollow Ace", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.033, "source": "VERIFY — commonly-published Hollow Ace dia; not on a PowerPro spec sheet" },
-
-    { "id": "joyfish-mono-30",  "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 30,  "diameter_in": 0.0236, "source": "Joy Fish published spec (0.60 mm)" },
-    { "id": "joyfish-mono-40",  "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 40,  "diameter_in": 0.0295, "source": "Joy Fish published spec (0.75 mm)" },
-    { "id": "joyfish-mono-50",  "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 50,  "diameter_in": 0.0315, "source": "Joy Fish published spec (0.80 mm)" },
-    { "id": "joyfish-mono-60",  "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 60,  "diameter_in": 0.0354, "source": "Joy Fish published spec (0.90 mm)" },
-    { "id": "joyfish-mono-80",  "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 80,  "diameter_in": 0.0394, "source": "Joy Fish published spec (1.00 mm)" },
-    { "id": "joyfish-mono-100", "brand": "Joy Fish", "product": "Premium Mono", "type": "mono", "lb_test": 100, "diameter_in": 0.0433, "source": "Joy Fish published spec (1.10 mm)" },
-
-    { "id": "maxima-ug-4",  "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 4,  "diameter_in": 0.0067, "source": "Maxima published spec (0.17 mm)" },
-    { "id": "maxima-ug-6",  "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 6,  "diameter_in": 0.0087, "source": "Maxima published spec (0.22 mm)" },
-    { "id": "maxima-ug-8",  "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 8,  "diameter_in": 0.0098, "source": "Maxima published spec (0.25 mm)" },
-    { "id": "maxima-ug-10", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 10, "diameter_in": 0.0118, "source": "Maxima published spec (0.30 mm)" },
-    { "id": "maxima-ug-12", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 12, "diameter_in": 0.0126, "source": "Maxima published spec (0.32 mm)" },
-    { "id": "maxima-ug-15", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 15, "diameter_in": 0.0146, "source": "Maxima published spec (0.37 mm)" },
-    { "id": "maxima-ug-20", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 20, "diameter_in": 0.0165, "source": "Maxima published spec (0.42 mm)" },
-    { "id": "maxima-ug-30", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 30, "diameter_in": 0.0217, "source": "Maxima published spec (0.55 mm)" },
-    { "id": "maxima-ug-40", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 40, "diameter_in": 0.0236, "source": "Maxima published spec (0.60 mm)" },
-    { "id": "maxima-ug-60", "brand": "Maxima", "product": "Ultragreen", "type": "mono", "lb_test": 60, "diameter_in": 0.031,  "source": "Maxima published spec" },
-
-    { "id": "momoi-diamond-30",  "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 30,  "diameter_in": 0.0232, "source": "Momoi published spec (0.59 mm)" },
-    { "id": "momoi-diamond-40",  "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 40,  "diameter_in": 0.0256, "source": "Momoi published spec (0.65 mm)" },
-    { "id": "momoi-diamond-50",  "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 50,  "diameter_in": 0.0295, "source": "Momoi published spec (0.75 mm)" },
-    { "id": "momoi-diamond-60",  "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 60,  "diameter_in": 0.0315, "source": "Momoi published spec (0.80 mm)" },
-    { "id": "momoi-diamond-80",  "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 80,  "diameter_in": 0.0354, "source": "Momoi published spec (0.90 mm)" },
-    { "id": "momoi-diamond-100", "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 100, "diameter_in": 0.0394, "source": "Momoi published spec (1.00 mm)" },
-    { "id": "momoi-diamond-130", "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 130, "diameter_in": 0.0504, "source": "Momoi published spec (1.28 mm)" },
-    { "id": "momoi-diamond-200", "brand": "Momoi", "product": "Diamond Monofilament", "type": "mono", "lb_test": 200, "diameter_in": 0.0571, "source": "Momoi published spec (1.45 mm)" },
-
-    { "id": "pline-cxx-25",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 25,  "diameter_in": 0.0209, "source": "P-Line published spec (0.53 mm)" },
-    { "id": "pline-cxx-30",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 30,  "diameter_in": 0.0228, "source": "P-Line published spec (0.58 mm)" },
-    { "id": "pline-cxx-40",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 40,  "diameter_in": 0.0244, "source": "P-Line published spec (0.62 mm)" },
-    { "id": "pline-cxx-50",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 50,  "diameter_in": 0.0291, "source": "P-Line published spec (0.74 mm)" },
-    { "id": "pline-cxx-60",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 60,  "diameter_in": 0.0331, "source": "P-Line published spec (0.84 mm)" },
-    { "id": "pline-cxx-80",  "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 80,  "diameter_in": 0.0374, "source": "P-Line published spec (0.95 mm)" },
-    { "id": "pline-cxx-100", "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 100, "diameter_in": 0.0441, "source": "P-Line published spec (1.12 mm)" },
-    { "id": "pline-cxx-130", "brand": "P-Line", "product": "CXX X-tra Strong", "type": "mono", "lb_test": 130, "diameter_in": 0.0528, "source": "P-Line published spec (1.34 mm)" },
-
-    { "id": "izorline-fs-25",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 25,  "diameter_in": 0.0197, "source": "Izorline published spec (0.50 mm)" },
-    { "id": "izorline-fs-30",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 30,  "diameter_in": 0.0217, "source": "Izorline published spec (0.55 mm)" },
-    { "id": "izorline-fs-40",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 40,  "diameter_in": 0.0236, "source": "Izorline published spec (0.60 mm)" },
-    { "id": "izorline-fs-50",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 50,  "diameter_in": 0.0276, "source": "Izorline published spec (0.70 mm)" },
-    { "id": "izorline-fs-60",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 60,  "diameter_in": 0.0315, "source": "Izorline published spec (0.80 mm)" },
-    { "id": "izorline-fs-80",  "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 80,  "diameter_in": 0.0354, "source": "Izorline published spec (0.90 mm)" },
-    { "id": "izorline-fs-100", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 100, "diameter_in": 0.0394, "source": "Izorline published spec (1.00 mm)" },
-    { "id": "izorline-fs-130", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 130, "diameter_in": 0.0472, "source": "Izorline published spec (1.20 mm)" },
-    { "id": "izorline-fs-150", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 150, "diameter_in": 0.0551, "source": "Izorline published spec (1.40 mm)" },
-    { "id": "izorline-fs-200", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 200, "diameter_in": 0.0591, "source": "Izorline published spec (1.50 mm)" },
-    { "id": "izorline-fs-300", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 300, "diameter_in": 0.0709, "source": "Izorline published spec (1.80 mm)" },
-    { "id": "izorline-fs-400", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 400, "diameter_in": 0.0787, "source": "Izorline published spec (2.00 mm)" },
-    { "id": "izorline-fs-600", "brand": "Izorline", "product": "1st String", "type": "mono", "lb_test": 600, "diameter_in": 0.0945, "source": "Izorline published spec (2.40 mm)" },
-
-    { "id": "ande-premium-12",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 12,  "diameter_in": 0.014, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-15",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 15,  "diameter_in": 0.016, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-20",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 20,  "diameter_in": 0.018, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-30",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 30,  "diameter_in": 0.022, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-40",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 40,  "diameter_in": 0.026, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-50",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 50,  "diameter_in": 0.028, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-60",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 60,  "diameter_in": 0.032, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-80",  "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 80,  "diameter_in": 0.036, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-100", "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 100, "diameter_in": 0.043, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-    { "id": "ande-premium-130", "brand": "Ande", "product": "Premium Monofilament", "type": "mono", "lb_test": 130, "diameter_in": 0.052, "source": "VERIFY — commonly-published Ande Premium dia; Ande spec chart is image-only" },
-
-    { "id": "jinkai-premium-25",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 25,  "diameter_in": 0.0173, "source": "Jinkai published spec (0.44 mm)" },
-    { "id": "jinkai-premium-30",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 30,  "diameter_in": 0.0185, "source": "Jinkai published spec (0.47 mm)" },
-    { "id": "jinkai-premium-40",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 40,  "diameter_in": 0.0224, "source": "Jinkai published spec (0.57 mm)" },
-    { "id": "jinkai-premium-50",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 50,  "diameter_in": 0.0244, "source": "Jinkai published spec (0.62 mm)" },
-    { "id": "jinkai-premium-60",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 60,  "diameter_in": 0.0291, "source": "Jinkai published spec (0.74 mm)" },
-    { "id": "jinkai-premium-80",  "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 80,  "diameter_in": 0.0319, "source": "Jinkai published spec (0.81 mm)" },
-    { "id": "jinkai-premium-100", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 100, "diameter_in": 0.0354, "source": "Jinkai published spec (0.90 mm)" },
-    { "id": "jinkai-premium-130", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 130, "diameter_in": 0.0409, "source": "Jinkai published spec (1.04 mm)" },
-    { "id": "jinkai-premium-150", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 150, "diameter_in": 0.0461, "source": "Jinkai published spec (1.17 mm)" },
-    { "id": "jinkai-premium-200", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 200, "diameter_in": 0.0524, "source": "Jinkai published spec (1.33 mm)" },
-    { "id": "jinkai-premium-220", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 220, "diameter_in": 0.0543, "source": "Jinkai published spec (1.38 mm)" },
-    { "id": "jinkai-premium-250", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 250, "diameter_in": 0.0579, "source": "Jinkai published spec (1.47 mm)" },
-    { "id": "jinkai-premium-300", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 300, "diameter_in": 0.0614, "source": "Jinkai published spec (1.56 mm)" },
-    { "id": "jinkai-premium-400", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 400, "diameter_in": 0.0713, "source": "Jinkai published spec (1.81 mm)" },
-    { "id": "jinkai-premium-500", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 500, "diameter_in": 0.0787, "source": "Jinkai published spec (2.00 mm)" },
-    { "id": "jinkai-premium-600", "brand": "Jinkai", "product": "Premium", "type": "mono", "lb_test": 600, "diameter_in": 0.0886, "source": "Jinkai published spec (2.25 mm)" },
-
-    { "id": "softsteel-ultra-40",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 40,  "diameter_in": 0.0217, "source": "Soft Steel published spec (0.55 mm)" },
-    { "id": "softsteel-ultra-50",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 50,  "diameter_in": 0.0236, "source": "Soft Steel published spec (0.60 mm)" },
-    { "id": "softsteel-ultra-60",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 60,  "diameter_in": 0.0256, "source": "Soft Steel published spec (0.65 mm)" },
-    { "id": "softsteel-ultra-80",  "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 80,  "diameter_in": 0.0295, "source": "Soft Steel published spec (0.75 mm)" },
-    { "id": "softsteel-ultra-100", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 100, "diameter_in": 0.0335, "source": "Soft Steel published spec (0.85 mm)" },
-    { "id": "softsteel-ultra-130", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 130, "diameter_in": 0.0374, "source": "Soft Steel published spec (0.95 mm)" },
-    { "id": "softsteel-ultra-150", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 150, "diameter_in": 0.0394, "source": "Soft Steel published spec (1.00 mm)" },
-    { "id": "softsteel-ultra-200", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 200, "diameter_in": 0.0472, "source": "Soft Steel published spec (1.20 mm)" },
-    { "id": "softsteel-ultra-250", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 250, "diameter_in": 0.0512, "source": "Soft Steel published spec (1.30 mm)" },
-    { "id": "softsteel-ultra-300", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 300, "diameter_in": 0.0551, "source": "Soft Steel published spec (1.40 mm)" },
-    { "id": "softsteel-ultra-400", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 400, "diameter_in": 0.0709, "source": "Soft Steel published spec (1.80 mm)" },
-    { "id": "softsteel-ultra-600", "brand": "Soft Steel", "product": "Ultra", "type": "mono", "lb_test": 600, "diameter_in": 0.0984, "source": "Soft Steel published spec (2.50 mm)" }
+    {
+      "id": "bigame-mono-8",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 8,
+      "diameter_in": 0.009,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-10",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 10,
+      "diameter_in": 0.012,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-12",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 12,
+      "diameter_in": 0.014,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-15",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 15,
+      "diameter_in": 0.015,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-20",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 20,
+      "diameter_in": 0.018,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-25",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.019,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-30",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.022,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-40",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.024,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-50",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.028,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-60",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.031,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-80",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.035,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-100",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.039,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "bigame-mono-130",
+      "brand": "Berkley",
+      "product": "Trilene Big Game",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.044,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-6",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 6,
+      "diameter_in": 0.009,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-8",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 8,
+      "diameter_in": 0.01,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-10",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 10,
+      "diameter_in": 0.011,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-12",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 12,
+      "diameter_in": 0.013,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-14",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 14,
+      "diameter_in": 0.014,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-17",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 17,
+      "diameter_in": 0.015,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-20",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 20,
+      "diameter_in": 0.016,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-25",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.018,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "trilenexl-mono-30",
+      "brand": "Berkley",
+      "product": "Trilene XL",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.02,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "momoi-mono-12",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 12,
+      "diameter_in": 0.0138,
+      "source": "Momoi published spec (0.35 mm)"
+    },
+    {
+      "id": "momoi-mono-16",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 16,
+      "diameter_in": 0.0157,
+      "source": "Momoi published spec (0.40 mm)"
+    },
+    {
+      "id": "momoi-mono-20",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 20,
+      "diameter_in": 0.0177,
+      "source": "Momoi published spec (0.45 mm)"
+    },
+    {
+      "id": "momoi-mono-25",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.0205,
+      "source": "Momoi published spec (0.52 mm)"
+    },
+    {
+      "id": "momoi-mono-30",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0232,
+      "source": "Momoi published spec (0.59 mm)"
+    },
+    {
+      "id": "momoi-mono-40",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0256,
+      "source": "Momoi published spec (0.65 mm)"
+    },
+    {
+      "id": "momoi-mono-50",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0295,
+      "source": "Momoi published spec (0.75 mm)"
+    },
+    {
+      "id": "momoi-mono-60",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0315,
+      "source": "Momoi published spec (0.80 mm)"
+    },
+    {
+      "id": "momoi-mono-80",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0354,
+      "source": "Momoi published spec (0.90 mm)"
+    },
+    {
+      "id": "momoi-mono-100",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0394,
+      "source": "Momoi published spec (1.00 mm)"
+    },
+    {
+      "id": "momoi-mono-130",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0504,
+      "source": "Momoi published spec (1.28 mm)"
+    },
+    {
+      "id": "momoi-mono-200",
+      "brand": "Momoi",
+      "product": "Hi-Catch Diamond",
+      "type": "mono",
+      "lb_test": 200,
+      "diameter_in": 0.0571,
+      "source": "Momoi published spec (1.45 mm)"
+    },
+    {
+      "id": "powerpro-solid-8",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.005,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-10",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.006,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-15",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.008,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-20",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.009,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-30",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-40",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.013,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-50",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-65",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-80",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.017,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-100",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.018,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-150",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 150,
+      "diameter_in": 0.022,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-200",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 200,
+      "diameter_in": 0.03,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "powerpro-solid-250",
+      "brand": "PowerPro",
+      "product": "Spectra Braid",
+      "type": "braid_solid",
+      "lb_test": 250,
+      "diameter_in": 0.035,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-20",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.007,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-30",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.009,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-40",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.011,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-50",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.012,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-65",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.014,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-80",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.016,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "maxcuatro-solid-100",
+      "brand": "PowerPro",
+      "product": "Maxcuatro",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.017,
+      "source": "PowerPro published spec"
+    },
+    {
+      "id": "sufix832-solid-8",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.007,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-10",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.008,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-15",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.0085,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-20",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.009,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-30",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-40",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.013,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-50",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-65",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "sufix832-solid-80",
+      "brand": "Sufix",
+      "product": "832 Advanced Superline",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.018,
+      "source": "Sufix published spec"
+    },
+    {
+      "id": "berkleyx9-solid-8",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.004,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-10",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.005,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-15",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.006,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-20",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.007,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-30",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.008,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-40",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.01,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-50",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.012,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-65",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.014,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-80",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.016,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "berkleyx9-solid-100",
+      "brand": "Berkley",
+      "product": "x9 Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.017,
+      "source": "Berkley published spec"
+    },
+    {
+      "id": "cortland-master-10",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.006,
+      "source": "Cortland published spec (0.152 mm)"
+    },
+    {
+      "id": "cortland-master-15",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.009,
+      "source": "Cortland published spec (0.229 mm)"
+    },
+    {
+      "id": "cortland-master-20",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.01,
+      "source": "Cortland published spec (0.254 mm)"
+    },
+    {
+      "id": "cortland-master-30",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.012,
+      "source": "Cortland published spec (0.305 mm)"
+    },
+    {
+      "id": "cortland-master-50",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "Cortland published spec (0.356 mm)"
+    },
+    {
+      "id": "cortland-master-65",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "Cortland published spec (0.406 mm)"
+    },
+    {
+      "id": "cortland-master-80",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.02,
+      "source": "Cortland published spec (0.508 mm)"
+    },
+    {
+      "id": "cortland-master-100",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.023,
+      "source": "Cortland published spec (0.584 mm)"
+    },
+    {
+      "id": "cortland-master-130",
+      "brand": "Cortland",
+      "product": "Master Braid",
+      "type": "braid_solid",
+      "lb_test": 130,
+      "diameter_in": 0.026,
+      "source": "Cortland published spec (0.660 mm)"
+    },
+    {
+      "id": "dorisea-8x-10",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.0055,
+      "source": "Dorisea published spec (0.14 mm)"
+    },
+    {
+      "id": "dorisea-8x-15",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.0071,
+      "source": "Dorisea published spec (0.18 mm)"
+    },
+    {
+      "id": "dorisea-8x-20",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.0079,
+      "source": "Dorisea published spec (0.20 mm)"
+    },
+    {
+      "id": "dorisea-8x-30",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.0102,
+      "source": "Dorisea published spec (0.26 mm)"
+    },
+    {
+      "id": "dorisea-8x-40",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.0126,
+      "source": "Dorisea published spec (0.32 mm)"
+    },
+    {
+      "id": "dorisea-8x-50",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.0142,
+      "source": "Dorisea published spec (0.36 mm)"
+    },
+    {
+      "id": "dorisea-8x-60",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 60,
+      "diameter_in": 0.0157,
+      "source": "Dorisea published spec (0.40 mm)"
+    },
+    {
+      "id": "dorisea-8x-80",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.0189,
+      "source": "Dorisea published spec (0.48 mm)"
+    },
+    {
+      "id": "dorisea-8x-100",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.0217,
+      "source": "Dorisea published spec (0.55 mm)"
+    },
+    {
+      "id": "dorisea-8x-130",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 130,
+      "diameter_in": 0.0248,
+      "source": "Dorisea published spec (0.63 mm)"
+    },
+    {
+      "id": "dorisea-8x-150",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 150,
+      "diameter_in": 0.0268,
+      "source": "Dorisea published spec (0.68 mm)"
+    },
+    {
+      "id": "dorisea-8x-200",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 200,
+      "diameter_in": 0.0295,
+      "source": "Dorisea published spec (0.75 mm)"
+    },
+    {
+      "id": "dorisea-8x-250",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 250,
+      "diameter_in": 0.0315,
+      "source": "Dorisea published spec (0.80 mm)"
+    },
+    {
+      "id": "dorisea-8x-300",
+      "brand": "Dorisea",
+      "product": "Extreme Braid 8X",
+      "type": "braid_solid",
+      "lb_test": 300,
+      "diameter_in": 0.0394,
+      "source": "Dorisea published spec (1.00 mm)"
+    },
+    {
+      "id": "jbraid-x8-8",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.005,
+      "source": "Daiwa published spec (0.13 mm)"
+    },
+    {
+      "id": "jbraid-x8-10",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.006,
+      "source": "Daiwa published spec (0.15 mm)"
+    },
+    {
+      "id": "jbraid-x8-15",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.007,
+      "source": "Daiwa published spec (0.19 mm)"
+    },
+    {
+      "id": "jbraid-x8-20",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.009,
+      "source": "Daiwa published spec (0.23 mm)"
+    },
+    {
+      "id": "jbraid-x8-30",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Daiwa published spec (0.28 mm)"
+    },
+    {
+      "id": "jbraid-x8-40",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.013,
+      "source": "Daiwa published spec (0.32 mm)"
+    },
+    {
+      "id": "jbraid-x8-50",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.014,
+      "source": "Daiwa published spec (0.36 mm)"
+    },
+    {
+      "id": "jbraid-x8-65",
+      "brand": "Daiwa",
+      "product": "J-Braid x8",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.016,
+      "source": "Daiwa published spec (0.41 mm)"
+    },
+    {
+      "id": "jbrown-hollow-40",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.012,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-60",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.015,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-80",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.018,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-100",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.017,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-130",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.021,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-200",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.024,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-300",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 300,
+      "diameter_in": 0.042,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-500",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 500,
+      "diameter_in": 0.053,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "jbrown-hollow-800",
+      "brand": "Jerry Brown",
+      "product": "Line One Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 800,
+      "diameter_in": 0.072,
+      "source": "Jerry Brown / BMC published spec"
+    },
+    {
+      "id": "pphollowace-40",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.016,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "pphollowace-60",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.019,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "pphollowace-80",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.021,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "pphollowace-100",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.024,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "pphollowace-130",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.028,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "pphollowace-200",
+      "brand": "PowerPro",
+      "product": "Hollow Ace",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.033,
+      "source": "VERIFY \u2014 commonly-published Hollow Ace dia; not on a PowerPro spec sheet"
+    },
+    {
+      "id": "joyfish-mono-30",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0236,
+      "source": "Joy Fish published spec (0.60 mm)"
+    },
+    {
+      "id": "joyfish-mono-40",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0295,
+      "source": "Joy Fish published spec (0.75 mm)"
+    },
+    {
+      "id": "joyfish-mono-50",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0315,
+      "source": "Joy Fish published spec (0.80 mm)"
+    },
+    {
+      "id": "joyfish-mono-60",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0354,
+      "source": "Joy Fish published spec (0.90 mm)"
+    },
+    {
+      "id": "joyfish-mono-80",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0394,
+      "source": "Joy Fish published spec (1.00 mm)"
+    },
+    {
+      "id": "joyfish-mono-100",
+      "brand": "Joy Fish",
+      "product": "Premium Mono",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0433,
+      "source": "Joy Fish published spec (1.10 mm)"
+    },
+    {
+      "id": "maxima-ug-4",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 4,
+      "diameter_in": 0.0067,
+      "source": "Maxima published spec (0.17 mm)"
+    },
+    {
+      "id": "maxima-ug-6",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 6,
+      "diameter_in": 0.0087,
+      "source": "Maxima published spec (0.22 mm)"
+    },
+    {
+      "id": "maxima-ug-8",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 8,
+      "diameter_in": 0.0098,
+      "source": "Maxima published spec (0.25 mm)"
+    },
+    {
+      "id": "maxima-ug-10",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 10,
+      "diameter_in": 0.0118,
+      "source": "Maxima published spec (0.30 mm)"
+    },
+    {
+      "id": "maxima-ug-12",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 12,
+      "diameter_in": 0.0126,
+      "source": "Maxima published spec (0.32 mm)"
+    },
+    {
+      "id": "maxima-ug-15",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 15,
+      "diameter_in": 0.0146,
+      "source": "Maxima published spec (0.37 mm)"
+    },
+    {
+      "id": "maxima-ug-20",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 20,
+      "diameter_in": 0.0165,
+      "source": "Maxima published spec (0.42 mm)"
+    },
+    {
+      "id": "maxima-ug-30",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0217,
+      "source": "Maxima published spec (0.55 mm)"
+    },
+    {
+      "id": "maxima-ug-40",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0236,
+      "source": "Maxima published spec (0.60 mm)"
+    },
+    {
+      "id": "maxima-ug-60",
+      "brand": "Maxima",
+      "product": "Ultragreen",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.031,
+      "source": "Maxima published spec"
+    },
+    {
+      "id": "momoi-diamond-30",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0232,
+      "source": "Momoi published spec (0.59 mm)"
+    },
+    {
+      "id": "momoi-diamond-40",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0256,
+      "source": "Momoi published spec (0.65 mm)"
+    },
+    {
+      "id": "momoi-diamond-50",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0295,
+      "source": "Momoi published spec (0.75 mm)"
+    },
+    {
+      "id": "momoi-diamond-60",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0315,
+      "source": "Momoi published spec (0.80 mm)"
+    },
+    {
+      "id": "momoi-diamond-80",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0354,
+      "source": "Momoi published spec (0.90 mm)"
+    },
+    {
+      "id": "momoi-diamond-100",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0394,
+      "source": "Momoi published spec (1.00 mm)"
+    },
+    {
+      "id": "momoi-diamond-130",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0504,
+      "source": "Momoi published spec (1.28 mm)"
+    },
+    {
+      "id": "momoi-diamond-200",
+      "brand": "Momoi",
+      "product": "Diamond Monofilament",
+      "type": "mono",
+      "lb_test": 200,
+      "diameter_in": 0.0571,
+      "source": "Momoi published spec (1.45 mm)"
+    },
+    {
+      "id": "pline-cxx-25",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.0209,
+      "source": "P-Line published spec (0.53 mm)"
+    },
+    {
+      "id": "pline-cxx-30",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0228,
+      "source": "P-Line published spec (0.58 mm)"
+    },
+    {
+      "id": "pline-cxx-40",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0244,
+      "source": "P-Line published spec (0.62 mm)"
+    },
+    {
+      "id": "pline-cxx-50",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0291,
+      "source": "P-Line published spec (0.74 mm)"
+    },
+    {
+      "id": "pline-cxx-60",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0331,
+      "source": "P-Line published spec (0.84 mm)"
+    },
+    {
+      "id": "pline-cxx-80",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0374,
+      "source": "P-Line published spec (0.95 mm)"
+    },
+    {
+      "id": "pline-cxx-100",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0441,
+      "source": "P-Line published spec (1.12 mm)"
+    },
+    {
+      "id": "pline-cxx-130",
+      "brand": "P-Line",
+      "product": "CXX X-tra Strong",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0528,
+      "source": "P-Line published spec (1.34 mm)"
+    },
+    {
+      "id": "izorline-fs-25",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.0197,
+      "source": "Izorline published spec (0.50 mm)"
+    },
+    {
+      "id": "izorline-fs-30",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0217,
+      "source": "Izorline published spec (0.55 mm)"
+    },
+    {
+      "id": "izorline-fs-40",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0236,
+      "source": "Izorline published spec (0.60 mm)"
+    },
+    {
+      "id": "izorline-fs-50",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0276,
+      "source": "Izorline published spec (0.70 mm)"
+    },
+    {
+      "id": "izorline-fs-60",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0315,
+      "source": "Izorline published spec (0.80 mm)"
+    },
+    {
+      "id": "izorline-fs-80",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0354,
+      "source": "Izorline published spec (0.90 mm)"
+    },
+    {
+      "id": "izorline-fs-100",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0394,
+      "source": "Izorline published spec (1.00 mm)"
+    },
+    {
+      "id": "izorline-fs-130",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0472,
+      "source": "Izorline published spec (1.20 mm)"
+    },
+    {
+      "id": "izorline-fs-150",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 150,
+      "diameter_in": 0.0551,
+      "source": "Izorline published spec (1.40 mm)"
+    },
+    {
+      "id": "izorline-fs-200",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 200,
+      "diameter_in": 0.0591,
+      "source": "Izorline published spec (1.50 mm)"
+    },
+    {
+      "id": "izorline-fs-300",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 300,
+      "diameter_in": 0.0709,
+      "source": "Izorline published spec (1.80 mm)"
+    },
+    {
+      "id": "izorline-fs-400",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 400,
+      "diameter_in": 0.0787,
+      "source": "Izorline published spec (2.00 mm)"
+    },
+    {
+      "id": "izorline-fs-600",
+      "brand": "Izorline",
+      "product": "1st String",
+      "type": "mono",
+      "lb_test": 600,
+      "diameter_in": 0.0945,
+      "source": "Izorline published spec (2.40 mm)"
+    },
+    {
+      "id": "ande-premium-12",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 12,
+      "diameter_in": 0.014,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-15",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 15,
+      "diameter_in": 0.016,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-20",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 20,
+      "diameter_in": 0.018,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-30",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.022,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-40",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.026,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-50",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.028,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-60",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.032,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-80",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.036,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-100",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.043,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "ande-premium-130",
+      "brand": "Ande",
+      "product": "Premium Monofilament",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.052,
+      "source": "VERIFY \u2014 commonly-published Ande Premium dia; Ande spec chart is image-only"
+    },
+    {
+      "id": "jinkai-premium-25",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 25,
+      "diameter_in": 0.0173,
+      "source": "Jinkai published spec (0.44 mm)"
+    },
+    {
+      "id": "jinkai-premium-30",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 30,
+      "diameter_in": 0.0185,
+      "source": "Jinkai published spec (0.47 mm)"
+    },
+    {
+      "id": "jinkai-premium-40",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0224,
+      "source": "Jinkai published spec (0.57 mm)"
+    },
+    {
+      "id": "jinkai-premium-50",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0244,
+      "source": "Jinkai published spec (0.62 mm)"
+    },
+    {
+      "id": "jinkai-premium-60",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0291,
+      "source": "Jinkai published spec (0.74 mm)"
+    },
+    {
+      "id": "jinkai-premium-80",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0319,
+      "source": "Jinkai published spec (0.81 mm)"
+    },
+    {
+      "id": "jinkai-premium-100",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0354,
+      "source": "Jinkai published spec (0.90 mm)"
+    },
+    {
+      "id": "jinkai-premium-130",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0409,
+      "source": "Jinkai published spec (1.04 mm)"
+    },
+    {
+      "id": "jinkai-premium-150",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 150,
+      "diameter_in": 0.0461,
+      "source": "Jinkai published spec (1.17 mm)"
+    },
+    {
+      "id": "jinkai-premium-200",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 200,
+      "diameter_in": 0.0524,
+      "source": "Jinkai published spec (1.33 mm)"
+    },
+    {
+      "id": "jinkai-premium-220",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 220,
+      "diameter_in": 0.0543,
+      "source": "Jinkai published spec (1.38 mm)"
+    },
+    {
+      "id": "jinkai-premium-250",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 250,
+      "diameter_in": 0.0579,
+      "source": "Jinkai published spec (1.47 mm)"
+    },
+    {
+      "id": "jinkai-premium-300",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 300,
+      "diameter_in": 0.0614,
+      "source": "Jinkai published spec (1.56 mm)"
+    },
+    {
+      "id": "jinkai-premium-400",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 400,
+      "diameter_in": 0.0713,
+      "source": "Jinkai published spec (1.81 mm)"
+    },
+    {
+      "id": "jinkai-premium-500",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 500,
+      "diameter_in": 0.0787,
+      "source": "Jinkai published spec (2.00 mm)"
+    },
+    {
+      "id": "jinkai-premium-600",
+      "brand": "Jinkai",
+      "product": "Premium",
+      "type": "mono",
+      "lb_test": 600,
+      "diameter_in": 0.0886,
+      "source": "Jinkai published spec (2.25 mm)"
+    },
+    {
+      "id": "softsteel-ultra-40",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 40,
+      "diameter_in": 0.0217,
+      "source": "Soft Steel published spec (0.55 mm)"
+    },
+    {
+      "id": "softsteel-ultra-50",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 50,
+      "diameter_in": 0.0236,
+      "source": "Soft Steel published spec (0.60 mm)"
+    },
+    {
+      "id": "softsteel-ultra-60",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 60,
+      "diameter_in": 0.0256,
+      "source": "Soft Steel published spec (0.65 mm)"
+    },
+    {
+      "id": "softsteel-ultra-80",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 80,
+      "diameter_in": 0.0295,
+      "source": "Soft Steel published spec (0.75 mm)"
+    },
+    {
+      "id": "softsteel-ultra-100",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 100,
+      "diameter_in": 0.0335,
+      "source": "Soft Steel published spec (0.85 mm)"
+    },
+    {
+      "id": "softsteel-ultra-130",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 130,
+      "diameter_in": 0.0374,
+      "source": "Soft Steel published spec (0.95 mm)"
+    },
+    {
+      "id": "softsteel-ultra-150",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 150,
+      "diameter_in": 0.0394,
+      "source": "Soft Steel published spec (1.00 mm)"
+    },
+    {
+      "id": "softsteel-ultra-200",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 200,
+      "diameter_in": 0.0472,
+      "source": "Soft Steel published spec (1.20 mm)"
+    },
+    {
+      "id": "softsteel-ultra-250",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 250,
+      "diameter_in": 0.0512,
+      "source": "Soft Steel published spec (1.30 mm)"
+    },
+    {
+      "id": "softsteel-ultra-300",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 300,
+      "diameter_in": 0.0551,
+      "source": "Soft Steel published spec (1.40 mm)"
+    },
+    {
+      "id": "softsteel-ultra-400",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 400,
+      "diameter_in": 0.0709,
+      "source": "Soft Steel published spec (1.80 mm)"
+    },
+    {
+      "id": "softsteel-ultra-600",
+      "brand": "Soft Steel",
+      "product": "Ultra",
+      "type": "mono",
+      "lb_test": 600,
+      "diameter_in": 0.0984,
+      "source": "Soft Steel published spec (2.50 mm)"
+    },
+    {
+      "id": "bb8x-solid-15",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.0063,
+      "source": "Beyond Braid published spec (0.16 mm)"
+    },
+    {
+      "id": "bb8x-solid-20",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.0079,
+      "source": "Beyond Braid published spec (0.2 mm)"
+    },
+    {
+      "id": "bb8x-solid-30",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Beyond Braid published spec (0.28 mm)"
+    },
+    {
+      "id": "bb8x-solid-40",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.0126,
+      "source": "Beyond Braid published spec (0.32 mm)"
+    },
+    {
+      "id": "bb8x-solid-50",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.0146,
+      "source": "Beyond Braid published spec (0.37 mm)"
+    },
+    {
+      "id": "bb8x-solid-60",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 60,
+      "diameter_in": 0.0157,
+      "source": "Beyond Braid published spec (0.4 mm)"
+    },
+    {
+      "id": "bb8x-solid-80",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.0177,
+      "source": "VERIFY \u2014 Beyond Braid sells 80 lb but publishes no diameter; ~0.45 mm estimate"
+    },
+    {
+      "id": "bb8x-solid-100",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.0197,
+      "source": "VERIFY \u2014 Beyond Braid sells 100 lb but publishes no diameter; ~0.5 mm estimate"
+    },
+    {
+      "id": "reaction-x8-10",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.0055,
+      "source": "Reaction Tackle published spec (0.14 mm)"
+    },
+    {
+      "id": "reaction-x8-15",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.0071,
+      "source": "Reaction Tackle published spec (0.18 mm)"
+    },
+    {
+      "id": "reaction-x8-20",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 20,
+      "diameter_in": 0.0079,
+      "source": "Reaction Tackle published spec (0.2 mm)"
+    },
+    {
+      "id": "reaction-x8-25",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 25,
+      "diameter_in": 0.0098,
+      "source": "Reaction Tackle published spec (0.25 mm)"
+    },
+    {
+      "id": "reaction-x8-30",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Reaction Tackle published spec (0.28 mm)"
+    },
+    {
+      "id": "reaction-x8-40",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.0126,
+      "source": "Reaction Tackle published spec (0.32 mm)"
+    },
+    {
+      "id": "reaction-x8-50",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.0142,
+      "source": "Reaction Tackle published spec (0.36 mm)"
+    },
+    {
+      "id": "reaction-x8-65",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.0165,
+      "source": "Reaction Tackle published spec (0.42 mm)"
+    },
+    {
+      "id": "reaction-x8-80",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.0189,
+      "source": "Reaction Tackle published spec (0.48 mm)"
+    },
+    {
+      "id": "reaction-x8-100",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.0217,
+      "source": "Reaction Tackle published spec (0.55 mm)"
+    },
+    {
+      "id": "reaction-x8-120",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 120,
+      "diameter_in": 0.0236,
+      "source": "Reaction Tackle published spec (0.6 mm)"
+    },
+    {
+      "id": "reaction-x8-150",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 150,
+      "diameter_in": 0.0276,
+      "source": "Reaction Tackle published spec (0.7 mm)"
+    },
+    {
+      "id": "reaction-x8-200",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 200,
+      "diameter_in": 0.0315,
+      "source": "Reaction Tackle published spec (0.8 mm)"
+    },
+    {
+      "id": "reaction-x8-300",
+      "brand": "Reaction Tackle",
+      "product": "X8 Braid",
+      "type": "braid_solid",
+      "lb_test": 300,
+      "diameter_in": 0.0472,
+      "source": "Reaction Tackle published spec (1.2 mm)"
+    }
   ]
 }
