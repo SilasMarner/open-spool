@@ -64,6 +64,12 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Reel Capacity Planner'),
         actions: [
+          if (_reel != null)
+            IconButton(
+              icon: const Icon(Icons.star_outline),
+              tooltip: 'Save favorite',
+              onPressed: _saveLoadout,
+            ),
           IconButton(
             icon: const Icon(Icons.bookmark_outline),
             tooltip: 'Favorites',
@@ -88,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(12, 12, 12, 96),
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 28),
         children: [
           const _StepHeader(1, 'Pick your reel'),
           _reelSelector(),
@@ -107,13 +113,6 @@ class _HomeScreenState extends State<HomeScreen> {
           _result(),
         ],
       ),
-      floatingActionButton: _reel == null
-          ? null
-          : FloatingActionButton.extended(
-              onPressed: _saveLoadout,
-              icon: const Icon(Icons.star_outline),
-              label: const Text('Save favorite'),
-            ),
     );
   }
 
