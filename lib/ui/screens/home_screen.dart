@@ -426,6 +426,7 @@ class _HomeScreenState extends State<HomeScreen> {
         overflowText: r.overflowText,
         unverifiedInputs: r.unverified,
         onShare: () => _shareResult(r),
+        onSave: _saveLoadout,
       );
 
   Future<void> _shareResult(ComputedResult r) async {

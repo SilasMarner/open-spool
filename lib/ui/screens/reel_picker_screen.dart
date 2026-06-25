@@ -54,10 +54,11 @@ class _ReelPickerScreenState extends State<ReelPickerScreen> {
               onChanged: (v) => setState(() => _query = v),
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
+          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            child: Row(
+            child: Wrap(
+              spacing: 8,
+              runSpacing: 8,
               children: [
                 _filterChip('All', null),
                 _filterChip('Conventional', ReelType.conventional),
@@ -101,13 +102,10 @@ class _ReelPickerScreenState extends State<ReelPickerScreen> {
     );
   }
 
-  Widget _filterChip(String label, ReelType? type) => Padding(
-        padding: const EdgeInsets.only(right: 8),
-        child: ChoiceChip(
-          label: Text(label),
-          selected: _typeFilter == type,
-          onSelected: (_) => setState(() => _typeFilter = type),
-        ),
+  Widget _filterChip(String label, ReelType? type) => ChoiceChip(
+        label: Text(label),
+        selected: _typeFilter == type,
+        onSelected: (_) => setState(() => _typeFilter = type),
       );
 
   Future<void> _addCustom() async {

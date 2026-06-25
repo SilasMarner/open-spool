@@ -16,12 +16,16 @@ class LinePickerScreen extends StatefulWidget {
 
 class _LinePickerScreenState extends State<LinePickerScreen> {
   String _query = '';
-  LineType? _typeFilter;
+
+  /// The chosen line type. Null *and* not-yet-chosen → show the type chooser.
+  /// Null *and* chosen → "Show all" was tapped, so list every type.
+  LineType? _type;
+  bool _typeChosen = false;
 
   List<Line> get _filtered {
     final q = _query.toLowerCase();
     return catalog.lines.where((l) {
-      if (_typeFilter != null && l.type != _typeFilter) return false;
+      if (_type != null && l.type != _type) return false;
       if (q.isEmpty) return true;
       return l.displayName.toLowerCase().contains(q) ||
           l.lbTest.toStringAsFixed(0).contains(q);
@@ -32,12 +36,36 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
       });
   }
 
+  /// Back arrow: from the list, step back to the type chooser; from the
+  /// chooser, leave the picker entirely.
+  void _back() {
+    if (_typeChosen) {
+      setState(() {
+        _typeChosen = false;
+        _query = '';
+      });
+    } else {
+      Navigator.pop(context);
+    }
+  }
+
+  void _chooseType(LineType? type) =>
+      setState(() {
+        _type = type;
+        _typeChosen = true;
+      });
+
   @override
   Widget build(BuildContext context) {
-    final u = settings.units;
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: _back,
+        ),
+        title: Text(_typeChosen
+            ? (_type == null ? 'All lines' : '${_type!.shortLabel} lines')
+            : widget.title),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
@@ -46,73 +74,120 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
           ),
         ],
       ),
-      body: Column(
+      body: _typeChosen ? _listBody() : _typeChooser(),
+    );
+  }
+
+  // ---- Stage 1: pick the line type ----------------------------------------
+
+  Widget _typeChooser() => ListView(
+        padding: const EdgeInsets.fromLTRB(12, 16, 12, 16),
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
-            child: TextField(
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                hintText: 'Search lines (brand or test)',
-                border: OutlineInputBorder(),
-              ),
-              onChanged: (v) => setState(() => _query = v),
-            ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(4, 0, 4, 4),
+            child: Text('What kind of line?',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            child: Row(
-              children: [
-                _filterChip('All', null),
-                _filterChip('Mono', LineType.mono),
-                _filterChip('Fluoro', LineType.fluoro),
-                _filterChip('Solid braid', LineType.braidSolid),
-                _filterChip('Hollow braid', LineType.braidHollow),
-              ],
-            ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(4, 0, 4, 12),
+            child: Text('Pick a type and only those lines show up.',
+                style: TextStyle(color: Colors.white60, fontSize: 13)),
           ),
-          Expanded(
-            child: _filtered.isEmpty
-                ? _EmptyState(
-                    icon: Icons.search_off,
-                    message: 'No lines match.',
-                    hint: 'Try a different search, or tap + to add a custom line.',
-                  )
-                : ListView.builder(
-              padding: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).viewPadding.bottom),
-              itemCount: _filtered.length,
-              itemBuilder: (context, i) {
-                final l = _filtered[i];
-                return ListTile(
-                  leading: const Icon(Icons.timeline),
-                  title: Row(
-                    children: [
-                      Flexible(child: Text('${l.displayName} · ${u.test(l.lbTest)}')),
-                      if (l.custom) const _Tag('custom'),
-                      if (l.unverified) const _Tag('VERIFY', warn: true),
-                    ],
-                  ),
-                  subtitle: Text('${l.type.shortLabel} · ${u.diameter(l.diameterIn)}'),
-                  onTap: () => Navigator.pop(context, l),
-                );
-              },
+          _typeOption(LineType.mono, Icons.water_drop_outlined),
+          _typeOption(LineType.fluoro, Icons.invert_colors_outlined),
+          _typeOption(LineType.braidSolid, Icons.timeline),
+          _typeOption(LineType.braidHollow, Icons.linear_scale),
+          const SizedBox(height: 4),
+          Center(
+            child: TextButton(
+              onPressed: () => _chooseType(null),
+              child: const Text('Show all lines instead'),
             ),
           ),
         ],
+      );
+
+  Widget _typeOption(LineType type, IconData icon) {
+    final count = catalog.lines.where((l) => l.type == type).length;
+    return Card(
+      child: ListTile(
+        leading: Icon(icon),
+        title: Text(type.label),
+        subtitle: Text('$count lines'),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => _chooseType(type),
       ),
     );
   }
 
-  Widget _filterChip(String label, LineType? type) => Padding(
-        padding: const EdgeInsets.only(right: 8),
-        child: ChoiceChip(
-          label: Text(label),
-          selected: _typeFilter == type,
-          onSelected: (_) => setState(() => _typeFilter = type),
+  // ---- Stage 2: the filtered list -----------------------------------------
+
+  Widget _listBody() {
+    final u = settings.units;
+    final list = _filtered;
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
+          child: TextField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Search (brand or test)',
+              border: OutlineInputBorder(),
+            ),
+            onChanged: (v) => setState(() => _query = v),
+          ),
         ),
-      );
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(14, 2, 12, 6),
+            child: TextButton.icon(
+              onPressed: () => setState(() {
+                _typeChosen = false;
+                _query = '';
+              }),
+              icon: const Icon(Icons.swap_horiz, size: 18),
+              label: Text(_type == null
+                  ? 'Showing all types · change'
+                  : 'Showing ${_type!.shortLabel} · change type'),
+            ),
+          ),
+        ),
+        Expanded(
+          child: list.isEmpty
+              ? _EmptyState(
+                  icon: Icons.search_off,
+                  message: 'No lines match.',
+                  hint: 'Try a different search, or tap + to add a custom line.',
+                )
+              : ListView.builder(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewPadding.bottom),
+                  itemCount: list.length,
+                  itemBuilder: (context, i) {
+                    final l = list[i];
+                    return ListTile(
+                      leading: const Icon(Icons.timeline),
+                      title: Row(
+                        children: [
+                          Flexible(
+                              child: Text(
+                                  '${l.displayName} · ${u.test(l.lbTest)}')),
+                          if (l.custom) const _Tag('custom'),
+                          if (l.unverified) const _Tag('VERIFY', warn: true),
+                        ],
+                      ),
+                      subtitle: Text(
+                          '${l.type.shortLabel} · ${u.diameter(l.diameterIn)}'),
+                      onTap: () => Navigator.pop(context, l),
+                    );
+                  },
+                ),
+        ),
+      ],
+    );
+  }
 
   Future<void> _addCustom() async {
     final line = await showDialog<Line>(
@@ -121,7 +196,14 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
     );
     if (line != null) {
       await catalog.addCustomLine(line);
-      if (mounted) setState(() {});
+      // Land in the new line's type list so it's right there to pick.
+      if (mounted) {
+        setState(() {
+          _type = line.type;
+          _typeChosen = true;
+          _query = '';
+        });
+      }
     }
   }
 }

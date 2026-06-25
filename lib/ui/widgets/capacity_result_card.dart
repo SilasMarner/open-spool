@@ -25,6 +25,10 @@ class CapacityResultCard extends StatelessWidget {
   /// share sheet (email, text, messaging, etc.).
   final VoidCallback? onShare;
 
+  /// When provided, a "Save favorite" button is shown so the user can persist
+  /// the current setup without hunting for the AppBar star.
+  final VoidCallback? onSave;
+
   const CapacityResultCard({
     super.key,
     required this.rows,
@@ -33,6 +37,7 @@ class CapacityResultCard extends StatelessWidget {
     this.overflowText,
     this.unverifiedInputs = false,
     this.onShare,
+    this.onSave,
   });
 
   @override
@@ -107,17 +112,29 @@ class CapacityResultCard extends StatelessWidget {
                 text: 'Uses an unverified catalog spec (tagged VERIFY). '
                     'Confirm the diameter / anchor before trusting this.',
               ),
-            if (onShare != null)
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton.icon(
-                  onPressed: onShare,
-                  icon: const Icon(Icons.ios_share, size: 18),
-                  label: const Text('Share'),
-                  style: TextButton.styleFrom(
-                    foregroundColor: theme.colorScheme.onPrimaryContainer,
-                  ),
-                ),
+            if (onSave != null || onShare != null)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  if (onSave != null)
+                    TextButton.icon(
+                      onPressed: onSave,
+                      icon: const Icon(Icons.star_outline, size: 18),
+                      label: const Text('Save favorite'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: theme.colorScheme.onPrimaryContainer,
+                      ),
+                    ),
+                  if (onShare != null)
+                    TextButton.icon(
+                      onPressed: onShare,
+                      icon: const Icon(Icons.ios_share, size: 18),
+                      label: const Text('Share'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: theme.colorScheme.onPrimaryContainer,
+                      ),
+                    ),
+                ],
               ),
           ],
         ),
