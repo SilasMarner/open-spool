@@ -6,8 +6,8 @@ import '../../models/loadout.dart';
 import '../../services/loadout_result.dart';
 
 /// Lists saved favorites. Tap one to load it onto the calculator; drag the
-/// handle to reorder; swipe or tap the trash icon to delete (with Undo); the
-/// share icon hands its result to the system share sheet.
+/// handle to reorder; tap the trash icon to delete (with Undo); the share icon
+/// hands its result to the system share sheet.
 class LoadoutsScreen extends StatefulWidget {
   const LoadoutsScreen({super.key});
 
@@ -18,11 +18,26 @@ class LoadoutsScreen extends StatefulWidget {
 class _LoadoutsScreenState extends State<LoadoutsScreen> {
   List<Loadout> _items = [];
   bool _loading = true;
+  ScaffoldMessengerState? _messenger;
 
   @override
   void initState() {
     super.initState();
     _load();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _messenger = ScaffoldMessenger.of(context);
+  }
+
+  @override
+  void dispose() {
+    // Don't let our "Deleted …" snackbar leak onto the previous screen — the
+    // root messenger keeps it alive across navigation otherwise.
+    _messenger?.clearSnackBars();
+    super.dispose();
   }
 
   Future<void> _load() async {
@@ -121,47 +136,37 @@ class _LoadoutsScreenState extends State<LoadoutsScreen> {
     final lineNames = l.segments
         .map((s) => catalog.line(s.lineId)?.displayName ?? '?')
         .join(' over ');
-    return Dismissible(
+    return ListTile(
       key: ValueKey(l.id),
-      direction: DismissDirection.endToStart,
-      background: Container(
-        color: Theme.of(context).colorScheme.errorContainer,
-        alignment: Alignment.centerRight,
-        padding: const EdgeInsets.only(right: 20),
-        child: const Icon(Icons.delete),
+      leading: Icon(
+        l.mode == LoadoutMode.topshot ? Icons.layers : Icons.linear_scale,
       ),
-      onDismissed: (_) => _delete(l),
-      child: ListTile(
-        leading: Icon(
-          l.mode == LoadoutMode.topshot ? Icons.layers : Icons.linear_scale,
-        ),
-        title: Text(l.name),
-        subtitle: Text('${reel?.displayName ?? l.reelId}\n$lineNames'),
-        isThreeLine: true,
-        trailing: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.ios_share),
-              tooltip: 'Share',
-              onPressed: () => _shareLoadout(l),
+      title: Text(l.name),
+      subtitle: Text('${reel?.displayName ?? l.reelId}\n$lineNames'),
+      isThreeLine: true,
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.ios_share),
+            tooltip: 'Share',
+            onPressed: () => _shareLoadout(l),
+          ),
+          IconButton(
+            icon: const Icon(Icons.delete_outline),
+            tooltip: 'Delete',
+            onPressed: () => _delete(l),
+          ),
+          ReorderableDragStartListener(
+            index: index,
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 6, vertical: 12),
+              child: Icon(Icons.drag_handle),
             ),
-            IconButton(
-              icon: const Icon(Icons.delete_outline),
-              tooltip: 'Delete',
-              onPressed: () => _delete(l),
-            ),
-            ReorderableDragStartListener(
-              index: index,
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6, vertical: 12),
-                child: Icon(Icons.drag_handle),
-              ),
-            ),
-          ],
-        ),
-        onTap: () => Navigator.pop(context, l),
+          ),
+        ],
       ),
+      onTap: () => Navigator.pop(context, l),
     );
   }
 }

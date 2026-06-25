@@ -66,6 +66,15 @@ adb install -r build/app/outputs/flutter-apk/app-release.apk
 
 App id: `com.mbettinger.reel_planner`.
 
+## Internal docs & process
+
+- [`docs/INTERNALS.md`](docs/INTERNALS.md) — behavior-level reference: UI flows, favorites
+  (save/dedupe/delete+undo/reorder), persistence shape, and the regression guards. **Kept in sync
+  with the code.**
+- [`docs/PREBUILD.md`](docs/PREBUILD.md) — the pre-build checklist. Updating the docs above when a
+  change alters a flow/screen/behavior is **step 1 of every build**, not an afterthought.
+- QA: the `reel-qa` skill drives a full-app walkthrough on the emulator and enforces the doc-sync step.
+
 ## v1 scope / not yet
 
 Mix is backing + topshot (2 segments). Not yet: 3+ segments, remote catalog sync, iOS build,
