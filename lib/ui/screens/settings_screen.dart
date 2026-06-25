@@ -69,6 +69,22 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.sailing_outlined),
+            title: const Text('Also from the author: OpenTides'),
+            subtitle: const Text(
+              'Tide & current predictions and marine weather — free on Google Play',
+            ),
+            isThreeLine: true,
+            trailing: const Icon(Icons.open_in_new),
+            onTap: () => launchUrl(
+              Uri.parse(
+                'https://play.google.com/store/apps/details?id=com.mattbettinger.tides',
+              ),
+              mode: LaunchMode.externalApplication,
+            ),
+          ),
+          const Divider(),
           const Padding(
             padding: EdgeInsets.all(16),
             child: Text(
@@ -87,6 +103,14 @@ class SettingsScreen extends StatelessWidget {
               'is laid and how tightly it is packed. Specs tagged VERIFY in the '
               'catalog are approximate and should be confirmed against the '
               'manufacturer before you trust the numbers.',
+            ),
+          ),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 12, 16, 24),
+            child: Text(
+              'OpenSpool v1.0.0',
+              style: TextStyle(color: Colors.white38, fontSize: 12),
             ),
           ),
         ],

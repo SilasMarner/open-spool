@@ -73,7 +73,13 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
             ),
           ),
           Expanded(
-            child: ListView.builder(
+            child: _filtered.isEmpty
+                ? _EmptyState(
+                    icon: Icons.search_off,
+                    message: 'No lines match.',
+                    hint: 'Try a different search, or tap + to add a custom line.',
+                  )
+                : ListView.builder(
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewPadding.bottom),
               itemCount: _filtered.length,
@@ -117,6 +123,35 @@ class _LinePickerScreenState extends State<LinePickerScreen> {
       await catalog.addCustomLine(line);
       if (mounted) setState(() {});
     }
+  }
+}
+
+class _EmptyState extends StatelessWidget {
+  final IconData icon;
+  final String message;
+  final String hint;
+  const _EmptyState(
+      {required this.icon, required this.message, required this.hint});
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 40, color: Colors.white38),
+            const SizedBox(height: 12),
+            Text(message,
+                style: const TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 6),
+            Text(hint,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.white60, fontSize: 13)),
+          ],
+        ),
+      ),
+    );
   }
 }
 

@@ -39,6 +39,11 @@ Note: Seaguar's spec chart omits the 200 lb diameter.
 Confirmed from spec: 60=.016. Estimated from comparable hollow core (VERIFY): **40=.013, 80=.019, 130=.024, 200=.030**.
 Note: Mustad/TUF-Line publishes a diameter only for select sizes.
 
+### 7. Abu Garcia Revo Toro Beast 50 (reel anchor) — 1 estimate
+Anchored to **~200 yd of 50 lb braid** (Abu Garcia states "over 200 yd of #50 PowerPro" but
+gives no exact figure for the 50 size). The 60 size is anchored to its published 30 lb braid /
+285 yd. Confirm the 50's exact 50 lb-braid capacity, or re-anchor to a published mono figure.
+
 ---
 
 ## Manufacturer contacts
