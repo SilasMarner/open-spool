@@ -69,14 +69,19 @@ First release of OpenSpool. Plan line capacity for 200+ saltwater reels across b
 - **Privacy policy:** Play requires a URL. A short "OpenSpool collects no data" page is enough — host
   one (e.g. alongside the OpenTides policy) before submitting.
 
-## Graphic assets still needed
+## Graphic assets
 
-| Asset | Spec | Notes |
+Generated assets live in [`../store-assets/`](../store-assets/), reproducible via
+`python3 store-assets/make_graphics.py` (Pillow + DejaVuSans-Bold). They use the OpenTides
+palette (navy `#0A1628`, cyan `#00BCD4`, cyan-light `#4DD0E1`) and wave motif so OpenSpool reads as
+the same family.
+
+| Asset | Spec | Status |
 |---|---|---|
-| **App icon** | 512×512 PNG, 32-bit, no alpha edges | Reuse the launcher icon at hi-res. Navy bg + cyan, matching the in-app palette (navy `#0A1628`, cyan `#00BCD4`) so it reads as the OpenTides family. A spool/line motif. |
-| **Feature graphic** | 1024×500 PNG/JPG, no alpha | Shown atop the listing. Navy gradient + the cyan wave motif from the in-app `WaveHeader`; "OpenSpool" wordmark + tagline "Saltwater line-capacity planner". Keep text clear of the edges. |
-| **Phone screenshots** | 2–8 PNG/JPG, 16:9 or 9:16, min 320 px short side | Capture on the Pixel emulator (1080×1920). Suggested set below. |
-| **Tablet screenshots** (optional) | 7" and 10" | Only if you want tablet featuring; not required to publish. |
+| **Feature graphic** | 1024×500 PNG, no alpha | ✅ `store-assets/feature-graphic-1024x500.png` — navy gradient, cyan `WaveHeader`-style waves, "Open" (white) + "Spool" (cyan) wordmark, tagline. |
+| **App icon** | 512×512 PNG, no alpha | ✅ `store-assets/app-icon-512x512.png` — spool-of-line emblem on navy with a trailing leader + family waves. (Also wire as the in-app launcher icon for consistency.) |
+| **Phone screenshots** | 2–8 PNG/JPG, 16:9 or 9:16, min 320 px short side | ⬜ Capture on the Pixel emulator (1080×1920). Suggested set below. |
+| **Tablet screenshots** (optional) | 7" and 10" | ⬜ Only if you want tablet featuring; not required to publish. |
 
 ### Suggested screenshot sequence (caption ideas)
 1. Calculator with a reel + straight braid result — "Know your yardage instantly."
