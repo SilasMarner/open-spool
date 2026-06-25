@@ -80,7 +80,7 @@ the same family.
 |---|---|---|
 | **Feature graphic** | 1024×500 PNG, no alpha | ✅ `store-assets/feature-graphic-1024x500.png` — navy gradient, cyan `WaveHeader`-style waves, "Open" (white) + "Spool" (cyan) wordmark, tagline. |
 | **App icon** | 512×512 PNG, no alpha | ✅ `store-assets/app-icon-512x512.png` — spool-of-line emblem on navy with a trailing leader + family waves. (Also wire as the in-app launcher icon for consistency.) |
-| **Phone screenshots** | 2–8 PNG/JPG, 16:9 or 9:16, min 320 px short side | ⬜ Capture on the Pixel emulator (1080×1920). Suggested set below. |
+| **Phone screenshots** | 2–8 PNG/JPG, 16:9 or 9:16, min 320 px short side | ✅ `store-assets/screenshots/` — 7 shots at 1080×1920 captured on `emulator-5554` (home, straight result, topshot mix, by-%, reel picker, line-type chooser, favorites). |
 | **Tablet screenshots** (optional) | 7" and 10" | ⬜ Only if you want tablet featuring; not required to publish. |
 
 ### Suggested screenshot sequence (caption ideas)
