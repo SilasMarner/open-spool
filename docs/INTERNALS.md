@@ -42,6 +42,16 @@ topshot modes it shows two segments; editing either length auto-adjusts the othe
 The card's bottom-right has **Save favorite** (shown when `onSave != null`) and **Share** (when
 `onShare != null`).
 
+**Per-segment spool share (mix results).** Each segment's `sub` line includes how much of the spool
+that segment occupies — e.g. `fixed · ~53% of spool`. Computed in `loadout_result.dart`
+(`_spoolShare` = `yards × diameter²·packing ÷ spoolK`, formatted by `_pct`) and appended to the
+existing `sub` ("fixed" / "computed fill" / "you set"). It flows through to both the card and the
+share summary unchanged. This exists to explain *why* a fat mono topshot leaves little braid backing:
+the diameter² law means a thick line eats far more spool per yard than thin braid (e.g. 50 yd of
+0.035" mono ≈ the volume of ~212 yd of 0.017" braid), so the backing number can look surprisingly low
+even though the math is correct. Straight fills don't show a share (always ~100%, covered by the fill
+note).
+
 ### Saving a favorite (`_saveLoadout`, home_screen.dart:482)
 1. Build a candidate `Loadout` (name `''`).
 2. `loadoutRepo.findDuplicate(candidate)` — matches **reel + mode + segments** (name ignored). If a

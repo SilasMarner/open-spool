@@ -37,6 +37,16 @@ class ComputedResult {
   });
 }
 
+/// Fraction of the spool's rated volume a [yards] run of [line] occupies. Lets
+/// the result card explain *why* a fat topshot leaves little room for backing.
+double _spoolShare(double yards, Line line, Reel reel) {
+  if (reel.spoolK <= 0) return 0;
+  return yards * volPerYard(line.diameterIn, packingFactor: line.packingFactor) /
+      reel.spoolK;
+}
+
+String _pct(double fraction) => '~${(fraction * 100).round()}% of spool';
+
 /// Straight (single-line) fill.
 ComputedResult computeStraight({required Reel reel, required Line line}) {
   final yards = straightYards(
@@ -70,13 +80,15 @@ ComputedResult computeMix({
     fixedYards: fixedYards,
   );
   final topFixed = fixed == FixedSegment.topshot;
+  final topShare = _spoolShare(r.topshotYards, topshot, reel);
+  final backShare = _spoolShare(r.backingYards, backing, reel);
   return ComputedResult(
     reel: reel,
     rows: [
       ResultLine('Topshot — ${topshot.displayName}', r.topshotYards,
-          sub: topFixed ? 'fixed' : 'computed fill'),
+          sub: '${topFixed ? 'fixed' : 'computed fill'} · ${_pct(topShare)}'),
       ResultLine('Backing — ${backing.displayName}', r.backingYards,
-          sub: topFixed ? 'computed fill' : 'fixed'),
+          sub: '${topFixed ? 'computed fill' : 'fixed'} · ${_pct(backShare)}'),
     ],
     fillFraction: r.fillFraction,
     overflow: r.overflow,
@@ -102,11 +114,15 @@ ComputedResult computeMixBoth({
     topYards: topYards,
     backYards: backYards,
   );
+  final topShare = _spoolShare(topYards, topshot, reel);
+  final backShare = _spoolShare(backYards, backing, reel);
   return ComputedResult(
     reel: reel,
     rows: [
-      ResultLine('Topshot — ${topshot.displayName}', topYards, sub: 'you set'),
-      ResultLine('Backing — ${backing.displayName}', backYards, sub: 'you set'),
+      ResultLine('Topshot — ${topshot.displayName}', topYards,
+          sub: 'you set · ${_pct(topShare)}'),
+      ResultLine('Backing — ${backing.displayName}', backYards,
+          sub: 'you set · ${_pct(backShare)}'),
     ],
     fillFraction: r.fillFraction,
     overflow: r.overflow,
