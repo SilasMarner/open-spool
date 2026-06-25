@@ -44,6 +44,11 @@ Anchored to **~200 yd of 50 lb braid** (Abu Garcia states "over 200 yd of #50 Po
 gives no exact figure for the 50 size). The 60 size is anchored to its published 30 lb braid /
 285 yd. Confirm the 50's exact 50 lb-braid capacity, or re-anchor to a published mono figure.
 
+### 8. Akios Shuttle 555 / 666 (reel anchors) — 2 estimates
+The 656 spool is published at **300 yd / 15 lb mono** (used for Shuttle/Tourno/S-Line 656).
+The narrow 555 (~250 yd) and wide 666 (~350 yd) are scaled from the 656 spool, not published
+figures. Confirm with Akios/Breakaway Tackle (Corpus Christi, TX) — they publish the 656 only.
+
 ---
 
 ## Manufacturer contacts
