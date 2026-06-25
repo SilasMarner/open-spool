@@ -18,9 +18,11 @@ _Last web search: 2026-06-24 (deep sweep of manufacturer + ~15 retailer/review s
 Need diameter for: **40, 60, 80, 100, 130, 200 lb**
 Current estimates (in): 40=.016, 60=.019, 80=.021, 100=.024, 130=.028, 200=.033
 
-### 2. Beyond Braid 8X (8-strand solid braid) — 2 sizes
-Need diameter for: **80, 100 lb** (15–60 lb already verified from the published chart)
-Current estimates (in): 80=.0177 (~0.45 mm), 100=.0197 (~0.50 mm)
+### 2. Beyond Braid 8X (8-strand solid braid) — ✅ RESOLVED 2026-06-25
+Beyond Braid emailed their full diameter/strength chart. Catalog now carries the published
+diameters for **10–100 lb** with no estimates (added 10/70/90 lb; corrected 80=0.48 mm/.0189 in,
+100=0.55 mm/.0217 in). Chart (mm): 10=0.12, 15=0.16, 20=0.20, 30=0.28, 40=0.32, 50=0.37,
+60=0.40, 70=0.44, 80=0.48, 90=0.50, 100=0.55.
 
 ### 3. Tight Line 12 Strand Hollow Core (hollow-core braid) — 8 sizes
 Need diameter for: **30, 50, 65, 80, 100, 130, 150, 200 lb**

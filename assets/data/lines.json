@@ -1892,6 +1892,15 @@
       "source": "Soft Steel published spec (2.50 mm)"
     },
     {
+      "id": "bb8x-solid-10",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.0047,
+      "source": "Beyond Braid published spec (0.12 mm)"
+    },
+    {
       "id": "bb8x-solid-15",
       "brand": "Beyond Braid",
       "product": "8X",
@@ -1946,13 +1955,31 @@
       "source": "Beyond Braid published spec (0.4 mm)"
     },
     {
+      "id": "bb8x-solid-70",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 70,
+      "diameter_in": 0.0173,
+      "source": "Beyond Braid published spec (0.44 mm)"
+    },
+    {
       "id": "bb8x-solid-80",
       "brand": "Beyond Braid",
       "product": "8X",
       "type": "braid_solid",
       "lb_test": 80,
-      "diameter_in": 0.0177,
-      "source": "VERIFY \u2014 Beyond Braid publishes no diameter above 60 lb; ~0.45 mm estimate"
+      "diameter_in": 0.0189,
+      "source": "Beyond Braid published spec (0.48 mm)"
+    },
+    {
+      "id": "bb8x-solid-90",
+      "brand": "Beyond Braid",
+      "product": "8X",
+      "type": "braid_solid",
+      "lb_test": 90,
+      "diameter_in": 0.0197,
+      "source": "Beyond Braid published spec (0.5 mm)"
     },
     {
       "id": "bb8x-solid-100",
@@ -1960,8 +1987,8 @@
       "product": "8X",
       "type": "braid_solid",
       "lb_test": 100,
-      "diameter_in": 0.0197,
-      "source": "VERIFY \u2014 Beyond Braid publishes no diameter above 60 lb; ~0.5 mm estimate"
+      "diameter_in": 0.0217,
+      "source": "Beyond Braid published spec (0.55 mm)"
     },
     {
       "id": "reaction-x8-10",
