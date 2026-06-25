@@ -1,4 +1,4 @@
-package com.mbettinger.reel_planner
+package com.mattbettinger.openspool
 
 import io.flutter.embedding.android.FlutterActivity
 
