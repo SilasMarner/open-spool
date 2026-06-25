@@ -5,7 +5,8 @@ import 'db.dart';
 class LoadoutRepository {
   Future<List<Loadout>> all() async {
     final db = await AppDb.instance.database;
-    final rows = await db.query('loadouts', orderBy: 'name COLLATE NOCASE');
+    final rows = await db.query('loadouts',
+        orderBy: 'position ASC, name COLLATE NOCASE');
     return rows.map(Loadout.fromRow).toList();
   }
 
@@ -27,11 +28,35 @@ class LoadoutRepository {
   Future<int> save(Loadout loadout) async {
     final db = await AppDb.instance.database;
     if (loadout.id == null) {
-      return db.insert('loadouts', loadout.toRow());
+      // New favorites go to the end of the list.
+      final row = loadout.toRow();
+      final r = await db
+          .rawQuery('SELECT COALESCE(MAX(position), -1) + 1 AS p FROM loadouts');
+      row['position'] = r.first['p'] as int;
+      return db.insert('loadouts', row);
     }
     await db.update('loadouts', loadout.toRow(),
         where: 'id = ?', whereArgs: [loadout.id]);
     return loadout.id!;
+  }
+
+  /// Re-insert a previously deleted favorite (keeps its id/position) — used to
+  /// implement Undo. Positions are normalised separately via [reorder].
+  Future<void> restore(Loadout loadout) async {
+    final db = await AppDb.instance.database;
+    await db.insert('loadouts', loadout.toRow());
+  }
+
+  /// Persist a new manual order: [orderedIds] is the favorites' ids top-to-
+  /// bottom, written back as the `position` column.
+  Future<void> reorder(List<int> orderedIds) async {
+    final db = await AppDb.instance.database;
+    final batch = db.batch();
+    for (var i = 0; i < orderedIds.length; i++) {
+      batch.update('loadouts', {'position': i},
+          where: 'id = ?', whereArgs: [orderedIds[i]]);
+    }
+    await batch.commit(noResult: true);
   }
 
   Future<void> delete(int id) async {

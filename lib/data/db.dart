@@ -15,7 +15,20 @@ class AppDb {
     final dir = await getDatabasesPath();
     return openDatabase(
       p.join(dir, 'reel_planner.db'),
-      version: 1,
+      version: 2,
+      onUpgrade: (db, oldV, newV) async {
+        if (oldV < 2) {
+          // Add a manual sort order. Seed it from the previous name ordering so
+          // existing favorites keep a stable position on first launch.
+          await db.execute(
+              'ALTER TABLE loadouts ADD COLUMN position INTEGER NOT NULL DEFAULT 0');
+          final rows = await db.query('loadouts', orderBy: 'name COLLATE NOCASE');
+          for (var i = 0; i < rows.length; i++) {
+            await db.update('loadouts', {'position': i},
+                where: 'id = ?', whereArgs: [rows[i]['id']]);
+          }
+        }
+      },
       onCreate: (db, _) async {
         await db.execute('''
           CREATE TABLE loadouts (
@@ -23,7 +36,8 @@ class AppDb {
             name TEXT NOT NULL,
             reel_id TEXT NOT NULL,
             mode TEXT NOT NULL,
-            segments TEXT NOT NULL
+            segments TEXT NOT NULL,
+            position INTEGER NOT NULL DEFAULT 0
           )
         ''');
         await db.execute('''

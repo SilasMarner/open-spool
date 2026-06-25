@@ -19,21 +19,26 @@ class Loadout {
   final LoadoutMode mode;
   final List<LineSegment> segments;
 
+  /// Manual sort order in the favorites list (lower = higher up).
+  final int position;
+
   const Loadout({
     this.id,
     required this.name,
     required this.reelId,
     required this.mode,
     required this.segments,
+    this.position = 0,
   });
 
-  Loadout copyWith({int? id, String? name, String? reelId, LoadoutMode? mode, List<LineSegment>? segments}) =>
+  Loadout copyWith({int? id, String? name, String? reelId, LoadoutMode? mode, List<LineSegment>? segments, int? position}) =>
       Loadout(
         id: id ?? this.id,
         name: name ?? this.name,
         reelId: reelId ?? this.reelId,
         mode: mode ?? this.mode,
         segments: segments ?? this.segments,
+        position: position ?? this.position,
       );
 
   factory Loadout.fromRow(Map<String, dynamic> row) => Loadout(
@@ -44,6 +49,7 @@ class Loadout {
         segments: (jsonDecode(row['segments'] as String) as List)
             .map((e) => LineSegment.fromJson(e as Map<String, dynamic>))
             .toList(),
+        position: (row['position'] as int?) ?? 0,
       );
 
   Map<String, dynamic> toRow() => {
@@ -52,5 +58,6 @@ class Loadout {
         'reel_id': reelId,
         'mode': mode.json,
         'segments': jsonEncode(segments.map((s) => s.toJson()).toList()),
+        'position': position,
       };
 }
