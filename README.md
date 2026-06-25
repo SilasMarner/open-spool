@@ -90,7 +90,7 @@ Open an issue or use the email link in the app's Settings.
 
 OpenSpool collects no data and makes no network requests — everything runs offline on your
 device. See [`PRIVACY.md`](PRIVACY.md) (hosted:
-<https://silasmarner.github.io/OpenSpool/privacy.html>).
+<https://silasmarner.github.io/open-spool/privacy.html>).
 
 ## License
 
