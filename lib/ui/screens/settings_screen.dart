@@ -19,22 +19,28 @@ class SettingsScreen extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
             child: Text('Units', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
-          RadioGroup<UnitSystem>(
-            groupValue: settings.units,
-            onChanged: (v) => settings.setUnits(v!),
-            child: const Column(
-              children: [
-                RadioListTile<UnitSystem>(
-                  title: Text('US (yd / lb / in)'),
-                  subtitle: Text('Yards, pounds, inches'),
-                  value: UnitSystem.us,
-                ),
-                RadioListTile<UnitSystem>(
-                  title: Text('Metric (m / kg / mm)'),
-                  subtitle: Text('Meters, kilograms, millimeters'),
-                  value: UnitSystem.metric,
-                ),
-              ],
+          // settings is a ChangeNotifier; this screen is a pushed route the root
+          // listener can't rebuild, so listen here or the radio won't move when
+          // tapped (it stays on whatever value the route opened with).
+          ListenableBuilder(
+            listenable: settings,
+            builder: (context, _) => RadioGroup<UnitSystem>(
+              groupValue: settings.units,
+              onChanged: (v) => settings.setUnits(v!),
+              child: const Column(
+                children: [
+                  RadioListTile<UnitSystem>(
+                    title: Text('US (yd / lb / in)'),
+                    subtitle: Text('Yards, pounds, inches'),
+                    value: UnitSystem.us,
+                  ),
+                  RadioListTile<UnitSystem>(
+                    title: Text('Metric (m / kg / mm)'),
+                    subtitle: Text('Meters, kilograms, millimeters'),
+                    value: UnitSystem.metric,
+                  ),
+                ],
+              ),
             ),
           ),
           const Divider(),

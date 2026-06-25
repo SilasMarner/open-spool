@@ -32,10 +32,17 @@ are unconfirmed placeholders.
 
 ## Calculator flow (`home_screen.dart`)
 
-Three numbered step cards:
+The body is a `Column`: a full-width **`WaveHeader`** band on top, then an `Expanded` `ListView` of
+three numbered step cards:
 1. **Pick your reel** → `reel_picker_screen`.
 2. **How are you filling it?** — segmented **Straight / Topshot / Backing-Topshot**.
 3. **Pick your line** → `line_picker_screen`.
+
+**Wave header (`ui/widgets/wave_header.dart`).** An animated cyan sine-wave band (`CustomPaint`)
+with the tagline "Saltwater line-capacity planner" and the picked reel as its subtitle. Ported
+straight from OpenTides' `WaveHeader` (same navy/cyan palette) **on purpose, so the two apps read as
+one family** — keep it visually in step with OpenTides. It is purely decorative; do not gate any
+logic on it.
 
 The **Capacity** result card (`capacity_result_card.dart`) renders below once enough is chosen. In
 topshot modes it shows two segments; editing either length auto-adjusts the other to fill the spool.
@@ -133,7 +140,14 @@ after you navigate back.
 ## Settings / units
 
 `settings` (SharedPreferences-backed) holds the US/Metric unit choice; the result card and pickers
-read it through `unit_converter.dart`. US default (yd / in / lb), metric = m / mm / kg.
+read it through `unit_converter.dart`. **US is the default** (yd / in / lb); metric = m / mm / kg.
+`Settings.load()` only flips to metric on a stored `'metric'`, so a fresh install is US.
+
+`settings` is a `ChangeNotifier`. The root `ListenableBuilder` in `main.dart` rebuilds the home tree,
+but **pushed routes don't rebuild from it** — `home_screen` listens to `settings` directly
+(`addListener`) and `settings_screen` wraps its unit `RadioGroup` in a `ListenableBuilder`. **This is
+required**: without it the settings radio is frozen on whatever value the route opened with — tapping
+a unit persists the change but the dot never moves (the "clicking US doesn't select it" bug).
 
 ## Build / deploy quick ref
 

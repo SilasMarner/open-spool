@@ -10,6 +10,7 @@ import '../../services/capacity_calculator.dart';
 import '../../services/loadout_result.dart';
 import '../../services/unit_converter.dart';
 import '../widgets/capacity_result_card.dart';
+import '../widgets/wave_header.dart';
 import 'line_picker_screen.dart';
 import 'loadouts_screen.dart';
 import 'manual_screen.dart';
@@ -100,10 +101,16 @@ class _HomeScreenState extends State<HomeScreen> {
       // 3-button bar under Android's forced edge-to-edge.
       body: SafeArea(
         top: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(12, 12, 12, 28),
+        child: Column(
           children: [
-            const _StepHeader(1, 'Pick your reel'),
+            // Animated wave band matching OpenTides, so the two apps read as one
+            // family. Shows the picked reel as its subtitle once chosen.
+            WaveHeader(subtitle: _reel?.displayName),
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(12, 12, 12, 28),
+                children: [
+                  const _StepHeader(1, 'Pick your reel'),
             _reelSelector(),
             const SizedBox(height: 16),
             const _StepHeader(2, 'How are you filling it?'),
@@ -118,6 +125,9 @@ class _HomeScreenState extends State<HomeScreen> {
               _mixSection(),
             const SizedBox(height: 16),
             _result(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
