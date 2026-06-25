@@ -59,6 +59,33 @@ class _HomeScreenState extends State<HomeScreen> {
     if (mounted) setState(() {});
   }
 
+  /// True when there's an in-progress plan worth clearing (a reel or any line
+  /// picked). Drives whether the "Start over" action is enabled.
+  bool get _hasSelections =>
+      _reel != null ||
+      _straightLine != null ||
+      _topshotLine != null ||
+      _backingLine != null;
+
+  /// Clear the calculator back to a fresh state. Only touches the in-progress
+  /// selections — saved favorites are untouched.
+  void _reset() {
+    setState(() {
+      _reel = null;
+      _fill = _FillType.straight;
+      _straightLine = null;
+      _topshotLine = null;
+      _backingLine = null;
+      _topYards.text = '50';
+      _backYards.text = '300';
+      _mixInput = _MixInput.length;
+      _topPercent = 30;
+    });
+    ScaffoldMessenger.of(context)
+      ..clearSnackBars()
+      ..showSnackBar(const SnackBar(content: Text('Started a new plan')));
+  }
+
   @override
   void dispose() {
     settings.removeListener(_onSettingsChanged);
@@ -73,6 +100,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('OpenSpool'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            tooltip: 'Start over',
+            onPressed: _hasSelections ? _reset : null,
+          ),
           IconButton(
             icon: const Icon(Icons.bookmark_outline),
             tooltip: 'Favorites',

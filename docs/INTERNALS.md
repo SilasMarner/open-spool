@@ -44,6 +44,12 @@ straight from OpenTides' `WaveHeader` (same navy/cyan palette) **on purpose, so 
 one family** — keep it visually in step with OpenTides. It is purely decorative; do not gate any
 logic on it.
 
+**Start over (app-bar refresh action).** A `refresh` icon leads the calculator's app-bar actions
+(`_reset`). It clears the in-progress plan — reel, all line picks, lengths, mix-input mode, and the
+percent slider back to their initial defaults — and toasts "Started a new plan". It is **disabled
+when there's nothing to clear** (`_hasSelections`: a reel or any line picked). It only resets the
+calculator's transient state; **saved favorites are untouched**.
+
 The **Capacity** result card (`capacity_result_card.dart`) renders below once enough is chosen. In
 topshot modes it shows two segments; editing either length auto-adjusts the other to fill the spool.
 The card's bottom-right has **Save favorite** (shown when `onSave != null`) and **Share** (when
