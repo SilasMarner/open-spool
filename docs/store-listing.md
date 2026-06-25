@@ -62,7 +62,7 @@ First release of OpenSpool. Plan line capacity for 200+ saltwater reels across b
 ## Surrounding Play Console fields
 
 - **Category:** Tools (alt: Sports). **Tags:** fishing, boating.
-- **Contact email:** `open-reel.single766@passmail.com` (in-app author address).
+- **Contact email:** `openspool.sandbar377@passmail.com` (in-app author address).
 - **Data safety:** No data collected — no account, fully local; the Settings mailto link opens the
   user's own email app. Answer "No data collected / No data shared."
 - **Content rating (IARC questionnaire):** Everyone.

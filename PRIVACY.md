@@ -44,4 +44,4 @@ updated" date.
 
 ## Contact
 
-Questions about privacy? Email **open-reel.single766@passmail.com**.
+Questions about privacy? Email **openspool.sandbar377@passmail.com**.

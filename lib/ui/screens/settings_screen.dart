@@ -59,7 +59,7 @@ class SettingsScreen extends StatelessWidget {
             leading: const Icon(Icons.email_outlined),
             title: const Text('Email the author'),
             subtitle: const Text(
-              'open-reel.single766@passmail.com\n'
+              'openspool.sandbar377@passmail.com\n'
               'Line corrections, verified diameters, reel/line requests, '
               'or questions',
             ),
@@ -68,7 +68,7 @@ class SettingsScreen extends StatelessWidget {
             onTap: () => launchUrl(
               Uri(
                 scheme: 'mailto',
-                path: 'open-reel.single766@passmail.com',
+                path: 'openspool.sandbar377@passmail.com',
                 query: 'subject=OpenSpool feedback',
               ),
               mode: LaunchMode.externalApplication,
