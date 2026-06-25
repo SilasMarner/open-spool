@@ -502,16 +502,6 @@
       "source": "Shimano published capacity (50 lb PowerPro / 275 yd)"
     },
     {
-      "id": "penn-squall2-30ld",
-      "brand": "Penn",
-      "model": "Squall II 30 Lever Drag",
-      "type": "conventional",
-      "anchor_label": "50 lb braid",
-      "anchor_diameter_in": 0.014,
-      "anchor_yards": 635,
-      "source": "Penn published capacity (50 lb braid / 635 yd)"
-    },
-    {
       "id": "penn-fathom-lp300",
       "brand": "Penn",
       "model": "Fathom Low Profile 300",
@@ -1900,6 +1890,406 @@
       "anchor_diameter_in": 0.016,
       "anchor_yards": 610,
       "source": "Approx. (rated 65-80 lb braid, 460-610 yd) — VERIFY"
+    },
+    {
+      "id": "shimano-curado-200k",
+      "brand": "Shimano",
+      "model": "Curado 200K",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 120,
+      "source": "Shimano published capacity (Curado 200HGK PowerPro 50 lb / 120 yd)"
+    },
+    {
+      "id": "shimano-curado-300k",
+      "brand": "Shimano",
+      "model": "Curado 300K",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 125,
+      "source": "Shimano published capacity (Curado 300 PowerPro 65 lb / 125 yd)"
+    },
+    {
+      "id": "shimano-tranx-500",
+      "brand": "Shimano",
+      "model": "Tranx 500",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 270,
+      "source": "Shimano published capacity (PowerPro 65 lb / 270 yd)"
+    },
+    {
+      "id": "daiwa-tatula-300",
+      "brand": "Daiwa",
+      "model": "Tatula TW 300",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 175,
+      "source": "Daiwa published capacity (J-Braid 50 lb / 175 yd)"
+    },
+    {
+      "id": "okuma-komodo-463",
+      "brand": "Okuma",
+      "model": "Komodo SS KDS-463",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 300,
+      "source": "Okuma published capacity (50 lb braid / 300 yd)"
+    },
+    {
+      "id": "shimano-twinpower-sw-6000",
+      "brand": "Shimano",
+      "model": "Twin Power SW 6000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 255,
+      "source": "Approx. (PowerPro 40 lb, between TP SW 5000/8000) — VERIFY against Shimano spec"
+    },
+    {
+      "id": "shimano-twinpower-sw-8000",
+      "brand": "Shimano",
+      "model": "Twin Power SW 8000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 300,
+      "source": "Shimano published capacity (PowerPro 40 lb / 300+ yd)"
+    },
+    {
+      "id": "shimano-twinpower-sw-10000",
+      "brand": "Shimano",
+      "model": "Twin Power SW 10000",
+      "type": "spinning",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 290,
+      "source": "Shimano published capacity (10000PG PowerPro 65 lb / 290 yd)"
+    },
+    {
+      "id": "shimano-twinpower-sw-14000",
+      "brand": "Shimano",
+      "model": "Twin Power SW 14000",
+      "type": "spinning",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 300,
+      "source": "Shimano published capacity (14000XG PowerPro 65 lb / 300 yd)"
+    },
+    {
+      "id": "daiwa-bgmq-4000",
+      "brand": "Daiwa",
+      "model": "BG MQ 4000",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 280,
+      "source": "From sister Saltist MQ 4000D-XH (J-Braid 20 lb / 280 yd) — VERIFY BG MQ spec"
+    },
+    {
+      "id": "daiwa-bgmq-5000",
+      "brand": "Daiwa",
+      "model": "BG MQ 5000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 230,
+      "source": "Daiwa published capacity (BGMQ5000D-H J-Braid 30 lb / 230 yd)"
+    },
+    {
+      "id": "daiwa-bgmq-6000",
+      "brand": "Daiwa",
+      "model": "BG MQ 6000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 320,
+      "source": "Daiwa published capacity (BGMQ6000D-H J-Braid 30 lb / 320 yd)"
+    },
+    {
+      "id": "daiwa-bgmq-8000",
+      "brand": "Daiwa",
+      "model": "BG MQ 8000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 280,
+      "source": "From sister Saltist MQ 8000H (J-Braid 50 lb / 280 yd) — VERIFY BG MQ spec"
+    },
+    {
+      "id": "daiwa-bgmq-10000",
+      "brand": "Daiwa",
+      "model": "BG MQ 10000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 330,
+      "source": "Daiwa published capacity (BGMQ10000D-H 50 lb / 330 yd)"
+    },
+    {
+      "id": "daiwa-bgmq-14000",
+      "brand": "Daiwa",
+      "model": "BG MQ 14000",
+      "type": "spinning",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 330,
+      "source": "From sister Saltist MQ 14000H (J-Braid 65 lb / 330 yd) — VERIFY BG MQ spec"
+    },
+    {
+      "id": "daiwa-saltist-mq-4000",
+      "brand": "Daiwa",
+      "model": "Saltist MQ 4000",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 280,
+      "source": "Daiwa published capacity (4000D-XH J-Braid 20 lb / 280 yd)"
+    },
+    {
+      "id": "daiwa-saltist-mq-5000",
+      "brand": "Daiwa",
+      "model": "Saltist MQ 5000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 230,
+      "source": "Daiwa published capacity (5000D-H J-Braid 30 lb / 230 yd)"
+    },
+    {
+      "id": "daiwa-saltist-mq-8000",
+      "brand": "Daiwa",
+      "model": "Saltist MQ 8000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 330,
+      "source": "Daiwa published capacity (8000H J-Braid 40 lb / 330 yd)"
+    },
+    {
+      "id": "daiwa-saltist-mq-10000",
+      "brand": "Daiwa",
+      "model": "Saltist MQ 10000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 330,
+      "source": "Daiwa published capacity (10000H J-Braid 50 lb / 330 yd)"
+    },
+    {
+      "id": "daiwa-saltist-mq-14000",
+      "brand": "Daiwa",
+      "model": "Saltist MQ 14000",
+      "type": "spinning",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 330,
+      "source": "Daiwa published capacity (14000H J-Braid 65 lb / 330 yd)"
+    },
+    {
+      "id": "okuma-azores-55",
+      "brand": "Okuma",
+      "model": "Azores Z-55S",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 270,
+      "source": "Approx. (knurled spool, braid direct-tie) — VERIFY against Okuma spec"
+    },
+    {
+      "id": "okuma-azores-65",
+      "brand": "Okuma",
+      "model": "Azores Z-65S",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 290,
+      "source": "Approx. (knurled spool, braid direct-tie) — VERIFY against Okuma spec"
+    },
+    {
+      "id": "okuma-azores-80",
+      "brand": "Okuma",
+      "model": "Azores Z-80S",
+      "type": "spinning",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 300,
+      "source": "Okuma published capacity (65 lb braid / 300 yd)"
+    },
+    {
+      "id": "shimano-stradic-4000",
+      "brand": "Shimano",
+      "model": "Stradic 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 170,
+      "source": "Shimano published capacity (Stradic 4000XG PowerPro 30 lb / 170 yd)"
+    },
+    {
+      "id": "shimano-stradic-c5000",
+      "brand": "Shimano",
+      "model": "Stradic C5000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 200,
+      "source": "Shimano published capacity (Stradic C5000XG PowerPro 30 lb / 200 yd)"
+    },
+    {
+      "id": "shimano-nasci-4000",
+      "brand": "Shimano",
+      "model": "Nasci 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 170,
+      "source": "Approx. (shares Stradic-class 4000 spool) — VERIFY against Shimano spec"
+    },
+    {
+      "id": "penn-clash-ii-2500",
+      "brand": "Penn",
+      "model": "Clash II 2500",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 160,
+      "source": "Penn published capacity (2500 braid 20 lb / 160 yd)"
+    },
+    {
+      "id": "penn-clash-ii-3000",
+      "brand": "Penn",
+      "model": "Clash II 3000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 130,
+      "source": "Penn published capacity (3000 braid 30 lb / 130 yd)"
+    },
+    {
+      "id": "penn-clash-ii-4000",
+      "brand": "Penn",
+      "model": "Clash II 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 185,
+      "source": "Penn published capacity (4000 braid 30 lb / 185 yd)"
+    },
+    {
+      "id": "penn-clash-ii-5000",
+      "brand": "Penn",
+      "model": "Clash II 5000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 240,
+      "source": "Penn published capacity (5000 braid 40 lb / 240 yd)"
+    },
+    {
+      "id": "penn-pursuit-iv-3000",
+      "brand": "Penn",
+      "model": "Pursuit IV 3000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 130,
+      "source": "Penn published capacity (3000 braid 30 lb / 130 yd)"
+    },
+    {
+      "id": "penn-pursuit-iv-4000",
+      "brand": "Penn",
+      "model": "Pursuit IV 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 185,
+      "source": "Penn published capacity (4000 braid 30 lb / 185 yd)"
+    },
+    {
+      "id": "penn-pursuit-iv-5000",
+      "brand": "Penn",
+      "model": "Pursuit IV 5000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 240,
+      "source": "Penn published capacity (5000 braid 40 lb / 240 yd)"
+    },
+    {
+      "id": "penn-pursuit-iv-6000",
+      "brand": "Penn",
+      "model": "Pursuit IV 6000",
+      "type": "spinning",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.013,
+      "anchor_yards": 300,
+      "source": "Approx. (one size up from 5000) — VERIFY against Penn spec"
+    },
+    {
+      "id": "daiwa-fuego-lt-2500",
+      "brand": "Daiwa",
+      "model": "Fuego LT 2500",
+      "type": "spinning",
+      "anchor_label": "15 lb braid",
+      "anchor_diameter_in": 0.008,
+      "anchor_yards": 185,
+      "source": "Daiwa published capacity (FEGLT2500D J-Braid 15 lb / 185 yd)"
+    },
+    {
+      "id": "daiwa-fuego-lt-3000",
+      "brand": "Daiwa",
+      "model": "Fuego LT 3000",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 220,
+      "source": "Daiwa published capacity (FEGLT3000D J-Braid 20 lb / 220 yd)"
+    },
+    {
+      "id": "daiwa-fuego-lt-4000",
+      "brand": "Daiwa",
+      "model": "Fuego LT 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 200,
+      "source": "Daiwa published capacity (FEGLT4000D J-Braid 30 lb / 200 yd)"
+    },
+    {
+      "id": "tsunami-evict-2000",
+      "brand": "Tsunami",
+      "model": "Evict 2000",
+      "type": "spinning",
+      "anchor_label": "15 lb braid",
+      "anchor_diameter_in": 0.008,
+      "anchor_yards": 150,
+      "source": "Tsunami published capacity (15 lb braid / 150 yd)"
+    },
+    {
+      "id": "tsunami-evict-3000",
+      "brand": "Tsunami",
+      "model": "Evict 3000",
+      "type": "spinning",
+      "anchor_label": "15 lb braid",
+      "anchor_diameter_in": 0.008,
+      "anchor_yards": 220,
+      "source": "Tsunami published capacity (15 lb braid / 220 yd)"
+    },
+    {
+      "id": "tsunami-evict-4000",
+      "brand": "Tsunami",
+      "model": "Evict 4000",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 230,
+      "source": "Tsunami published capacity (30 lb braid / 230 yd)"
     }
   ]
 }
