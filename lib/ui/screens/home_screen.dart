@@ -64,12 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('OpenSpool'),
         actions: [
-          if (_reel != null)
-            IconButton(
-              icon: const Icon(Icons.star_outline),
-              tooltip: 'Save favorite',
-              onPressed: _saveLoadout,
-            ),
           IconButton(
             icon: const Icon(Icons.bookmark_outline),
             tooltip: 'Favorites',
@@ -530,16 +524,25 @@ class _HomeScreenState extends State<HomeScreen> {
       ];
     }
 
-    final name = await _askName(reel);
-    if (name == null || name.trim().isEmpty) return;
-
-    await loadoutRepo.save(Loadout(
-      name: name.trim(),
+    final candidate = Loadout(
+      name: '',
       reelId: reel.id,
       mode: _fill == _FillType.straight ? LoadoutMode.straight : LoadoutMode.topshot,
       segments: segments,
-    ));
-    _toast('Saved "$name".');
+    );
+
+    // Don't let the same reel + lines + lengths be saved twice.
+    final existing = await loadoutRepo.findDuplicate(candidate);
+    if (existing != null) {
+      _toast('Already saved as "${existing.name}".');
+      return;
+    }
+
+    final name = await _askName(reel);
+    if (name == null || name.trim().isEmpty) return;
+
+    await loadoutRepo.save(candidate.copyWith(name: name.trim()));
+    _toast('Saved "${name.trim()}".');
   }
 
   Future<String?> _askName(Reel reel) {
