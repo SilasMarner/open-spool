@@ -52,6 +52,18 @@ the diameter² law means a thick line eats far more spool per yard than thin bra
 even though the math is correct. Straight fills don't show a share (always ~100%, covered by the fill
 note).
 
+**Mix input — by length or by %.** In the Topshot and Backing/Topshot modes a **By length / By %**
+toggle (`_MixInput`) sits atop the length card. *By %* shows a slider that sets the **topshot's share
+of the spool volume**; the backing takes the rest, and `computeMixSplit` (loadout_result.dart) turns
+the split into each segment's yardage (`yards = share × spoolK ÷ diameter²·packing`) — a full-spool
+split, so it never overflows. Saving a percent split resolves it to concrete pinned yards (both
+`fixedYards` set), so it persists and reloads exactly like a both-lengths plan; the percentage itself
+is just an input convenience and is not stored.
+
+**Test rating in result labels.** Each result row carries the line's `lbTest`; the card and the share
+summary render it after the line name as `· 80 lb` (or kg in metric, via `units.test`). Keeps the
+result naming the line's *strength*, not just its product.
+
 ### Saving a favorite (`_saveLoadout`, home_screen.dart:482)
 1. Build a candidate `Loadout` (name `''`).
 2. `loadoutRepo.findDuplicate(candidate)` — matches **reel + mode + segments** (name ignored). If a

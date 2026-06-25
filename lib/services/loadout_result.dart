@@ -12,7 +12,11 @@ class ResultLine {
   final String label;
   final double yards;
   final String sub;
-  const ResultLine(this.label, this.yards, {this.sub = ''});
+
+  /// Line test rating (lb) for this segment, so the UI can show e.g. "· 80 lb"
+  /// (or kg in metric). Null for rows that aren't a single line.
+  final double? lbTest;
+  const ResultLine(this.label, this.yards, {this.sub = '', this.lbTest});
 }
 
 /// A fully computed capacity result. Built once, then rendered as a card and/or
@@ -56,7 +60,7 @@ ComputedResult computeStraight({required Reel reel, required Line line}) {
   );
   return ComputedResult(
     reel: reel,
-    rows: [ResultLine(line.displayName, yards, sub: line.type.shortLabel)],
+    rows: [ResultLine(line.displayName, yards, sub: line.type.shortLabel, lbTest: line.lbTest)],
     fillFraction: 1.0,
     unverified: reel.unverified || line.unverified,
   );
@@ -86,9 +90,11 @@ ComputedResult computeMix({
     reel: reel,
     rows: [
       ResultLine('Topshot — ${topshot.displayName}', r.topshotYards,
-          sub: '${topFixed ? 'fixed' : 'computed fill'} · ${_pct(topShare)}'),
+          sub: '${topFixed ? 'fixed' : 'computed fill'} · ${_pct(topShare)}',
+          lbTest: topshot.lbTest),
       ResultLine('Backing — ${backing.displayName}', r.backingYards,
-          sub: '${topFixed ? 'computed fill' : 'fixed'} · ${_pct(backShare)}'),
+          sub: '${topFixed ? 'computed fill' : 'fixed'} · ${_pct(backShare)}',
+          lbTest: backing.lbTest),
     ],
     fillFraction: r.fillFraction,
     overflow: r.overflow,
@@ -120,9 +126,9 @@ ComputedResult computeMixBoth({
     reel: reel,
     rows: [
       ResultLine('Topshot — ${topshot.displayName}', topYards,
-          sub: 'you set · ${_pct(topShare)}'),
+          sub: 'you set · ${_pct(topShare)}', lbTest: topshot.lbTest),
       ResultLine('Backing — ${backing.displayName}', backYards,
-          sub: 'you set · ${_pct(backShare)}'),
+          sub: 'you set · ${_pct(backShare)}', lbTest: backing.lbTest),
     ],
     fillFraction: r.fillFraction,
     overflow: r.overflow,
@@ -130,6 +136,35 @@ ComputedResult computeMixBoth({
         ? 'These two lengths need ~${(r.fillFraction * 100).toStringAsFixed(0)}% '
             'of the spool — more than it holds. Trim the topshot or backing.'
         : null,
+    unverified: reel.unverified || topshot.unverified || backing.unverified,
+  );
+}
+
+/// Split the spool by **percentage of volume** instead of by length: the topshot
+/// takes [topPercent] % of the spool, the backing fills the rest, and each
+/// segment's yardage falls out of the diameter² model. Always a full-spool split,
+/// so it never overflows.
+ComputedResult computeMixSplit({
+  required Reel reel,
+  required Line topshot,
+  required Line backing,
+  required double topPercent,
+}) {
+  final f = (topPercent / 100).clamp(0.0, 1.0);
+  final topYards =
+      f * reel.spoolK / volPerYard(topshot.diameterIn, packingFactor: topshot.packingFactor);
+  final backYards = (1 - f) *
+      reel.spoolK /
+      volPerYard(backing.diameterIn, packingFactor: backing.packingFactor);
+  return ComputedResult(
+    reel: reel,
+    rows: [
+      ResultLine('Topshot — ${topshot.displayName}', topYards,
+          sub: 'set to ${_pct(f)}', lbTest: topshot.lbTest),
+      ResultLine('Backing — ${backing.displayName}', backYards,
+          sub: 'fills ${_pct(1 - f)}', lbTest: backing.lbTest),
+    ],
+    fillFraction: 1.0,
     unverified: reel.unverified || topshot.unverified || backing.unverified,
   );
 }
@@ -193,7 +228,9 @@ String shareSummary(ComputedResult r, UnitSystem u, {String? title}) {
   b.writeln('Reel: ${r.reel.displayName} (${r.reel.type.label})');
   for (final row in r.rows) {
     final sub = row.sub.isNotEmpty ? ' (${row.sub})' : '';
-    b.writeln('${row.label}: ${u.length(row.yards)}$sub');
+    final name =
+        row.lbTest != null ? '${row.label} · ${u.test(row.lbTest!)}' : row.label;
+    b.writeln('$name: ${u.length(row.yards)}$sub');
   }
   if (r.overflow) {
     b.writeln('Note: ${r.overflowText ?? 'the fixed line alone overfills this spool.'}');

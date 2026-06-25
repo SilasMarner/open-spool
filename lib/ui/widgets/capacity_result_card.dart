@@ -8,7 +8,11 @@ class ResultRow {
   final String label;
   final double yards;
   final String sub;
-  const ResultRow(this.label, this.yards, {this.sub = ''});
+
+  /// Line test rating (lb); when set, shown as "· 80 lb" (kg in metric) after
+  /// the label so the result names the line's strength, not just its product.
+  final double? lbTest;
+  const ResultRow(this.label, this.yards, {this.sub = '', this.lbTest});
 }
 
 /// Shows the computed capacity. Big headline number(s) plus an estimate note.
@@ -62,7 +66,10 @@ class CapacityResultCard extends StatelessWidget {
                 textBaseline: TextBaseline.alphabetic,
                 children: [
                   Expanded(
-                    child: Text(r.label,
+                    child: Text(
+                        r.lbTest != null
+                            ? '${r.label} · ${u.test(r.lbTest!)}'
+                            : r.label,
                         style: theme.textTheme.bodyLarge?.copyWith(
                           color: theme.colorScheme.onPrimaryContainer,
                         )),

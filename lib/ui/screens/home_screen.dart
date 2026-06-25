@@ -20,6 +20,10 @@ import 'settings_screen.dart';
 /// backing auto-fills), or backing + topshot with both lengths set explicitly.
 enum _FillType { straight, topshot, both }
 
+/// How the user dials in a topshot/backing mix: by typed lengths, or by a
+/// percentage split of the spool (each segment's yardage is computed for them).
+enum _MixInput { length, percent }
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -37,6 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Line? _backingLine;
   final _topYards = TextEditingController(text: '50');
   final _backYards = TextEditingController(text: '300');
+
+  /// Mix input style and the topshot's share of the spool (%) for percent mode.
+  _MixInput _mixInput = _MixInput.length;
+  double _topPercent = 30;
 
   @override
   void initState() {
@@ -232,46 +240,109 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _yardsField(
-                  controller: _topYards,
-                  label: 'Topshot length',
-                  unit: unit,
-                  onChanged: both
-                      ? (_) {
-                          _syncMix(FixedSegment.topshot);
-                          setState(() {});
-                        }
-                      : null,
-                ),
-                if (both) ...[
-                  const SizedBox(height: 12),
+                _mixInputToggle(),
+                const SizedBox(height: 14),
+                if (_mixInput == _MixInput.percent)
+                  _percentBody()
+                else ...[
                   _yardsField(
-                    controller: _backYards,
-                    label: 'Backing length',
+                    controller: _topYards,
+                    label: 'Topshot length',
                     unit: unit,
-                    onChanged: (_) {
-                      _syncMix(FixedSegment.backing);
-                      setState(() {});
-                    },
+                    onChanged: both
+                        ? (_) {
+                            _syncMix(FixedSegment.topshot);
+                            setState(() {});
+                          }
+                        : null,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 8, left: 2),
-                    child: Text(
-                      'Edit either length — the other auto-adjusts to fill the '
-                      'rest of the spool.',
-                      style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                  if (both) ...[
+                    const SizedBox(height: 12),
+                    _yardsField(
+                      controller: _backYards,
+                      label: 'Backing length',
+                      unit: unit,
+                      onChanged: (_) {
+                        _syncMix(FixedSegment.backing);
+                        setState(() {});
+                      },
                     ),
-                  ),
-                ] else
-                  const Padding(
-                    padding: EdgeInsets.only(top: 8, left: 2),
-                    child: Text(
-                      'Backing fills the rest of the spool automatically.',
-                      style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8, left: 2),
+                      child: Text(
+                        'Edit either length — the other auto-adjusts to fill the '
+                        'rest of the spool.',
+                        style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                      ),
                     ),
-                  ),
+                  ] else
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8, left: 2),
+                      child: Text(
+                        'Backing fills the rest of the spool automatically.',
+                        style: TextStyle(color: Colors.white70, fontSize: 12.5),
+                      ),
+                    ),
+                ],
               ],
             ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _mixInputToggle() => SegmentedButton<_MixInput>(
+        showSelectedIcon: false,
+        style: const ButtonStyle(
+          textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 12.5)),
+        ),
+        segments: const [
+          ButtonSegment(
+            value: _MixInput.length,
+            label: Text('By length'),
+            icon: Icon(Icons.straighten, size: 18),
+          ),
+          ButtonSegment(
+            value: _MixInput.percent,
+            label: Text('By %'),
+            icon: Icon(Icons.percent, size: 18),
+          ),
+        ],
+        selected: {_mixInput},
+        onSelectionChanged: (s) => setState(() => _mixInput = s.first),
+      );
+
+  /// Percent-split body: a slider sets the topshot's share of the spool; the
+  /// backing takes the rest. The result card shows the yardage each works out to.
+  Widget _percentBody() {
+    final top = _topPercent.round();
+    final back = 100 - top;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            const Text('Topshot share', style: TextStyle(fontSize: 14)),
+            const Spacer(),
+            Text('$top%  ·  backing $back%',
+                style: const TextStyle(fontWeight: FontWeight.w600)),
+          ],
+        ),
+        Slider(
+          value: _topPercent,
+          min: 0,
+          max: 100,
+          divisions: 100,
+          label: '$top%',
+          onChanged: (v) => setState(() => _topPercent = v),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 2),
+          child: Text(
+            'Split the spool by volume — each line’s yardage is computed '
+            'below.',
+            style: TextStyle(color: Colors.white70, fontSize: 12.5),
           ),
         ),
       ],
@@ -384,6 +455,17 @@ class _HomeScreenState extends State<HomeScreen> {
       return const _Hint('Pick both a topshot and a backing line.');
     }
 
+    // Percent split applies to either mix mode — set the topshot's share of the
+    // spool and both yardages are computed.
+    if (_mixInput == _MixInput.percent) {
+      return _card(computeMixSplit(
+        reel: reel,
+        topshot: top,
+        backing: back,
+        topPercent: _topPercent,
+      ));
+    }
+
     if (_fill == _FillType.topshot) {
       final y = _yards(_topYards);
       if (y == null) return const _Hint('Enter a topshot length greater than zero.');
@@ -414,7 +496,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _card(ComputedResult r) => CapacityResultCard(
-        rows: [for (final row in r.rows) ResultRow(row.label, row.yards, sub: row.sub)],
+        rows: [
+          for (final row in r.rows)
+            ResultRow(row.label, row.yards, sub: row.sub, lbTest: row.lbTest)
+        ],
         fillFraction: r.fillFraction,
         overflow: r.overflow,
         overflowText: r.overflowText,
@@ -496,18 +581,32 @@ class _HomeScreenState extends State<HomeScreen> {
         _toast('Pick both lines first.');
         return;
       }
-      final topFixed = _yards(_topYards);
-      if (topFixed == null) {
-        _toast('Enter a valid topshot length.');
-        return;
-      }
-      // Backing/Topshot pins both; Topshot leaves the backing to auto-fill.
+      double? topFixed;
       double? backFixed;
-      if (_fill == _FillType.both) {
-        backFixed = _yards(_backYards);
-        if (backFixed == null) {
-          _toast('Enter a valid backing length.');
+      if (_mixInput == _MixInput.percent) {
+        // Resolve the split to concrete pinned yards so it persists like any
+        // both-lengths plan (the percentage is just an input convenience).
+        final r = computeMixSplit(
+          reel: reel,
+          topshot: _topshotLine!,
+          backing: _backingLine!,
+          topPercent: _topPercent,
+        );
+        topFixed = r.rows[0].yards;
+        backFixed = r.rows[1].yards;
+      } else {
+        topFixed = _yards(_topYards);
+        if (topFixed == null) {
+          _toast('Enter a valid topshot length.');
           return;
+        }
+        // Backing/Topshot pins both; Topshot leaves the backing to auto-fill.
+        if (_fill == _FillType.both) {
+          backFixed = _yards(_backYards);
+          if (backFixed == null) {
+            _toast('Enter a valid backing length.');
+            return;
+          }
         }
       }
       segments = [
