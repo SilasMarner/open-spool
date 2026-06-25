@@ -64,7 +64,7 @@ flutter build apk --release
 adb install -r build/app/outputs/flutter-apk/app-release.apk
 ```
 
-App id: `com.mbettinger.reel_planner`.
+App id: `com.mattbettinger.openspool`.
 
 ## Internal docs & process
 
@@ -79,3 +79,19 @@ App id: `com.mbettinger.reel_planner`.
 
 Mix is backing + topshot (2 segments). Not yet: 3+ segments, remote catalog sync, iOS build,
 empirical per-brand packing calibration, loadout import/export.
+
+## Contributing
+
+The highest-value contribution is **accurate data** — correct line diameters and reel capacity
+anchors with a manufacturer source. See [`CONTRIBUTING.md`](CONTRIBUTING.md). Wrong number?
+Open an issue or use the email link in the app's Settings.
+
+## Privacy
+
+OpenSpool collects no data and makes no network requests — everything runs offline on your
+device. See [`PRIVACY.md`](PRIVACY.md) (hosted:
+<https://silasmarner.github.io/OpenSpool/privacy.html>).
+
+## License
+
+[MIT](LICENSE) © 2026 Matt Bettinger.

@@ -66,8 +66,9 @@ First release of OpenSpool. Plan line capacity for 200+ saltwater reels across b
 - **Data safety:** No data collected — no account, fully local; the Settings mailto link opens the
   user's own email app. Answer "No data collected / No data shared."
 - **Content rating (IARC questionnaire):** Everyone.
-- **Privacy policy:** Play requires a URL. A short "OpenSpool collects no data" page is enough — host
-  one (e.g. alongside the OpenTides policy) before submitting.
+- **Privacy policy URL:** `https://silasmarner.github.io/OpenSpool/privacy.html` (GitHub Pages,
+  served from `/docs/privacy.html` on `main`; source also at [`../PRIVACY.md`](../PRIVACY.md)).
+  States OpenSpool collects no data.
 
 ## Graphic assets
 
