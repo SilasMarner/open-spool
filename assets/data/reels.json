@@ -2340,6 +2340,136 @@
       "anchor_diameter_in": 0.011,
       "anchor_yards": 230,
       "source": "Tsunami published capacity (30 lb braid / 230 yd)"
+    },
+    {
+      "id": "penn-slammeriv-3500",
+      "brand": "Penn",
+      "model": "Slammer IV 3500",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 220,
+      "source": "Penn published capacity (20 lb braid / 220 yd)"
+    },
+    {
+      "id": "penn-slammeriv-4500",
+      "brand": "Penn",
+      "model": "Slammer IV 4500",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 250,
+      "source": "Penn published capacity (30 lb braid / 250 yd)"
+    },
+    {
+      "id": "daiwa-bg-6500",
+      "brand": "Daiwa",
+      "model": "BG 6500",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 550,
+      "source": "Daiwa published capacity (50 lb J-Braid / 550 yd)"
+    },
+    {
+      "id": "penn-authority-7500",
+      "brand": "Penn",
+      "model": "Authority 7500",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 440,
+      "source": "Penn published capacity (50 lb braid / 440 yd)"
+    },
+    {
+      "id": "shimano-stella-30000",
+      "brand": "Shimano",
+      "model": "Stella SW 30000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 600,
+      "source": "Shimano published capacity (50 lb PowerPro / 600 yd)"
+    },
+    {
+      "id": "shimano-trinidad-20a",
+      "brand": "Shimano",
+      "model": "Trinidad 20A",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 375,
+      "source": "Shimano published capacity (65 lb PowerPro / 375 yd)"
+    },
+    {
+      "id": "shimano-talica20",
+      "brand": "Shimano",
+      "model": "Talica 20",
+      "type": "conventional",
+      "anchor_label": "80 lb braid",
+      "anchor_diameter_in": 0.017,
+      "anchor_yards": 575,
+      "source": "Shimano published capacity (80 lb PowerPro / 575 yd)"
+    },
+    {
+      "id": "shimano-talica25",
+      "brand": "Shimano",
+      "model": "Talica 25",
+      "type": "conventional",
+      "anchor_label": "80 lb braid",
+      "anchor_diameter_in": 0.017,
+      "anchor_yards": 730,
+      "source": "Shimano published capacity (80 lb PowerPro / 730 yd)"
+    },
+    {
+      "id": "okuma-cavalla-5ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-5II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 350,
+      "source": "Okuma published capacity (50 lb braid / 350 yd)"
+    },
+    {
+      "id": "okuma-cavalla-12ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-12II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 475,
+      "source": "Okuma published capacity (50 lb braid / 475 yd)"
+    },
+    {
+      "id": "okuma-cavalla-16ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-16II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 525,
+      "source": "Okuma published capacity (50 lb braid / 525 yd)"
+    },
+    {
+      "id": "okuma-andros-5ii",
+      "brand": "Okuma",
+      "model": "Andros A-5II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 450,
+      "source": "Okuma published capacity (50 lb braid / 450 yd)"
+    },
+    {
+      "id": "shimano-calcutta-conquest-400",
+      "brand": "Shimano",
+      "model": "Calcutta Conquest 400",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 300,
+      "source": "Shimano published capacity (50 lb PowerPro / 300 yd)"
     }
   ]
 }
