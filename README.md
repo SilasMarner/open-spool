@@ -8,6 +8,14 @@ including **topshot mixes** (a fixed topshot over backing that fills the rest of
 
 > Separate project from OpenTides — its own repo, package, and Play listing.
 
+## Screenshots
+
+| Calculator | Straight result | Topshot + backing |
+|:---:|:---:|:---:|
+| <img src="store-assets/screenshots/00_calculator_home.png" width="240"> | <img src="store-assets/screenshots/01_straight_result.png" width="240"> | <img src="store-assets/screenshots/02_topshot_result.png" width="240"> |
+| **Split by length / %** | **Reel picker** | **Favorites** |
+| <img src="store-assets/screenshots/03_by_percent.png" width="240"> | <img src="store-assets/screenshots/04_reel_picker.png" width="240"> | <img src="store-assets/screenshots/06_favorites.png" width="240"> |
+
 ## How the math works
 
 Line occupies spool volume proportional to `length × diameter²`. Each reel is anchored to **one
