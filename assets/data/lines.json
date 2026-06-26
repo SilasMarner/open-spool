@@ -2184,6 +2184,30 @@
     { "id": "tufline-gc-60",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.016, "source": "TUF-Line published spec" },
     { "id": "tufline-gc-80",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.019, "source": "VERIFY — TUF-Line Guide's Choice 80 lb diameter estimated from comparable hollow core" },
     { "id": "tufline-gc-130", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.024, "source": "VERIFY — TUF-Line Guide's Choice 130 lb diameter estimated from comparable hollow core" },
-    { "id": "tufline-gc-200", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.030, "source": "VERIFY — TUF-Line Guide's Choice 200 lb diameter estimated from comparable hollow core" }
+    { "id": "tufline-gc-200", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.030, "source": "VERIFY — TUF-Line Guide's Choice 200 lb diameter estimated from comparable hollow core" },
+
+    { "id": "lp-hollow-50",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 50,  "diameter_in": 0.014, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+    { "id": "lp-hollow-60",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.016, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+    { "id": "lp-hollow-80",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.018, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+    { "id": "lp-hollow-100", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.020, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+    { "id": "lp-hollow-130", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.023, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+    { "id": "lp-hollow-200", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.027, "source": "VERIFY — LP Hollow Core estimate from comparable hollow Spectra (Jerry Brown/Izorline); LP publishes no diameter chart" },
+
+    { "id": "lp-solid-40",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.011, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+    { "id": "lp-solid-50",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.013, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+    { "id": "lp-solid-65",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.015, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+    { "id": "lp-solid-80",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+    { "id": "lp-solid-100", "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.019, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+    { "id": "lp-solid-130", "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.022, "source": "VERIFY — LP Solid Spectra estimate from comparable solid Spectra; LP publishes no diameter chart" },
+
+    { "id": "tasline-elite-20",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.0081, "source": "Tasline published PE/diameter chart (PE1.5, 0.205 mm)" },
+    { "id": "tasline-elite-30",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.0102, "source": "Tasline published PE/diameter chart (PE2.5, 0.260 mm)" },
+    { "id": "tasline-elite-40",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.0122, "source": "Tasline published PE/diameter chart (PE3.5, 0.310 mm)" },
+    { "id": "tasline-elite-50",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.0130, "source": "Tasline published PE/diameter chart (PE4, 0.330 mm)" },
+    { "id": "tasline-elite-60",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 60,  "diameter_in": 0.0146, "source": "Tasline published PE/diameter chart (PE5, 0.370 mm)" },
+    { "id": "tasline-elite-80",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.0159, "source": "Tasline published PE/diameter chart (PE6, 0.405 mm)" },
+    { "id": "tasline-elite-100", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.0179, "source": "VERIFY — Tasline chart lists PE8 100 lb at 0.407 mm (non-monotonic vs PE6); 0.0179 in interpolated, confirm" },
+    { "id": "tasline-elite-120", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.0205, "source": "Tasline published PE/diameter chart (PE10, 0.520 mm)" },
+    { "id": "tasline-elite-140", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 140, "diameter_in": 0.0224, "source": "Tasline published PE/diameter chart (PE12, 0.570 mm)" }
   ]
 }

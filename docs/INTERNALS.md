@@ -7,8 +7,9 @@ covers *how the UI behaves and where each thing lives*, so the non-obvious flow 
 > [`PREBUILD.md`](PREBUILD.md)). Any change that alters a flow, a screen, or a persisted shape must
 > update the matching section here in the same change.
 
-App brand is **OpenSpool**; the hosted repo is **OpenReel** (intentional split). App id
-`com.mbettinger.reel_planner` (do not change). Dark-only Material 3.
+App brand is **OpenSpool**; the hosted repo is **open-spool** (GitHub `SilasMarner/open-spool`,
+gitea `matt/open-spool`). App id `com.mattbettinger.openspool` (do not change). The Flutter/pubspec
+package name is still `reel_planner` (internal only — never user-visible). Dark-only Material 3.
 
 ## Architecture map
 

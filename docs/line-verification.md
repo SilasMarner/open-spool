@@ -6,7 +6,7 @@ one. Values currently in the catalog are best estimates. Confirm by contacting t
 manufacturer, then update `diameter_in` (inches) and replace the `source` string
 with the manufacturer figure.
 
-_Last web search: 2026-06-24 (deep sweep of manufacturer + ~15 retailer/review sites — no published diameters found)._
+_Last web search: 2026-06-26 (added LP + Tasline; pulled Jerry Brown/BMC + Tasline published charts; researched hollow-core behaviour under tension — see the research note at the bottom)._
 
 ## What to ask for
 
@@ -55,7 +55,49 @@ The 656 spool is published at **300 yd / 15 lb mono** (used for Shuttle/Tourno/S
 The narrow 555 (~250 yd) and wide 666 (~350 yd) are scaled from the 656 spool, not published
 figures. Confirm with Akios/Breakaway Tackle (Corpus Christi, TX) — they publish the 656 only.
 
+### 10. LP Hollow Core + Solid Spectra — ALL sizes estimated (added 2026-06-26)
+LP (the SoCal long-range tuna braid) **publishes no per-test diameter chart** anywhere we could find
+(manufacturer + retailer + BloodyDecks/360Tuna sweep). All LP entries are interpolated from comparable
+genuine-Spectra lines (Jerry Brown Line One / Izorline) and tagged `VERIFY`.
+- Hollow estimates (in): 50=.014, 60=.016, 80=.018, 100=.020, 130=.023, 200=.027
+- Solid estimates (in): 40=.011, 50=.013, 65=.015, 80=.017, 100=.019, 130=.022
+Confirm with whoever LP sources/labels through (the West-Coast tackle shops that carry it), or replace
+with a measured set. Low confidence until then.
+
+### 11. Tasline Elite 8X — PE8 / 100 lb size needs confirming (added 2026-06-26)
+Built from Tasline's **own published PE→diameter→lb chart** (tasline.com.au/line-diameter-chart) — so
+most sizes are confirmed, not estimated. **One anomaly:** the chart lists PE8 / 100 lb at **0.407 mm**,
+which is essentially identical to PE6 / 80 lb (0.405 mm) and clearly a typo. The 100 lb entry uses an
+interpolated **0.0179 in** and is tagged `VERIFY` — confirm the real PE8 diameter (likely ~0.45 mm) with
+Tasline. Every other Tasline size is straight off the published chart.
+
 ---
+
+## Research note — does hollow-core braid shrink under tension? (2026-06-26)
+
+The question: hollow braid flattens/compresses on a loaded spool, so should the capacity math add a
+"diameter-shrinks-under-tension" term? **Finding: there is no verified, quantitative model to bolt on,
+and the app already handles this the way the industry does.**
+
+- **No published tension→diameter coefficient exists.** Manufacturers, professional spoolers, and every
+  capacity calculator surveyed treat packed capacity as empirical: "variables of tension, lay and
+  material type affect capacity and should be verified with actual put-ups." Nobody publishes "diameter
+  reduces X% at Y lb of spooling tension."
+- **The direction is also counter-intuitive.** Forum/captain consensus (BDOutdoors, 360Tuna) is that
+  *solid* braid actually packs ~10–12% **more** than hollow when wound tight because it stays rounder;
+  hollow flattens and lays flat but its *stated* diameter is the most optimistic of any line. So hollow's
+  big real-world capacity comes mostly from an optimistic stated diameter, not from compressing on the
+  spool.
+- **Our model already absorbs both effects.** The diameter²-volume law with a per-type `packingFactor`
+  (mono/fluoro 1.0, solid 1.2, hollow 1.85), calibrated to a real put-up (Avet T-RX 80W ≈ 1,900 yd of
+  100 lb hollow), is mathematically the same volume law the pro calculators use — the packing factor is
+  exactly the empirical "true packed volume ÷ stated-diameter volume" correction. Adding a separate
+  tension term would double-count what the factor already captures.
+- **Conclusion / where accuracy actually comes from:** don't change the engine. The accuracy lever is
+  (a) better *verified* line diameters (e.g. the Jerry Brown/BMC and Tasline charts now in the catalog)
+  and (b) more real reel put-ups to re-check the per-type packing factors. If we ever want to refine the
+  hollow factor, the right method is to gather several published hollow-core reel capacities and
+  back-solve the factor that best fits — an empirical calibration, not a tension formula.
 
 ## Manufacturer contacts
 
