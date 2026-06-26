@@ -2470,6 +2470,66 @@
       "anchor_diameter_in": 0.014,
       "anchor_yards": 300,
       "source": "Shimano published capacity (50 lb PowerPro / 300 yd)"
+    },
+    {
+      "id": "shimano-talica8",
+      "brand": "Shimano",
+      "model": "Talica 8",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 390,
+      "source": "Shimano published capacity (50 lb PowerPro / 390 yd)"
+    },
+    {
+      "id": "penn-battle-iii-8000",
+      "brand": "Penn",
+      "model": "Battle III 8000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 515,
+      "source": "Penn published capacity (50 lb braid / 515 yd)"
+    },
+    {
+      "id": "penn-fathom2-12ld",
+      "brand": "Penn",
+      "model": "Fathom II 12 Lever Drag 2-Speed",
+      "type": "conventional",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.012,
+      "anchor_yards": 400,
+      "source": "Penn published capacity (40 lb braid / 400 yd)"
+    },
+    {
+      "id": "daiwa-lexa-400hd",
+      "brand": "Daiwa",
+      "model": "Lexa 400 HD",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 200,
+      "source": "Daiwa published capacity (65 lb J-Braid / 200 yd)"
+    },
+    {
+      "id": "okuma-andros-12ii",
+      "brand": "Okuma",
+      "model": "Andros A-12II",
+      "type": "conventional",
+      "anchor_label": "25 lb mono",
+      "anchor_diameter_in": 0.020,
+      "anchor_yards": 420,
+      "source": "Okuma published capacity (25 lb mono / 420 yd)"
+    },
+    {
+      "id": "okuma-andros-16ii",
+      "brand": "Okuma",
+      "model": "Andros A-16II",
+      "type": "conventional",
+      "anchor_label": "25 lb mono",
+      "anchor_diameter_in": 0.020,
+      "anchor_yards": 650,
+      "source": "Okuma published capacity (25 lb mono / 650 yd)"
     }
   ]
 }

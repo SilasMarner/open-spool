@@ -2208,6 +2208,15 @@
     { "id": "tasline-elite-80",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.0159, "source": "Tasline published PE/diameter chart (PE6, 0.405 mm)" },
     { "id": "tasline-elite-100", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.0179, "source": "VERIFY — Tasline chart lists PE8 100 lb at 0.407 mm (non-monotonic vs PE6); 0.0179 in interpolated, confirm" },
     { "id": "tasline-elite-120", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.0205, "source": "Tasline published PE/diameter chart (PE10, 0.520 mm)" },
-    { "id": "tasline-elite-140", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 140, "diameter_in": 0.0224, "source": "Tasline published PE/diameter chart (PE12, 0.570 mm)" }
+    { "id": "tasline-elite-140", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 140, "diameter_in": 0.0224, "source": "Tasline published PE/diameter chart (PE12, 0.570 mm)" },
+
+    { "id": "jbraid-grand-20",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.009, "source": "Daiwa published spec (0.23 mm)" },
+    { "id": "jbraid-grand-30",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.011, "source": "Daiwa published spec (0.28 mm)" },
+    { "id": "jbraid-grand-40",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.013, "source": "Daiwa published spec (0.32 mm)" },
+    { "id": "jbraid-grand-50",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.014, "source": "Daiwa published spec (0.36 mm)" },
+    { "id": "jbraid-grand-65",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "Daiwa published spec (0.41 mm)" },
+    { "id": "jbraid-grand-80",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "Daiwa published spec (0.43 mm)" },
+    { "id": "jbraid-grand-100", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.020, "source": "Daiwa published spec (0.50 mm)" },
+    { "id": "jbraid-grand-120", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.022, "source": "Daiwa published spec (0.55 mm)" }
   ]
 }
