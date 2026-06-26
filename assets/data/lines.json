@@ -938,6 +938,15 @@
       "source": "Daiwa published spec (0.41 mm)"
     },
     {
+      "id": "momoi-diamond-hollow-100",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.0185,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.47 mm)"
+    },
+    {
       "id": "jbrown-hollow-40",
       "brand": "Jerry Brown",
       "product": "Line One Hollow Core",

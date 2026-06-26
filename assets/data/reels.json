@@ -82,6 +82,56 @@
       "source": "Avet published capacity (80 lb mono / 1000 yd)"
     },
     {
+      "id": "avet-mxl-58",
+      "brand": "Avet",
+      "model": "MXL 5.8",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 600,
+      "source": "Avet MXL ~600 yd of 50 lb braid (retailer-reported) — VERIFY"
+    },
+    {
+      "id": "avet-ex-30-2",
+      "brand": "Avet",
+      "model": "EX 30/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 360,
+      "source": "Avet EX 30/2 (narrow two-speed) — capacity estimated from EXW ratio, VERIFY"
+    },
+    {
+      "id": "avet-exw-30-2",
+      "brand": "Avet",
+      "model": "EXW 30/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 500,
+      "source": "Avet EXW 30/2 ~500 yd of 50 lb mono (forum-reported) — VERIFY"
+    },
+    {
+      "id": "avet-ex-50-2",
+      "brand": "Avet",
+      "model": "EX 50/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 700,
+      "source": "Avet EX 50/2 (narrow two-speed) — capacity estimated from EXW ratio, VERIFY"
+    },
+    {
+      "id": "avet-exw-50-2",
+      "brand": "Avet",
+      "model": "EXW 50/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 950,
+      "source": "Avet published capacity (50 lb mono / 950 yd)"
+    },
+    {
       "id": "penn-int30visw",
       "brand": "Penn",
       "model": "International 30VISW",
