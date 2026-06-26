@@ -2530,6 +2530,16 @@
       "anchor_diameter_in": 0.020,
       "anchor_yards": 650,
       "source": "Okuma published capacity (25 lb mono / 650 yd)"
+    },
+    {
+      "id": "shimano-trinidad-30a",
+      "brand": "Shimano",
+      "model": "Trinidad 30A",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 1015,
+      "source": "Shimano published capacity (50 lb PowerPro / 1015 yd)"
     }
   ]
 }

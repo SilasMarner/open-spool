@@ -488,87 +488,6 @@
       "source": "PowerPro published spec"
     },
     {
-      "id": "sufix832-solid-8",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 8,
-      "diameter_in": 0.007,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-10",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 10,
-      "diameter_in": 0.008,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-15",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 15,
-      "diameter_in": 0.0085,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-20",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 20,
-      "diameter_in": 0.009,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-30",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 30,
-      "diameter_in": 0.011,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-40",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 40,
-      "diameter_in": 0.013,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-50",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 50,
-      "diameter_in": 0.014,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-65",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 65,
-      "diameter_in": 0.016,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-80",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 80,
-      "diameter_in": 0.018,
-      "source": "Sufix published spec"
-    },
-    {
       "id": "berkleyx9-solid-8",
       "brand": "Berkley",
       "product": "x9 Braid",
@@ -2158,6 +2077,8 @@
     { "id": "sufix832-50", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014,  "source": "Sufix published spec" },
     { "id": "sufix832-65", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016,  "source": "Sufix published spec" },
     { "id": "sufix832-80", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.018,  "source": "Sufix published spec" },
+    { "id": "sufix832-100", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.022, "source": "Rapala/Sufix published spec (0.022 in)" },
+    { "id": "sufix832-130", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.026, "source": "Rapala/Sufix published spec (0.026 in)" },
 
     { "id": "spiderwire-stealth-10", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 10, "diameter_in": 0.006, "source": "SpiderWire published spec" },
     { "id": "spiderwire-stealth-15", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.008, "source": "VERIFY — SpiderWire Stealth 15 lb diameter interpolated; confirm on spec" },

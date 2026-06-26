@@ -6,7 +6,7 @@ one. Values currently in the catalog are best estimates. Confirm by contacting t
 manufacturer, then update `diameter_in` (inches) and replace the `source` string
 with the manufacturer figure.
 
-_Last web search: 2026-06-26 (added LP + Tasline; pulled Jerry Brown/BMC + Tasline published charts; researched hollow-core behaviour under tension — see the research note at the bottom)._
+_Last web search: 2026-06-26 (added LP + Tasline; pulled Jerry Brown/BMC + Tasline published charts; researched hollow-core behaviour under tension — see the research note at the bottom). Later same day: verified Shimano Trinidad A capacities (added Trinidad 30A) and Sufix 832 diameters off Rapala's official chart (extended 832 to 100/130 lb and removed a duplicate `sufix832-solid-*` set that listed the product twice)._
 
 ## What to ask for
 
