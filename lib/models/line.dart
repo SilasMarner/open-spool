@@ -32,6 +32,19 @@ extension LineTypeX on LineType {
         LineType.braidSolid => 'braid_solid',
         LineType.braidHollow => 'braid_hollow',
       };
+
+  /// Default packing factor for the construction when a catalog entry doesn't
+  /// specify one. Mono/fluoro are taken at face value (1.0); braid stated
+  /// diameters understate packed volume, so they scale up — hollow core most.
+  /// Calibrated against real spool data (Penn Fathom 40N solid braid; an Avet
+  /// 80W holding ~1,900 yd of 100 lb hollow). A per-line `packing_factor` in
+  /// JSON still overrides this.
+  double get defaultPackingFactor => switch (this) {
+        LineType.mono => 1.0,
+        LineType.fluoro => 1.0,
+        LineType.braidSolid => 1.2,
+        LineType.braidHollow => 1.85,
+      };
 }
 
 class Line {
@@ -44,7 +57,10 @@ class Line {
   /// Diameter in inches — the source of truth for capacity math.
   final double diameterIn;
 
-  /// Effective cross-section scale; <1 packs tighter. Default 1.0.
+  /// Effective cross-section scale relative to stated diameter². 1.0 takes the
+  /// diameter at face value (mono/fluoro); braid uses >1 because its published
+  /// diameter understates packed volume. Defaults by [LineType] when a catalog
+  /// entry omits it — see [LineTypeX.defaultPackingFactor].
   final double packingFactor;
 
   /// Provenance note. `VERIFY` anywhere in here flags an unconfirmed spec.
@@ -88,7 +104,8 @@ class Line {
       type: LineTypeX.fromJson(j['type'] as String),
       lbTest: (j['lb_test'] as num).toDouble(),
       diameterIn: diaIn,
-      packingFactor: (j['packing_factor'] as num?)?.toDouble() ?? 1.0,
+      packingFactor: (j['packing_factor'] as num?)?.toDouble() ??
+          LineTypeX.fromJson(j['type'] as String).defaultPackingFactor,
       source: j['source'] as String?,
       custom: custom,
     );

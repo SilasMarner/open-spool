@@ -350,6 +350,7 @@ class _CustomLineDialogState extends State<_CustomLineDialog> {
         type: _type,
         lbTest: double.parse(_test.text.trim()),
         diameterIn: double.parse(_dia.text.trim()),
+        packingFactor: _type.defaultPackingFactor,
         source: 'user-entered',
         custom: true,
       ),

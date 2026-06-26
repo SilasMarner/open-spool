@@ -22,13 +22,19 @@ Line occupies spool volume proportional to `length × diameter²`. Each reel is 
 published capacity**, giving a spool constant:
 
 ```
-K = anchorYards × anchorDiameter²        (inches)
+K = anchorYards × anchorDiameter² × anchorPackingFactor     (inches)
 ```
 
-Any other line of diameter `d` then fills `yards = K / d²`. A topshot mix pins one segment to a
-fixed length, subtracts its volume, and fills the remainder with the other line. Each line carries
-an optional `packingFactor` (default 1.0) to tune braid-vs-mono compression later without touching
-call sites.
+Any other line of diameter `d` then fills `yards = K / (d² × packingFactor)`. A topshot mix pins one
+segment to a fixed length, subtracts its volume, and fills the remainder with the other line.
+
+**Why `packingFactor`:** published braid diameters understate how much spool volume the line really
+occupies once it's wound (hollow core worst), so a naive mono-anchored diameter² conversion badly
+over-estimates braid. Each line construction carries a calibrated factor — mono/fluoro `1.0`,
+solid braid `1.2`, hollow braid `1.85` — and a reel applies the same factor to its anchor capacity
+so braid-anchored and mono-anchored reels stay consistent. The factors are calibrated against real
+spool data (Penn Fathom 40N solid-braid capacities; an Avet 80W holding ~1,900 yd of 100 lb hollow).
+A per-line `packing_factor` in the catalog JSON overrides the type default.
 
 The engine lives in `lib/services/capacity_calculator.dart` (pure Dart, no Flutter deps) and is
 covered by `test/capacity_calculator_test.dart`.

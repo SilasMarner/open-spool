@@ -25,10 +25,15 @@ App brand is **OpenSpool**; the hosted repo is **OpenReel** (intentional split).
 
 ## The math (summary — full detail in README)
 
-`K = anchorYards × anchorDiameter²(in)`; for any line `yards = K / d²`. Topshot pins one segment to a
-fixed length, subtracts its volume from `K`, fills the remainder with the other line. `packingFactor`
-(default 1.0) is reserved for braid-vs-mono tuning. Catalog entries whose `source` contains `VERIFY`
-are unconfirmed placeholders.
+`K = anchorYards × anchorDiameter²(in) × anchorPackingFactor`; for any line `yards = K / (d²·packing)`.
+Topshot pins one segment to a fixed length, subtracts its volume from `K`, fills the remainder with the
+other line. **`packingFactor` calibrates braid:** published braid diameters understate packed volume, so
+each `LineType` carries a default (`mono`/`fluoro` 1.0, `braid_solid` 1.2, `braid_hollow` 1.85 — see
+`LineTypeX.defaultPackingFactor`); a per-line `packing_factor` in JSON overrides it. A reel's anchor uses
+the same factor (inferred from its `anchor_label` via `Reel.anchorPackingFactor`) so braid-anchored and
+mono-anchored reels stay mutually consistent — without it, braid's optimistic stated diameter would
+understate `K`. Calibrated against real spool data (Penn Fathom 40N solid braid; an Avet 80W holding
+~1,900 yd of 100 lb hollow). Catalog entries whose `source` contains `VERIFY` are unconfirmed placeholders.
 
 ## Calculator flow (`home_screen.dart`)
 

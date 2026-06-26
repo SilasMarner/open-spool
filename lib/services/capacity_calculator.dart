@@ -12,10 +12,13 @@
 ///
 ///     yards = K / d²
 ///
-/// Each line carries an optional [packingFactor] (default 1.0) that scales its
-/// effective cross-section, so braid-vs-mono compression can be calibrated
-/// later without touching call sites. A factor < 1 means the line packs tighter
-/// (more yards per unit spool volume).
+/// Each line carries a [packingFactor] that scales its effective cross-section.
+/// Published braid diameters understate the volume the line really occupies on
+/// a packed spool (hollow core most of all), so braid types use a factor > 1 to
+/// pull capacity down to real-world numbers. A factor of 1.0 means the stated
+/// diameter is taken at face value (mono / fluoro). The spool constant uses the
+/// anchor line's factor too — see [spoolConstant] — so a reel anchored on braid
+/// resolves to the same true spool volume a mono anchor would.
 library;
 
 /// Which segment in a topshot mix the user pinned to a fixed length.
@@ -26,11 +29,18 @@ double volPerYard(double diameterIn, {double packingFactor = 1.0}) =>
     diameterIn * diameterIn * packingFactor;
 
 /// The spool constant K for a reel from one known capacity anchor.
+///
+/// [anchorPackingFactor] is the packing factor of the line the capacity was
+/// published for (1.0 for mono/fluoro, >1 for braid). Including it keeps a
+/// braid-anchored reel's true spool volume consistent with a mono anchor;
+/// without it, braid's optimistic stated diameter would understate K and skew
+/// every conversion off that reel.
 double spoolConstant({
   required double anchorYards,
   required double anchorDiameterIn,
+  double anchorPackingFactor = 1.0,
 }) =>
-    anchorYards * anchorDiameterIn * anchorDiameterIn;
+    anchorYards * anchorDiameterIn * anchorDiameterIn * anchorPackingFactor;
 
 /// Yards of a single line that fills the whole spool (straight braid or mono).
 double straightYards({

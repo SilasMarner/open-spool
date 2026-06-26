@@ -1,4 +1,5 @@
 import '../services/capacity_calculator.dart';
+import 'line.dart';
 
 enum ReelType { spinning, conventional }
 
@@ -46,10 +47,22 @@ class Reel {
     this.custom = false,
   });
 
-  /// Usable spool volume constant K = anchorYards · anchorDiameter².
+  /// Packing factor of the line the anchor capacity was published for, inferred
+  /// from [anchorLabel]. Reel ratings are almost always mono or solid braid;
+  /// this keeps the derived spool volume on the same footing as the line catalog
+  /// so braid-anchored and mono-anchored reels stay mutually consistent.
+  double get anchorPackingFactor {
+    final l = anchorLabel.toLowerCase();
+    if (l.contains('hollow')) return LineType.braidHollow.defaultPackingFactor;
+    if (l.contains('braid')) return LineType.braidSolid.defaultPackingFactor;
+    return 1.0; // mono / fluoro — stated diameter taken at face value
+  }
+
+  /// Usable spool volume constant K = anchorYards · anchorDiameter² · packing.
   double get spoolK => spoolConstant(
         anchorYards: anchorYards,
         anchorDiameterIn: anchorDiameterIn,
+        anchorPackingFactor: anchorPackingFactor,
       );
 
   bool get unverified => source != null && source!.toUpperCase().contains('VERIFY');
