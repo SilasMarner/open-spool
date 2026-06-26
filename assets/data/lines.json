@@ -2138,6 +2138,12 @@
     { "id": "jbraid-grand-65",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "Daiwa published spec (0.41 mm)" },
     { "id": "jbraid-grand-80",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "Daiwa published spec (0.43 mm)" },
     { "id": "jbraid-grand-100", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.020, "source": "Daiwa published spec (0.50 mm)" },
-    { "id": "jbraid-grand-120", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.022, "source": "Daiwa published spec (0.55 mm)" }
+    { "id": "jbraid-grand-120", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.022, "source": "Daiwa published spec (0.55 mm)" },
+
+    { "id": "ppslickv2-15", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.008, "source": "PowerPro published spec (0.008 in)" },
+    { "id": "ppslickv2-30", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.011, "source": "PowerPro published spec (0.011 in)" },
+    { "id": "ppslickv2-50", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014, "source": "PowerPro published spec (0.014 in)" },
+    { "id": "ppslickv2-65", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016, "source": "PowerPro published spec (0.016 in)" },
+    { "id": "ppslickv2-80", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.017, "source": "PowerPro published spec (0.017 in)" }
   ]
 }

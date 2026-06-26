@@ -2540,6 +2540,26 @@
       "anchor_diameter_in": 0.014,
       "anchor_yards": 1015,
       "source": "Shimano published capacity (50 lb PowerPro / 1015 yd)"
+    },
+    {
+      "id": "penn-squall-lp-300",
+      "brand": "Penn",
+      "model": "Squall Low Profile 300",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 165,
+      "source": "Penn published capacity (50 lb braid / 165 yd)"
+    },
+    {
+      "id": "penn-squall-lp-400",
+      "brand": "Penn",
+      "model": "Squall Low Profile 400",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 200,
+      "source": "Penn published capacity (50 lb braid / 200 yd)"
     }
   ]
 }
