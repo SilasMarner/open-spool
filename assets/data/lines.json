@@ -857,6 +857,42 @@
       "source": "Daiwa published spec (0.41 mm)"
     },
     {
+      "id": "momoi-diamond-hollow-30",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.28 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-40",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.013,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.33 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-60",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.0141,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.36 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-80",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.0161,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.41 mm)"
+    },
+    {
       "id": "momoi-diamond-hollow-100",
       "brand": "Momoi",
       "product": "Diamond Braid Gen 3 Hollow",
@@ -864,6 +900,33 @@
       "lb_test": 100,
       "diameter_in": 0.0185,
       "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.47 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-130",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.0205,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.52 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-150",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 150,
+      "diameter_in": 0.0256,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.65 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-200",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.0315,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.80 mm)"
     },
     {
       "id": "jbrown-hollow-40",
