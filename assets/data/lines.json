@@ -659,6 +659,69 @@
       "source": "Cortland published spec (0.660 mm)"
     },
     {
+      "id": "cortland-c16-hollow-40",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.011,
+      "source": "Cortland C16 published spec (0.279 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-60",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.014,
+      "source": "Cortland C16 published spec (0.356 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-80",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.016,
+      "source": "Cortland C16 published spec (0.406 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-100",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.018,
+      "source": "Cortland C16 published spec (0.457 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-130",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.02,
+      "source": "Cortland C16 published spec (0.508 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-200",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.026,
+      "source": "Cortland C16 published spec (0.660 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-300",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 300,
+      "diameter_in": 0.036,
+      "source": "Cortland C16 published spec (0.914 mm)"
+    },
+    {
       "id": "dorisea-8x-10",
       "brand": "Dorisea",
       "product": "Extreme Braid 8X",
