@@ -722,6 +722,96 @@
       "source": "Cortland C16 published spec (0.914 mm)"
     },
     {
+      "id": "cortland-tlb-8",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.006,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.15 mm)"
+    },
+    {
+      "id": "cortland-tlb-10",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.007,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.17 mm)"
+    },
+    {
+      "id": "cortland-tlb-15",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.008,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.21 mm)"
+    },
+    {
+      "id": "cortland-tlb-30",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.009,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.24 mm)"
+    },
+    {
+      "id": "cortland-tlb-40",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.011,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.27 mm)"
+    },
+    {
+      "id": "cortland-tlb-50",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.013,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.34 mm)"
+    },
+    {
+      "id": "cortland-tlb-65",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.015,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.37 mm)"
+    },
+    {
+      "id": "cortland-tlb-80",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.018,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.46 mm)"
+    },
+    {
+      "id": "cortland-tlb-100",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.02,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.52 mm)"
+    },
+    {
+      "id": "cortland-tlb-130",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 130,
+      "diameter_in": 0.022,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.57 mm)"
+    },
+    {
       "id": "dorisea-8x-10",
       "brand": "Dorisea",
       "product": "Extreme Braid 8X",
