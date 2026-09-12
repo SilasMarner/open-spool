@@ -82,6 +82,56 @@
       "source": "Avet published capacity (80 lb mono / 1000 yd)"
     },
     {
+      "id": "avet-mxl-58",
+      "brand": "Avet",
+      "model": "MXL 5.8",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 600,
+      "source": "VERIFY — Avet MXL ~600 yd of 50 lb braid, corroborated across multiple retailer/forum listings (G2 MXL cites 620 yd); re-searched — found a published chart for the newer MXL Raptor (50/770, 65/500, 80/400) but that's a different-generation product from the classic MXL 5.8, so not substituted; still no factory chart for this exact model"
+    },
+    {
+      "id": "avet-ex-30-2",
+      "brand": "Avet",
+      "model": "EX 30/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 310,
+      "source": "Confirmed — Avet EX 30/2 published chart (mono 40/420, 50/310, 60/270 yd/lb; braid 80/750, 100/670, 130/460 yd/lb)"
+    },
+    {
+      "id": "avet-exw-30-2",
+      "brand": "Avet",
+      "model": "EXW 30/2",
+      "type": "conventional",
+      "anchor_label": "100 lb braid",
+      "anchor_diameter_in": 0.018,
+      "anchor_yards": 850,
+      "source": "Confirmed — Avet EXW 30/2 spec listing (charkbait.com) states 850 yd of 100 lb test; re-anchored from an unconfirmed 50lb-mono forum estimate to the wide spool's own published braid figure"
+    },
+    {
+      "id": "avet-ex-50-2",
+      "brand": "Avet",
+      "model": "EX 50/2",
+      "type": "conventional",
+      "anchor_label": "60 lb mono",
+      "anchor_diameter_in": 0.031,
+      "anchor_yards": 500,
+      "source": "Confirmed — Avet EX 50/2 published chart (mono 60/500, 80/370, 100/290 yd/lb; braid 80/1380, 100/1240, 130/850 yd/lb); re-anchored from an estimated 50lb-mono figure to the chart's actual 60lb-mono point"
+    },
+    {
+      "id": "avet-exw-50-2",
+      "brand": "Avet",
+      "model": "EXW 50/2",
+      "type": "conventional",
+      "anchor_label": "50 lb mono",
+      "anchor_diameter_in": 0.028,
+      "anchor_yards": 950,
+      "source": "Avet published capacity (50 lb mono / 950 yd)"
+    },
+    {
       "id": "penn-int30visw",
       "brand": "Penn",
       "model": "International 30VISW",
@@ -539,7 +589,7 @@
       "anchor_label": "40 lb braid",
       "anchor_diameter_in": 0.013,
       "anchor_yards": 330,
-      "source": "VERIFY — Lexa 400 ~40 lb braid / 330 yd; Daiwa lists metric PE only"
+      "source": "Confirmed — matches owner/dealer-reported J-Braid capacity (330 yd of 40 lb); Daiwa's own spec sheet still lists metric PE only"
     },
     {
       "id": "accurate-bv-600",
@@ -556,10 +606,10 @@
       "brand": "Accurate",
       "model": "Boss Valiant BV-500",
       "type": "conventional",
-      "anchor_label": "65 lb braid",
-      "anchor_diameter_in": 0.016,
-      "anchor_yards": 230,
-      "source": "VERIFY — BV-500 ~65 lb braid / 230 yd; confirm on Accurate chart"
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 500,
+      "source": "Confirmed — Accurate's own BV-500 product description states 500 yd of 50 lb braid; re-anchored from an unconfirmed 65lb/230yd estimate"
     },
     {
       "id": "penn-senator-113h-4-0",
@@ -1119,7 +1169,7 @@
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
       "anchor_yards": 200,
-      "source": "Abu Garcia approx (~200 yd of 50 lb braid) — VERIFY"
+      "source": "Confirmed — Abu Garcia published capacity chart lists 200/50 yd/lb (alongside 380/20, 285/30)"
     },
     {
       "id": "abu-revo-toro-beast-60",
@@ -1258,8 +1308,8 @@
       "type": "conventional",
       "anchor_label": "15 lb mono",
       "anchor_diameter_in": 0.015,
-      "anchor_yards": 250,
-      "source": "Akios approx (narrow 555 spool ~250 yd of 15 lb mono) — VERIFY"
+      "anchor_yards": 240,
+      "source": "Confirmed — Akios Shuttle 555 published capacity (240 yd of 15 lb nylon)"
     },
     {
       "id": "akios-shuttle-666",
@@ -1268,8 +1318,8 @@
       "type": "conventional",
       "anchor_label": "15 lb mono",
       "anchor_diameter_in": 0.015,
-      "anchor_yards": 350,
-      "source": "Akios approx (wide 666 spool ~350 yd of 15 lb mono) — VERIFY"
+      "anchor_yards": 330,
+      "source": "Confirmed — Akios Shuttle 666 STR KURO published capacity (330 yd of 15 lb mono)"
     },
     {
       "id": "tsunami-saltx-ii-3000",
@@ -1458,8 +1508,8 @@
       "type": "spinning",
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
-      "anchor_yards": 780,
-      "source": "Penn approx (~780 yd of 50 lb braid, scaled from the 8500 spool) — VERIFY"
+      "anchor_yards": 845,
+      "source": "Confirmed — Penn Authority 10500 published braid chart (845/50, 780/60, 540/80 yd/lb); prior estimate had mistakenly used the 60 lb figure"
     },
     {
       "id": "shimano-spheros-sw-5000",
@@ -1588,8 +1638,8 @@
       "type": "conventional",
       "anchor_label": "80 lb braid",
       "anchor_diameter_in": 0.017,
-      "anchor_yards": 460,
-      "source": "Approx. from user-reported 80 lb PowerPro ~460 yd — VERIFY against Shimano spec"
+      "anchor_yards": 415,
+      "source": "Confirmed — Shimano Torium 30 published braid chart gives 80lb/415yd (corroborated across independent retailer listings, and used as this reel's anchor); the same chart's cited 50lb figure (1015yd) is inconsistent with the 65/80lb points (implies ~65% more spool volume per pound than the other two points, which isn't physically plausible for one spool) and should be treated as an unverified/likely-erroneous transcription, not a confirmed figure"
     },
     {
       "id": "shimano-tekota-500",
@@ -1708,8 +1758,8 @@
       "type": "conventional",
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
-      "anchor_yards": 460,
-      "source": "Approx. (mono 25 lb / 390 yd published) — VERIFY braid spec"
+      "anchor_yards": 475,
+      "source": "Confirmed — Penn Squall II 25N published braid chart (30/675, 40/555, 50/475 yd/lb)"
     },
     {
       "id": "penn-squall2-30",
@@ -1808,8 +1858,8 @@
       "type": "conventional",
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
-      "anchor_yards": 300,
-      "source": "Approx. (rated 40-50 lb braid, ~300 yd real-world) — VERIFY"
+      "anchor_yards": 325,
+      "source": "Confirmed — Accurate BV2-400 published capacity (325 yd of 50 lb braid, Izorline reference)"
     },
     {
       "id": "accurate-bv2-500",
@@ -1819,7 +1869,7 @@
       "anchor_label": "65 lb braid",
       "anchor_diameter_in": 0.016,
       "anchor_yards": 400,
-      "source": "Approx. (rated 50-65 lb braid) — VERIFY against Accurate spec"
+      "source": "VERIFY — re-searched; only a vague \"rated 50-65lb braid\" range found, no specific yardage confirmed for the BV2-500"
     },
     {
       "id": "accurate-bv2-600",
@@ -1828,8 +1878,8 @@
       "type": "conventional",
       "anchor_label": "65 lb braid",
       "anchor_diameter_in": 0.016,
-      "anchor_yards": 500,
-      "source": "Approx. (real-world ~500 yd 65 lb braid) — VERIFY"
+      "anchor_yards": 400,
+      "source": "Confirmed — Accurate BV2-600 published capacity (400 yd of 65 lb braid); corrected down from a 500 yd real-world estimate"
     },
     {
       "id": "quantum-cabo-40",
@@ -1869,7 +1919,7 @@
       "anchor_label": "PE6 (~70 lb) braid",
       "anchor_diameter_in": 0.016,
       "anchor_yards": 547,
-      "source": "Converted from Maxel PE6 / 500 m spec — VERIFY"
+      "source": "VERIFY — re-searched; only found unrelated Rage 60H capacity figures (1320 yd/20lb mono, ~400 yd/65lb braid real-world) that don't cleanly corroborate or replace the PE6/500m conversion, so left unchanged"
     },
     {
       "id": "daiwa-saltiga-ld40",
@@ -1886,10 +1936,10 @@
       "brand": "Daiwa",
       "model": "Saltiga LD 50 2-Speed",
       "type": "conventional",
-      "anchor_label": "65 lb braid",
-      "anchor_diameter_in": 0.016,
-      "anchor_yards": 610,
-      "source": "Approx. (rated 65-80 lb braid, 460-610 yd) — VERIFY"
+      "anchor_label": "80 lb braid",
+      "anchor_diameter_in": 0.017,
+      "anchor_yards": 460,
+      "source": "Confirmed — Daiwa J-Braid capacity chart for the Saltiga LD50 (80/460, 100/360 yd/lb); re-anchored from a vague 65-80lb range to the chart's 80lb point"
     },
     {
       "id": "shimano-curado-200k",
@@ -1948,8 +1998,8 @@
       "type": "spinning",
       "anchor_label": "40 lb braid",
       "anchor_diameter_in": 0.013,
-      "anchor_yards": 255,
-      "source": "Approx. (PowerPro 40 lb, between TP SW 5000/8000) — VERIFY against Shimano spec"
+      "anchor_yards": 230,
+      "source": "VERIFY — refined via 1/lb interpolation from confirmed PowerPro capacity points (30lb/290yd, 50lb/195yd) on the TwinPower SW 6000's own chart; the 40lb point itself still isn't published"
     },
     {
       "id": "shimano-twinpower-sw-8000",
@@ -1989,7 +2039,7 @@
       "anchor_label": "20 lb braid",
       "anchor_diameter_in": 0.009,
       "anchor_yards": 280,
-      "source": "From sister Saltist MQ 4000D-XH (J-Braid 20 lb / 280 yd) — VERIFY BG MQ spec"
+      "source": "Confirmed — Daiwa BG MQ 4000D-XH published J-Braid capacity (20/280, 30/200 yd/lb); matches the prior sister-model estimate exactly"
     },
     {
       "id": "daiwa-bgmq-5000",
@@ -2019,7 +2069,7 @@
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
       "anchor_yards": 280,
-      "source": "From sister Saltist MQ 8000H (J-Braid 50 lb / 280 yd) — VERIFY BG MQ spec"
+      "source": "Confirmed — Daiwa BG MQ 8000-H published J-Braid capacity (40/330, 50/280 yd/lb); matches the prior sister-model estimate exactly"
     },
     {
       "id": "daiwa-bgmq-10000",
@@ -2039,7 +2089,7 @@
       "anchor_label": "65 lb braid",
       "anchor_diameter_in": 0.016,
       "anchor_yards": 330,
-      "source": "From sister Saltist MQ 14000H (J-Braid 65 lb / 330 yd) — VERIFY BG MQ spec"
+      "source": "Confirmed — Daiwa BG MQ 14000-H published J-Braid capacity (65/330, 80/280 yd/lb); matches the prior sister-model estimate exactly"
     },
     {
       "id": "daiwa-saltist-mq-4000",
@@ -2098,8 +2148,8 @@
       "type": "spinning",
       "anchor_label": "40 lb braid",
       "anchor_diameter_in": 0.013,
-      "anchor_yards": 270,
-      "source": "Approx. (knurled spool, braid direct-tie) — VERIFY against Okuma spec"
+      "anchor_yards": 250,
+      "source": "Confirmed — Okuma Azores Z-55S published braid chart (30/320, 40/250, 50/210 yd/lb)"
     },
     {
       "id": "okuma-azores-65",
@@ -2109,7 +2159,7 @@
       "anchor_label": "50 lb braid",
       "anchor_diameter_in": 0.014,
       "anchor_yards": 290,
-      "source": "Approx. (knurled spool, braid direct-tie) — VERIFY against Okuma spec"
+      "source": "VERIFY — re-searched; found the sister Z-55S's confirmed chart (30/320, 40/250, 50/210 yd/lb) but no matching braid capacity for the Z-65S itself"
     },
     {
       "id": "okuma-azores-80",
@@ -2148,8 +2198,8 @@
       "type": "spinning",
       "anchor_label": "30 lb braid",
       "anchor_diameter_in": 0.011,
-      "anchor_yards": 170,
-      "source": "Approx. (shares Stradic-class 4000 spool) — VERIFY against Shimano spec"
+      "anchor_yards": 180,
+      "source": "Confirmed — Nasci 4000XG published PowerPro capacity (15/230, 30/180, 50/120 yd/lb), same physical spool as the standard 4000"
     },
     {
       "id": "penn-clash-ii-2500",
@@ -2228,8 +2278,8 @@
       "type": "spinning",
       "anchor_label": "40 lb braid",
       "anchor_diameter_in": 0.013,
-      "anchor_yards": 300,
-      "source": "Approx. (one size up from 5000) — VERIFY against Penn spec"
+      "anchor_yards": 390,
+      "source": "Confirmed — Penn Pursuit IV 6000 published braid chart (30/490, 40/390, 50/335 yd/lb)"
     },
     {
       "id": "daiwa-fuego-lt-2500",
@@ -2290,6 +2340,226 @@
       "anchor_diameter_in": 0.011,
       "anchor_yards": 230,
       "source": "Tsunami published capacity (30 lb braid / 230 yd)"
+    },
+    {
+      "id": "penn-slammeriv-3500",
+      "brand": "Penn",
+      "model": "Slammer IV 3500",
+      "type": "spinning",
+      "anchor_label": "20 lb braid",
+      "anchor_diameter_in": 0.009,
+      "anchor_yards": 220,
+      "source": "Penn published capacity (20 lb braid / 220 yd)"
+    },
+    {
+      "id": "penn-slammeriv-4500",
+      "brand": "Penn",
+      "model": "Slammer IV 4500",
+      "type": "spinning",
+      "anchor_label": "30 lb braid",
+      "anchor_diameter_in": 0.011,
+      "anchor_yards": 250,
+      "source": "Penn published capacity (30 lb braid / 250 yd)"
+    },
+    {
+      "id": "daiwa-bg-6500",
+      "brand": "Daiwa",
+      "model": "BG 6500",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 550,
+      "source": "Daiwa published capacity (50 lb J-Braid / 550 yd)"
+    },
+    {
+      "id": "penn-authority-7500",
+      "brand": "Penn",
+      "model": "Authority 7500",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 440,
+      "source": "Penn published capacity (50 lb braid / 440 yd)"
+    },
+    {
+      "id": "shimano-stella-30000",
+      "brand": "Shimano",
+      "model": "Stella SW 30000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 600,
+      "source": "Shimano published capacity (50 lb PowerPro / 600 yd)"
+    },
+    {
+      "id": "shimano-trinidad-20a",
+      "brand": "Shimano",
+      "model": "Trinidad 20A",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 375,
+      "source": "Shimano published capacity (65 lb PowerPro / 375 yd)"
+    },
+    {
+      "id": "shimano-talica20",
+      "brand": "Shimano",
+      "model": "Talica 20",
+      "type": "conventional",
+      "anchor_label": "80 lb braid",
+      "anchor_diameter_in": 0.017,
+      "anchor_yards": 575,
+      "source": "Shimano published capacity (80 lb PowerPro / 575 yd)"
+    },
+    {
+      "id": "shimano-talica25",
+      "brand": "Shimano",
+      "model": "Talica 25",
+      "type": "conventional",
+      "anchor_label": "80 lb braid",
+      "anchor_diameter_in": 0.017,
+      "anchor_yards": 730,
+      "source": "Shimano published capacity (80 lb PowerPro / 730 yd)"
+    },
+    {
+      "id": "okuma-cavalla-5ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-5II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 350,
+      "source": "Okuma published capacity (50 lb braid / 350 yd)"
+    },
+    {
+      "id": "okuma-cavalla-12ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-12II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 475,
+      "source": "Okuma published capacity (50 lb braid / 475 yd)"
+    },
+    {
+      "id": "okuma-cavalla-16ii",
+      "brand": "Okuma",
+      "model": "Cavalla CAV-16II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 525,
+      "source": "Okuma published capacity (50 lb braid / 525 yd)"
+    },
+    {
+      "id": "okuma-andros-5ii",
+      "brand": "Okuma",
+      "model": "Andros A-5II",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 450,
+      "source": "Okuma published capacity (50 lb braid / 450 yd)"
+    },
+    {
+      "id": "shimano-calcutta-conquest-400",
+      "brand": "Shimano",
+      "model": "Calcutta Conquest 400",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 300,
+      "source": "Shimano published capacity (50 lb PowerPro / 300 yd)"
+    },
+    {
+      "id": "shimano-talica8",
+      "brand": "Shimano",
+      "model": "Talica 8",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 390,
+      "source": "Shimano published capacity (50 lb PowerPro / 390 yd)"
+    },
+    {
+      "id": "penn-battle-iii-8000",
+      "brand": "Penn",
+      "model": "Battle III 8000",
+      "type": "spinning",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 515,
+      "source": "Penn published capacity (50 lb braid / 515 yd)"
+    },
+    {
+      "id": "penn-fathom2-12ld",
+      "brand": "Penn",
+      "model": "Fathom II 12 Lever Drag 2-Speed",
+      "type": "conventional",
+      "anchor_label": "40 lb braid",
+      "anchor_diameter_in": 0.012,
+      "anchor_yards": 400,
+      "source": "Penn published capacity (40 lb braid / 400 yd)"
+    },
+    {
+      "id": "daiwa-lexa-400hd",
+      "brand": "Daiwa",
+      "model": "Lexa 400 HD",
+      "type": "conventional",
+      "anchor_label": "65 lb braid",
+      "anchor_diameter_in": 0.016,
+      "anchor_yards": 200,
+      "source": "Daiwa published capacity (65 lb J-Braid / 200 yd)"
+    },
+    {
+      "id": "okuma-andros-12ii",
+      "brand": "Okuma",
+      "model": "Andros A-12II",
+      "type": "conventional",
+      "anchor_label": "25 lb mono",
+      "anchor_diameter_in": 0.020,
+      "anchor_yards": 420,
+      "source": "Okuma published capacity (25 lb mono / 420 yd)"
+    },
+    {
+      "id": "okuma-andros-16ii",
+      "brand": "Okuma",
+      "model": "Andros A-16II",
+      "type": "conventional",
+      "anchor_label": "25 lb mono",
+      "anchor_diameter_in": 0.020,
+      "anchor_yards": 650,
+      "source": "Okuma published capacity (25 lb mono / 650 yd)"
+    },
+    {
+      "id": "shimano-trinidad-30a",
+      "brand": "Shimano",
+      "model": "Trinidad 30A",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 1015,
+      "source": "Shimano published capacity (50 lb PowerPro / 1015 yd)"
+    },
+    {
+      "id": "penn-squall-lp-300",
+      "brand": "Penn",
+      "model": "Squall Low Profile 300",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 165,
+      "source": "Penn published capacity (50 lb braid / 165 yd)"
+    },
+    {
+      "id": "penn-squall-lp-400",
+      "brand": "Penn",
+      "model": "Squall Low Profile 400",
+      "type": "conventional",
+      "anchor_label": "50 lb braid",
+      "anchor_diameter_in": 0.014,
+      "anchor_yards": 200,
+      "source": "Penn published capacity (50 lb braid / 200 yd)"
     }
   ]
 }

@@ -2,7 +2,7 @@ name: reel_planner
 description: "Saltwater reel line-capacity planner — spinning & conventional, braid & mono, topshot mixes."
 publish_to: 'none'
 
-version: 1.0.1+2
+version: 1.0.7+8
 
 environment:
   sdk: ^3.12.0
@@ -18,6 +18,7 @@ dependencies:
   shared_preferences: ^2.2.0
   share_plus: ^10.0.0
   url_launcher: ^6.3.0
+  package_info_plus: ^8.0.0
 
 dev_dependencies:
   flutter_test:

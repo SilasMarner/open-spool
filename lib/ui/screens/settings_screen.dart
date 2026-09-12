@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_state.dart';
@@ -112,11 +113,20 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
           const Divider(),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 12, 16, 24),
-            child: Text(
-              'OpenSpool v1.0.0',
-              style: TextStyle(color: Colors.white38, fontSize: 12),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+            child: FutureBuilder<PackageInfo>(
+              future: PackageInfo.fromPlatform(),
+              builder: (context, snapshot) {
+                final info = snapshot.data;
+                final label = info == null
+                    ? 'OpenSpool'
+                    : 'OpenSpool v${info.version} (${info.buildNumber})';
+                return Text(
+                  label,
+                  style: const TextStyle(color: Colors.white38, fontSize: 12),
+                );
+              },
             ),
           ),
         ],

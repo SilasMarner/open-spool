@@ -488,87 +488,6 @@
       "source": "PowerPro published spec"
     },
     {
-      "id": "sufix832-solid-8",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 8,
-      "diameter_in": 0.007,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-10",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 10,
-      "diameter_in": 0.008,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-15",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 15,
-      "diameter_in": 0.0085,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-20",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 20,
-      "diameter_in": 0.009,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-30",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 30,
-      "diameter_in": 0.011,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-40",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 40,
-      "diameter_in": 0.013,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-50",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 50,
-      "diameter_in": 0.014,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-65",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 65,
-      "diameter_in": 0.016,
-      "source": "Sufix published spec"
-    },
-    {
-      "id": "sufix832-solid-80",
-      "brand": "Sufix",
-      "product": "832 Advanced Superline",
-      "type": "braid_solid",
-      "lb_test": 80,
-      "diameter_in": 0.018,
-      "source": "Sufix published spec"
-    },
-    {
       "id": "berkleyx9-solid-8",
       "brand": "Berkley",
       "product": "x9 Braid",
@@ -738,6 +657,159 @@
       "lb_test": 130,
       "diameter_in": 0.026,
       "source": "Cortland published spec (0.660 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-40",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.011,
+      "source": "Cortland C16 published spec (0.279 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-60",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.014,
+      "source": "Cortland C16 published spec (0.356 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-80",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.016,
+      "source": "Cortland C16 published spec (0.406 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-100",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.018,
+      "source": "Cortland C16 published spec (0.457 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-130",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.02,
+      "source": "Cortland C16 published spec (0.508 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-200",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.026,
+      "source": "Cortland C16 published spec (0.660 mm)"
+    },
+    {
+      "id": "cortland-c16-hollow-300",
+      "brand": "Cortland",
+      "product": "C16 Hollow Core",
+      "type": "braid_hollow",
+      "lb_test": 300,
+      "diameter_in": 0.036,
+      "source": "Cortland C16 published spec (0.914 mm)"
+    },
+    {
+      "id": "cortland-tlb-8",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 8,
+      "diameter_in": 0.006,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.15 mm)"
+    },
+    {
+      "id": "cortland-tlb-10",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 10,
+      "diameter_in": 0.007,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.17 mm)"
+    },
+    {
+      "id": "cortland-tlb-15",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 15,
+      "diameter_in": 0.008,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.21 mm)"
+    },
+    {
+      "id": "cortland-tlb-30",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 30,
+      "diameter_in": 0.009,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.24 mm)"
+    },
+    {
+      "id": "cortland-tlb-40",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 40,
+      "diameter_in": 0.011,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.27 mm)"
+    },
+    {
+      "id": "cortland-tlb-50",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 50,
+      "diameter_in": 0.013,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.34 mm)"
+    },
+    {
+      "id": "cortland-tlb-65",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 65,
+      "diameter_in": 0.015,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.37 mm)"
+    },
+    {
+      "id": "cortland-tlb-80",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 80,
+      "diameter_in": 0.018,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.46 mm)"
+    },
+    {
+      "id": "cortland-tlb-100",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 100,
+      "diameter_in": 0.02,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.52 mm)"
+    },
+    {
+      "id": "cortland-tlb-130",
+      "brand": "Cortland",
+      "product": "TLB 8-Strand Solid Braid",
+      "type": "braid_solid",
+      "lb_test": 130,
+      "diameter_in": 0.022,
+      "source": "Cortland/Tight Line Braid TLB package spec (0.57 mm)"
     },
     {
       "id": "dorisea-8x-10",
@@ -938,6 +1010,78 @@
       "source": "Daiwa published spec (0.41 mm)"
     },
     {
+      "id": "momoi-diamond-hollow-30",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 30,
+      "diameter_in": 0.011,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.28 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-40",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 40,
+      "diameter_in": 0.013,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.33 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-60",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 60,
+      "diameter_in": 0.0141,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.36 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-80",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 80,
+      "diameter_in": 0.0161,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.41 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-100",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 100,
+      "diameter_in": 0.0185,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.47 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-130",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 130,
+      "diameter_in": 0.0205,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.52 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-150",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 150,
+      "diameter_in": 0.0256,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.65 mm)"
+    },
+    {
+      "id": "momoi-diamond-hollow-200",
+      "brand": "Momoi",
+      "product": "Diamond Braid Gen 3 Hollow",
+      "type": "braid_hollow",
+      "lb_test": 200,
+      "diameter_in": 0.0315,
+      "source": "Momoi Diamond Braid Gen 3 hollow core published spec (0.80 mm)"
+    },
+    {
       "id": "jbrown-hollow-40",
       "brand": "Jerry Brown",
       "product": "Line One Hollow Core",
@@ -1025,7 +1169,7 @@
       "type": "braid_hollow",
       "lb_test": 30,
       "diameter_in": 0.011,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-50",
@@ -1034,7 +1178,7 @@
       "type": "braid_hollow",
       "lb_test": 50,
       "diameter_in": 0.014,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-65",
@@ -1043,7 +1187,7 @@
       "type": "braid_hollow",
       "lb_test": 65,
       "diameter_in": 0.016,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-80",
@@ -1052,7 +1196,7 @@
       "type": "braid_hollow",
       "lb_test": 80,
       "diameter_in": 0.018,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-100",
@@ -1061,7 +1205,7 @@
       "type": "braid_hollow",
       "lb_test": 100,
       "diameter_in": 0.020,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-130",
@@ -1070,7 +1214,7 @@
       "type": "braid_hollow",
       "lb_test": 130,
       "diameter_in": 0.022,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-150",
@@ -1079,7 +1223,7 @@
       "type": "braid_hollow",
       "lb_test": 150,
       "diameter_in": 0.024,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "tightline-hollow-200",
@@ -1088,7 +1232,7 @@
       "type": "braid_hollow",
       "lb_test": 200,
       "diameter_in": 0.028,
-      "source": "VERIFY — Tight Line Braid (tightlinebraid.com) lists tests/yardages but not per-size diameters; estimated from comparable 12-strand hollow core"
+      "source": "VERIFY — re-searched (tightlinebraid.com product/collection pages); still lists tests/yardages but no per-size diameters; estimated from comparable 12-strand hollow core, unchanged"
     },
     {
       "id": "pphollowace-40",
@@ -1097,7 +1241,7 @@
       "type": "braid_hollow",
       "lb_test": 40,
       "diameter_in": 0.016,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "pphollowace-60",
@@ -1106,7 +1250,7 @@
       "type": "braid_hollow",
       "lb_test": 60,
       "diameter_in": 0.019,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "pphollowace-80",
@@ -1115,7 +1259,7 @@
       "type": "braid_hollow",
       "lb_test": 80,
       "diameter_in": 0.021,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "pphollowace-100",
@@ -1124,7 +1268,7 @@
       "type": "braid_hollow",
       "lb_test": 100,
       "diameter_in": 0.024,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "pphollowace-130",
@@ -1133,7 +1277,7 @@
       "type": "braid_hollow",
       "lb_test": 130,
       "diameter_in": 0.028,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "pphollowace-200",
@@ -1142,7 +1286,7 @@
       "type": "braid_hollow",
       "lb_test": 200,
       "diameter_in": 0.033,
-      "source": "VERIFY \u2014 PowerPro does not publish per-size Hollow Ace diameters; commonly-cited estimate"
+      "source": "VERIFY \u2014 re-searched (PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H product pages); still no per-size Hollow-Ace diameter chart published anywhere found; commonly-cited estimate unchanged"
     },
     {
       "id": "joyfish-mono-30",
@@ -2149,14 +2293,16 @@
     { "id": "sufix832-50", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014,  "source": "Sufix published spec" },
     { "id": "sufix832-65", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016,  "source": "Sufix published spec" },
     { "id": "sufix832-80", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.018,  "source": "Sufix published spec" },
+    { "id": "sufix832-100", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.022, "source": "Rapala/Sufix published spec (0.022 in)" },
+    { "id": "sufix832-130", "brand": "Sufix", "product": "832 Advanced Superline", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.026, "source": "Rapala/Sufix published spec (0.026 in)" },
 
     { "id": "spiderwire-stealth-10", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 10, "diameter_in": 0.006, "source": "SpiderWire published spec" },
-    { "id": "spiderwire-stealth-15", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.008, "source": "VERIFY — SpiderWire Stealth 15 lb diameter interpolated; confirm on spec" },
-    { "id": "spiderwire-stealth-20", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 20, "diameter_in": 0.010, "source": "VERIFY — SpiderWire Stealth 20 lb diameter interpolated; confirm on spec" },
+    { "id": "spiderwire-stealth-15", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.008, "source": "Confirmed via retailer spec listings (Walmart/generalstorespokane), 0.20mm/.008in" },
+    { "id": "spiderwire-stealth-20", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 20, "diameter_in": 0.010, "source": "Confirmed via retailer spec listings (Walmart), 0.25mm/.010in" },
     { "id": "spiderwire-stealth-30", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.012, "source": "SpiderWire published spec" },
-    { "id": "spiderwire-stealth-50", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014, "source": "VERIFY — SpiderWire Stealth 50 lb diameter interpolated; confirm on spec" },
+    { "id": "spiderwire-stealth-50", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014, "source": "Confirmed via retailer spec listings (Walmart), 0.35mm/.014in" },
     { "id": "spiderwire-stealth-65", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.015, "source": "SpiderWire published spec" },
-    { "id": "spiderwire-stealth-80", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.017, "source": "VERIFY — SpiderWire Stealth 80 lb diameter interpolated; confirm on spec" },
+    { "id": "spiderwire-stealth-80", "brand": "SpiderWire", "product": "Stealth", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.016, "source": "Confirmed via retailer spec listings (Walmart/Target/TackleDirect), 0.40mm/.016in — corrected from .017 estimate" },
 
     { "id": "sunline-siglon-x8-35", "brand": "Sunline", "product": "Siglon PE x8", "type": "braid_solid", "lb_test": 35, "diameter_in": 0.0094, "source": "Sunline published diameter (0.24 mm); lb test approximate" },
     { "id": "sunline-siglon-x8-40", "brand": "Sunline", "product": "Siglon PE x8", "type": "braid_solid", "lb_test": 40, "diameter_in": 0.0106, "source": "Sunline published diameter (0.27 mm); lb test approximate" },
@@ -2169,12 +2315,52 @@
     { "id": "seaguar-threadlock-80",  "brand": "Seaguar", "product": "Threadlock Hollow Core", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.019, "source": "Seaguar published spec" },
     { "id": "seaguar-threadlock-100", "brand": "Seaguar", "product": "Threadlock Hollow Core", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.020, "source": "Seaguar published spec" },
     { "id": "seaguar-threadlock-130", "brand": "Seaguar", "product": "Threadlock Hollow Core", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.022, "source": "Seaguar published spec" },
-    { "id": "seaguar-threadlock-200", "brand": "Seaguar", "product": "Threadlock Hollow Core", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.026, "source": "VERIFY — Threadlock 200 lb diameter estimated; Seaguar omits this size" },
+    { "id": "seaguar-threadlock-200", "brand": "Seaguar", "product": "Threadlock Hollow Core", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.026, "source": "VERIFY — re-searched (seaguar.com, TackleDirect, Melton Tackle); Seaguar still omits a published diameter for this size (one forum post reports 1.40mm/.055in with a mono leader inserted, not the line\u2019s own diameter); estimate unchanged" },
 
-    { "id": "tufline-gc-40",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 40,  "diameter_in": 0.013, "source": "VERIFY — TUF-Line Guide's Choice 40 lb diameter estimated from comparable hollow core" },
+    { "id": "tufline-gc-40",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 40,  "diameter_in": 0.013, "source": "VERIFY — sqrt(lb) scaling from confirmed 60lb (.016in) and 150lb (.025in) TUF-Line spec points" },
     { "id": "tufline-gc-60",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.016, "source": "TUF-Line published spec" },
-    { "id": "tufline-gc-80",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.019, "source": "VERIFY — TUF-Line Guide's Choice 80 lb diameter estimated from comparable hollow core" },
-    { "id": "tufline-gc-130", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.024, "source": "VERIFY — TUF-Line Guide's Choice 130 lb diameter estimated from comparable hollow core" },
-    { "id": "tufline-gc-200", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.030, "source": "VERIFY — TUF-Line Guide's Choice 200 lb diameter estimated from comparable hollow core" }
+    { "id": "tufline-gc-80",  "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.0185, "source": "VERIFY — sqrt(lb) scaling from confirmed 60lb (.016in) and 150lb (.025in) TUF-Line spec points" },
+    { "id": "tufline-gc-130", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.0236, "source": "VERIFY — sqrt(lb) scaling from confirmed 60lb (.016in) and 150lb (.025in) TUF-Line spec points" },
+    { "id": "tufline-gc-150", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 150, "diameter_in": 0.025, "source": "TUF-Line published spec (0.636mm/.025in)" },
+    { "id": "tufline-gc-200", "brand": "TUF-Line", "product": "Guide's Choice Hollow", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.0293, "source": "VERIFY — sqrt(lb) scaling from confirmed 60lb (.016in) and 150lb (.025in) TUF-Line spec points" },
+
+    { "id": "lp-hollow-50",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 50,  "diameter_in": 0.014, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+    { "id": "lp-hollow-60",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 60,  "diameter_in": 0.016, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+    { "id": "lp-hollow-80",  "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 80,  "diameter_in": 0.018, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+    { "id": "lp-hollow-100", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 100, "diameter_in": 0.020, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+    { "id": "lp-hollow-130", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 130, "diameter_in": 0.023, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+    { "id": "lp-hollow-200", "brand": "LP", "product": "Hollow Core Spectra", "type": "braid_hollow", "lb_test": 200, "diameter_in": 0.027, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); estimate follows the closest published comparable, BHP Tackle\u2019s Jerry Brown Line One hollow-spectra chart (40/.014in, 60/.015in, 80/.018in, 100/.017in [non-monotonic in JB\u2019s own chart], 130/.021in, 200/.024in)" },
+
+    { "id": "lp-solid-40",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.011, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+    { "id": "lp-solid-50",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.013, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+    { "id": "lp-solid-65",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.015, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+    { "id": "lp-solid-80",  "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+    { "id": "lp-solid-100", "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.019, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+    { "id": "lp-solid-130", "brand": "LP", "product": "Solid Spectra", "type": "braid_solid", "lb_test": 130, "diameter_in": 0.022, "source": "VERIFY — re-searched; confirmed LP = Lindgren-Pitman, which still publishes no diameter chart (per lindgren-pitman.com); no solid-Spectra manufacturer chart found as a closer comparable either, so left as the existing estimate" },
+
+    { "id": "tasline-elite-20",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.0081, "source": "Tasline published PE/diameter chart (PE1.5, 0.205 mm)" },
+    { "id": "tasline-elite-30",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.0102, "source": "Tasline published PE/diameter chart (PE2.5, 0.260 mm)" },
+    { "id": "tasline-elite-40",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.0122, "source": "Tasline published PE/diameter chart (PE3.5, 0.310 mm)" },
+    { "id": "tasline-elite-50",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.0130, "source": "Tasline published PE/diameter chart (PE4, 0.330 mm)" },
+    { "id": "tasline-elite-60",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 60,  "diameter_in": 0.0146, "source": "Tasline published PE/diameter chart (PE5, 0.370 mm)" },
+    { "id": "tasline-elite-80",  "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.0159, "source": "Tasline published PE/diameter chart (PE6, 0.405 mm)" },
+    { "id": "tasline-elite-100", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.0179, "source": "VERIFY — pe12.com lists 100lb = 0.545mm/.0215in, but that's non-monotonic against tasline.com.au's own confirmed 120lb (0.520mm/.0205in) and pe12.com's own 80lb figure (0.48mm) runs ~18% higher than tasline.com.au's confirmed 80lb (0.405mm) for the same rating, so the two charts aren't on a consistent scale and can't be mixed; reverted to the interpolated 0.0179in between tasline.com.au's own confirmed 80lb/120lb points pending a real PE8 chart entry" },
+    { "id": "tasline-elite-120", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.0205, "source": "Tasline published PE/diameter chart (PE10, 0.520 mm)" },
+    { "id": "tasline-elite-140", "brand": "Tasline", "product": "Elite 8X", "type": "braid_solid", "lb_test": 140, "diameter_in": 0.0224, "source": "Tasline published PE/diameter chart (PE12, 0.570 mm)" },
+
+    { "id": "jbraid-grand-20",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 20,  "diameter_in": 0.009, "source": "Daiwa published spec (0.23 mm)" },
+    { "id": "jbraid-grand-30",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 30,  "diameter_in": 0.011, "source": "Daiwa published spec (0.28 mm)" },
+    { "id": "jbraid-grand-40",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 40,  "diameter_in": 0.013, "source": "Daiwa published spec (0.32 mm)" },
+    { "id": "jbraid-grand-50",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 50,  "diameter_in": 0.014, "source": "Daiwa published spec (0.36 mm)" },
+    { "id": "jbraid-grand-65",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 65,  "diameter_in": 0.016, "source": "Daiwa published spec (0.41 mm)" },
+    { "id": "jbraid-grand-80",  "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 80,  "diameter_in": 0.017, "source": "Daiwa published spec (0.43 mm)" },
+    { "id": "jbraid-grand-100", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 100, "diameter_in": 0.020, "source": "Daiwa published spec (0.50 mm)" },
+    { "id": "jbraid-grand-120", "brand": "Daiwa", "product": "J-Braid Grand x8", "type": "braid_solid", "lb_test": 120, "diameter_in": 0.022, "source": "Daiwa published spec (0.55 mm)" },
+
+    { "id": "ppslickv2-15", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 15, "diameter_in": 0.008, "source": "PowerPro published spec (0.008 in)" },
+    { "id": "ppslickv2-30", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 30, "diameter_in": 0.011, "source": "PowerPro published spec (0.011 in)" },
+    { "id": "ppslickv2-50", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 50, "diameter_in": 0.014, "source": "PowerPro published spec (0.014 in)" },
+    { "id": "ppslickv2-65", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 65, "diameter_in": 0.016, "source": "PowerPro published spec (0.016 in)" },
+    { "id": "ppslickv2-80", "brand": "PowerPro", "product": "Super 8 Slick V2", "type": "braid_solid", "lb_test": 80, "diameter_in": 0.017, "source": "PowerPro published spec (0.017 in)" }
   ]
 }
