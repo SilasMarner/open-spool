@@ -1639,7 +1639,7 @@
       "anchor_label": "80 lb braid",
       "anchor_diameter_in": 0.017,
       "anchor_yards": 415,
-      "source": "Confirmed — Shimano Torium 30 published braid chart (50/1015, 65/515, 80/415 yd/lb)"
+      "source": "Confirmed — Shimano Torium 30 published braid chart gives 80lb/415yd (corroborated across independent retailer listings, and used as this reel's anchor); the same chart's cited 50lb figure (1015yd) is inconsistent with the 65/80lb points (implies ~65% more spool volume per pound than the other two points, which isn't physically plausible for one spool) and should be treated as an unverified/likely-erroneous transcription, not a confirmed figure"
     },
     {
       "id": "shimano-tekota-500",

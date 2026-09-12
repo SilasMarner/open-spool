@@ -12,6 +12,8 @@ _Last web search: 2026-09-11 — a full re-pass over every remaining VERIFY line
 
 **Same-day follow-up pass (2026-09-11):** re-searched the entries the first pass above left open. **Lines still unresolved** after a second search — PowerPro Hollow-Ace (checked PowerPro.com, Shimano fishshop, Melton/TackleDirect/J&H — no per-size chart exists), Tight Line 12 Strand Hollow Core (tightlinebraid.com confirmed to list tests/yardages only), Seaguar Threadlock 200 lb (seaguar.com/TackleDirect/Melton — Seaguar's own chart still omits this size). **LP Hollow/Solid Spectra**: confirmed LP = Lindgren-Pitman (lindgren-pitman.com), which itself publishes no diameter chart; found BHP Tackle's Jerry Brown "Line One" hollow-spectra chart as the closest still-comparable published reference (40/.014in, 60/.015in, 80/.018in, 100/.017in — non-monotonic in JB's own chart, 130/.021in, 200/.024in) and cited it explicitly, but did not overwrite LP's existing estimated values since JB's chart has its own known anomaly and is a different manufacturer/construction. **Reel anchors resolved:** Avet EXW 30/2 (850 yd/100 lb braid, off a charkbait.com spec listing — replaces an unconfirmed 500 yd/50lb-mono forum estimate) and all three Daiwa BG MQ entries (4000/8000/14000 — each has its own published J-Braid chart that turned out to match the prior sister-model estimate exactly). **Still open:** Avet MXL 5.8 (found a chart for the newer-generation MXL Raptor, 50/770 65/500 80/400, but didn't substitute since it's a different product generation), Maxel Rage 60 (only unrelated capacity figures found), Accurate BV2-500, Shimano TwinPower SW 6000, Okuma Azores Z-65S (all three re-confirmed unresolved, no new search run since the first pass already exhausted the obvious sources)._
 
+_Correction pass (2026-09-12), from code review of the above: two entries "confirmed" on 2026-09-11 didn't hold up. **Tasline Elite 8X 100 lb** — pe12.com's 0.545 mm figure made the diameter sequence non-monotonic against the already-confirmed 120 lb point (0.520 mm), and pe12.com's own 80 lb figure runs ~18% higher than tasline.com.au's confirmed 80 lb for the same rating, so the two sources aren't on a consistent scale; reverted to the interpolated 0.0179 in estimate (VERIFY again — see section 11). **Shimano Torium 30** — the source note's cited 50 lb chart figure (1015 yd) is physically inconsistent with its own 65/80 lb points (implausibly ~65% more spool volume per pound); the anchor itself (80 lb/415 yd) is unaffected and stays confirmed, but the note no longer presents the 50 lb figure as trustworthy._
+
 ## What to ask for
 
 > "Please send the **line diameter** (in inches or mm) for each pound test of the
@@ -70,14 +72,17 @@ own chart — likely a JB chart quirk, not corrected here), 130=.021in, 200=.024
 hollow entry's `source` field as the reference point, but LP's own estimated values were left
 unchanged since JB is a different manufacturer/construction and its chart has that known anomaly.
 
-### 11. Tasline Elite 8X — ✅ RESOLVED 2026-09-11
-Was built from Tasline's own PE→diameter→lb chart (tasline.com.au/line-diameter-chart), which lists
+### 11. Tasline Elite 8X — 1 size still estimated (re-opened 2026-09-12)
+Built from Tasline's own PE→diameter→lb chart (tasline.com.au/line-diameter-chart), which lists
 PE8 / 100 lb at **0.407 mm** — essentially identical to PE6 / 80 lb (0.405 mm) and clearly wrong.
-**Resolution:** pe12.com independently publishes a Tasline Elite White PE-rating table keyed directly
-to marketed lb-test (not Tasline's own PE numbering) that is cleanly monotonic: 80 lb = 0.48 mm,
-100 lb = **0.545 mm**. The two charts turn out to use different PE-numbering conventions for the same
-physical products (tasline.com.au's "PE8" ≠ pe12.com's "PE8"), which is what produced the apparent
-typo. Catalog now carries the confirmed **100 lb = 0.545 mm / .0215 in**, VERIFY removed.
+**2026-09-11 attempt:** pe12.com's Tasline Elite White table gives 100 lb = 0.545 mm, which was
+briefly adopted as "confirmed." **Reverted 2026-09-12:** that figure is non-monotonic against
+tasline.com.au's own confirmed 120 lb point (0.520 mm/.0205 in — 100 lb would then be *thicker*
+than 120 lb of the same product), and pe12.com's own 80 lb figure (0.48 mm) runs ~18% higher than
+tasline.com.au's confirmed 80 lb (0.405 mm) for the identical rating — the two sites are not on a
+consistent measurement scale, so pe12.com's number can't be mixed with tasline.com.au's chart.
+Reverted to the **interpolated 0.0179 in** (VERIFY) between tasline.com.au's own confirmed 80 lb/120 lb
+points, pending a real PE8 chart entry from Tasline itself.
 
 ---
 
@@ -105,8 +110,12 @@ Confirm by finding the manufacturer's own line-capacity chart, then update `anch
   existing estimate exactly); Daiwa's own spec sheet still only publishes metric PE.
 - **Accurate BV-500** — re-anchored from an unconfirmed "65 lb/230 yd" guess to Accurate's own
   published **50 lb braid / 500 yd** figure.
-- **Shimano Torium 30** — confirmed 415 yd/80 lb braid off Shimano's chart (50/1015, 65/515,
-  80/415 yd/lb); was a 460 yd forum estimate.
+- **Shimano Torium 30** — confirmed 415 yd/80 lb braid off Shimano's chart (corroborated across
+  independent retailer listings); was a 460 yd forum estimate. Note (added 2026-09-12): the same
+  chart's cited 50 lb figure (1015 yd) is inconsistent with the 65/80 lb points — it implies ~65%
+  more spool volume per pound than those two, which one physical spool can't produce — so it's
+  flagged in the source as an unverified/likely-erroneous transcription rather than trusted; the
+  80 lb anchor point itself is unaffected.
 - **Penn Squall II 25N** — confirmed 475 yd/50 lb braid off Penn's chart (30/675, 40/555, 50/475).
 - **Accurate BV2-400** — confirmed 325 yd/50 lb braid (Izorline reference), up from a 300 yd guess.
 - **Accurate BV2-600** — confirmed 400 yd/65 lb braid, corrected down from a 500 yd real-world guess.
